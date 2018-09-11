@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppComputacaoPlugada</string>
+    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos ?</string>
+
+</resources>
