@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -11,29 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardBackgroundColor="@color/colorAccent"
         card_view:cardCornerRadius="20dp"
         card_view:cardElevation="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:orientation="vertical">
-
+            android:layout_height="match_parent">
             <TextView
+                android:layout_margin="5dp"
                 android:id="@+id/tituloEX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="0dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="Contando os Pontos"
+                android:text="Trabalhar com Números Binários "
                 android:textColor="@android:color/black"
-                android:textSize="30dp"
+                android:textSize="23dp"
+                android:layout_weight="1"
                 android:textStyle="bold" />
 
+
+
         </RelativeLayout>
+
+
+
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

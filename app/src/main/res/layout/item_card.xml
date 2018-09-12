@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        card_view:cardBackgroundColor="@color/colorPrimary"
+        card_view:cardBackgroundColor="@color/colorAccent"
         card_view:cardCornerRadius="20dp"
         card_view:cardElevation="5dp">
 
@@ -36,10 +36,12 @@
 
             <TextView
                 android:id="@+id/subTituloCW"
+                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tituloCW"
-                android:layout_margin="0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tituloCW"
                 android:fontFamily="cursive"
                 android:text="Números Binários "
                 android:textSize="20dp"
@@ -54,7 +56,6 @@
                 android:layout_below="@+id/subTituloCW"
                 android:fontFamily="casual"
                 android:text="@string/descricao_card"
-                android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
 
@@ -77,6 +78,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
                         android:text="Materias"
+                        android:textColor="@android:color/black"
                         android:textStyle="bold" />
 
                     <TextView
@@ -85,7 +87,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:text="Matematica"
-                        android:textColor="@android:color/white"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -101,6 +102,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
                         android:text="Habilidades"
+                        android:textColor="@android:color/black"
                         android:textStyle="bold" />
 
                     <TextView
@@ -109,7 +111,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:text="Contar, Correlacionar, Ordenar"
-                        android:textColor="@android:color/white"
                         android:textStyle="bold" />
 
 
@@ -126,6 +127,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
                         android:text="Idade"
+                        android:textColor="@android:color/black"
                         android:textStyle="bold" />
 
                     <TextView
@@ -134,7 +136,6 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="casual"
                         android:text="A partir de 7 anos"
-                        android:textColor="@android:color/white"
                         android:textStyle="bold" />
 
                 </LinearLayout>

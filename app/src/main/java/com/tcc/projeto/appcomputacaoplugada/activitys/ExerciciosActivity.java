@@ -40,12 +40,27 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     public List<Exercicio> getExerciciosList() {
         List<Exercicio> exerciciosList = new ArrayList<Exercicio>();
-        Exercicio exercicio01 = new Exercicio("Exercicio01");
-        Exercicio Exercicio02 = new Exercicio("Exercicio02");
-        Exercicio Exercicio03 = new Exercicio("Exercicio03");
+        Exercicio exercicio01 = new Exercicio("Introdução");
+        Exercicio Exercicio02 = new Exercicio("Números Binários");
+        Exercicio Exercicio03 = new Exercicio("Trabalhar com Números Binários");
+        Exercicio Exercicio04 = new Exercicio("Enviar Mensagens Secretas");
+        Exercicio Exercicio05 = new Exercicio("Correio Eletrônico e Modems");
+        Exercicio Exercicio06 = new Exercicio("Contar acima de 31");
+        Exercicio Exercicio07 = new Exercicio("Mais Sobre Números Binários");
+        Exercicio Exercicio08 = new Exercicio("De que se trata tudo isso?");
+
+
         exerciciosList.add(exercicio01);
         exerciciosList.add(Exercicio02);
         exerciciosList.add(Exercicio03);
+        exerciciosList.add(Exercicio04);
+        exerciciosList.add(Exercicio05);
+        exerciciosList.add(Exercicio06);
+        exerciciosList.add(Exercicio07);
+        exerciciosList.add(Exercicio08);
+
+
+
         Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
         return exerciciosList;
     }
@@ -60,3 +75,14 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     }
 }
+/*
+<ImageView
+                android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_check_black_24dp"
+                        android:visibility="gone"/>*/
