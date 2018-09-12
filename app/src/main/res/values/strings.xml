@@ -2,7 +2,10 @@
     <string name="app_name">AppComputacaoPlugada</string>
     <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos ?</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="string_intro_01">Para esta atividade, são necessários cinco cartões, conforme mostrado abaixo, com pontos
+    marcados de um lado e nada sobre o verso. Os cartões devem estar na seguinte ordem: </string>
+
+
 
 </resources>

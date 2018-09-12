@@ -1,13 +1,189 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fundo"
+    android:orientation="vertical"
     tools:context="com.tcc.projeto.appcomputacaoplugada.fragments.IntroducaoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/string_intro_01"
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta16" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta8" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta4" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta2" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta1" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="O que você percebeu sobre o número de pontos nos cartões?"
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Quantos pontos teria o próximo cartão colocado à esquerda?"
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Podemos usar estes cartões para representar números virando alguns deles para baixo e
+adicionando os pontos dos cartões com a face para cima."
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/carta16"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/fundoCarta" />
+
+            <ImageButton
+                android:id="@+id/carta8"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta8" />
+
+            <ImageButton
+                android:id="@+id/carta4"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/fundoCarta" />
+
+            <ImageButton
+                android:id="@+id/carta2"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/fundoCarta" />
+
+            <ImageButton
+                android:id="@+id/carta1"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:background="@mipmap/carta1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/num16"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/num8"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/num4"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/num2"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="0"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/num1"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="1"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
