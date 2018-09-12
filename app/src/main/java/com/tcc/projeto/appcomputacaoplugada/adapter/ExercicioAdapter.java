@@ -19,11 +19,11 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
 import java.util.List;
 
 public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyViewHolder> {
-    private List<Exercicio> mList;
+    private String[] mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListener mRecyclerViewOnClickListener;
 
-    public ExercicioAdapter(ExerciciosActivity aexerciciosActivity, List<Exercicio> exercicios) {
+    public ExercicioAdapter(ExerciciosActivity aexerciciosActivity, String[] exercicios) {
         this.mList = exercicios;
         mLayoutInflater = (LayoutInflater) aexerciciosActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -42,15 +42,15 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.mTitulo.setText(mList.get(position).getTitulo());
+        holder.mTitulo.setText(mList[position]);
         Log.d("onBindViewHolder", "position " + position);
-        Log.d("onBindViewHolder", "getTituloEX " + mList.get(position).getTitulo());
+        //Log.d("onBindViewHolder", "getTituloEX " + mList.get(position).getTitulo());
     }
 
     @Override
     public int getItemCount() {
-        Log.d("onBindViewHolder", "Tamanho [] " + mList.size());
-        return mList.size();
+        Log.d("onBindViewHolder", "Tamanho [] " + mList.length);
+        return mList.length;
 
     }
 

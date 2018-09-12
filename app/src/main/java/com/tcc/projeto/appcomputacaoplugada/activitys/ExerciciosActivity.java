@@ -38,28 +38,11 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         mRecyclerView.setAdapter(mAdapter);
     }
 
-    public List<Exercicio> getExerciciosList() {
-        List<Exercicio> exerciciosList = new ArrayList<Exercicio>();
-        Exercicio exercicio01 = new Exercicio("Introdução");
-        Exercicio Exercicio02 = new Exercicio("Números Binários");
-        Exercicio Exercicio03 = new Exercicio("Trabalhar com Números Binários");
-        Exercicio Exercicio04 = new Exercicio("Enviar Mensagens Secretas");
-        Exercicio Exercicio05 = new Exercicio("Correio Eletrônico e Modems");
-        Exercicio Exercicio06 = new Exercicio("Contar acima de 31");
-        Exercicio Exercicio07 = new Exercicio("Mais Sobre Números Binários");
-        Exercicio Exercicio08 = new Exercicio("De que se trata tudo isso?");
-
-
-        exerciciosList.add(exercicio01);
-        exerciciosList.add(Exercicio02);
-        exerciciosList.add(Exercicio03);
-        exerciciosList.add(Exercicio04);
-        exerciciosList.add(Exercicio05);
-        exerciciosList.add(Exercicio06);
-        exerciciosList.add(Exercicio07);
-        exerciciosList.add(Exercicio08);
-
-
+    public String[] getExerciciosList() {
+        String [] exerciciosList = new String[]{
+                "Introdução","Números Binários","Trabalhar com Números Binários","Enviar Mensagens Secretas","Correio Eletrônico e Modems","Contar acima de 31","Mais Sobre Números Binários",
+                "De que se trata tudo isso?"
+        };
 
         Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
         return exerciciosList;
@@ -68,21 +51,11 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-        Intent intent = new Intent(getApplicationContext(), ExerciciosActivity.class);
+        Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
         startActivity(intent);
         finish();
 
 
     }
 }
-/*
-<ImageView
-                android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:src="@drawable/ic_check_black_24dp"
-                        android:visibility="gone"/>*/
+
