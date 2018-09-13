@@ -65,26 +65,90 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:text="O que você percebeu sobre o número de pontos nos cartões?"
+            android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
             android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
             android:textStyle="bold" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <RadioButton
+                android:id="@+id/certo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked1"
+                android:text="Cada cartão tem duas vezes
+mais pontos que o cartão à sua direita" />
+
+            <RadioButton
+                android:id="@+id/errado11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked1"
+                android:text="Cada cartão tem um valor aleatorio" />
+
+            <RadioButton
+                android:id="@+id/errado12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked1"
+                android:text="Cada cartão tem o valor da proxima mais a anterior" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Quantos pontos teria o próximo cartão colocado à esquerda?"
+            android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
             android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
             android:textStyle="bold" />
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <RadioButton
+                android:id="@+id/errado21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked2"
+                android:text="24" />
+
+            <RadioButton
+                android:id="@+id/errado22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked2"
+                android:text="20" />
+
+            <RadioButton
+                android:id="@+id/certo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked2"
+                android:text="32" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Podemos usar estes cartões para representar números virando alguns deles para baixo e
-adicionando os pontos dos cartões com a face para cima."
+            android:text="@string/string_intro_02"
             android:textAlignment="center"
             android:textColor="@color/textColorPrimary"
             android:textStyle="bold" />
@@ -142,48 +206,128 @@ adicionando os pontos dos cartões com a face para cima."
 
             <TextView
                 android:id="@+id/num16"
-                android:gravity="center"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="center"
                 android:text="0"
-                android:textStyle="bold"/>
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/num8"
-                android:gravity="center"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/textColorPrimary"
                 android:text="1"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
+                android:textColor="@color/textColorPrimary"
                 android:id="@+id/num4"
-                android:gravity="center"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="center"
                 android:text="0"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/num2"
-                android:gravity="center"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="center"
+                android:textColor="@color/textColorPrimary"
                 android:text="0"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/num1"
-                android:gravity="center"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:gravity="center"
                 android:text="1"
-                android:textStyle="bold"/>
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/string_intro_03"
+            android:textAlignment="center"
+            android:textColor="@color/textColorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="3. Como seria o número 17 em binário ?"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+
+            <RadioButton
+                android:id="@+id/errado31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked3"
+                android:text="01101" />
+
+            <RadioButton
+                android:id="@+id/certo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked3"
+                android:text="10001" />
+
+            <RadioButton
+                android:id="@+id/errado32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked3"
+                android:text="10011" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button2"
+            android:background="@drawable/buttonshape"
+            android:text="Finalizar"
+            android:fontFamily="@font/bungee"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Você errou a resposta da questão X, tente novamente!"
+            android:textAlignment="center"
+            android:textStyle="bold" />
     </LinearLayout>
+
 
 </ScrollView>
 

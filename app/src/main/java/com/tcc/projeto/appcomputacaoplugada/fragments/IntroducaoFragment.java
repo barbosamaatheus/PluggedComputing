@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -20,6 +21,7 @@ public class IntroducaoFragment extends Fragment {
     private ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16;
     private TextView num1, num2, num4, num8, num16;
     private Carta carta01, carta02, carta04, carta08, carta16;
+    private boolean passou1, passou2, passou3;
 
     public IntroducaoFragment() {
         // Required empty public constructor
@@ -75,9 +77,9 @@ public class IntroducaoFragment extends Fragment {
     private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
         alterarEstadoCarta(carta);
         mCarta.setBackgroundResource(carta.getImagem());
-        if (carta.isFrente()){
+        if (carta.isFrente()) {
             num.setText("1");
-        }else {
+        } else {
             num.setText("0");
         }
 
@@ -94,7 +96,7 @@ public class IntroducaoFragment extends Fragment {
     }
 
     private void mudarImagem(Carta carta) {
-        switch (carta.getNumero()){
+        switch (carta.getNumero()) {
             case 1:
                 carta.setImagem(R.mipmap.carta1);
                 break;
@@ -136,4 +138,74 @@ public class IntroducaoFragment extends Fragment {
 
 
     }
+
+    public void onRadioButtonClicked1(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.certo1:
+                if (checked)
+                    passou1 = true;
+                    break;
+            case R.id.errado11:
+                if (checked)
+                    passou1 = false;
+                    break;
+
+            case R.id.errado12:
+                if (checked)
+                    passou1 = false;
+                    break;
+        }
+    }
+
+    public void onRadioButtonClicked2(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.certo2:
+                if (checked)
+                    passou2 = true;
+                    break;
+            case R.id.errado21:
+                if (checked)
+                    passou2 = false;
+                    break;
+
+            case R.id.errado22:
+                if (checked)
+                    passou2 = false;
+                    break;
+        }
+    }
+
+    public void onRadioButtonClicked3(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.certo3:
+                if (checked)
+                    passou3 = true;
+                    break;
+            case R.id.errado31:
+                if (checked)
+                    passou3 = false;
+                    break;
+
+            case R.id.errado32:
+                if (checked)
+                    passou3 = false;
+                    break;
+        }
+    }
 }
+
+
+
+

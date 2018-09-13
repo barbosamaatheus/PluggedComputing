@@ -1,11 +1,19 @@
 <resources>
     <string name="app_name">AppComputacaoPlugada</string>
-    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos ?</string>
+    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
 
 
     <string name="string_intro_01">Para esta atividade, são necessários cinco cartões, conforme mostrado abaixo, com pontos
     marcados de um lado e nada sobre o verso. Os cartões devem estar na seguinte ordem: </string>
 
-
+    <string name="string_intro_02">Podemos usar estes cartões para representar números virando alguns deles para baixo e
+adicionando os pontos dos cartões com a face para cima. Quando um cartão está com a face para baixo, sem mostrar os pontos, este cartão é
+    representado por um zero. Quando os pontos são exibidos, o cartão é representado por
+    um. Este é o sistema numérico binário.  </string>
+    <string name="string_intro_03">Na imagem a cima, podemos observer a representação do numero 9 (Soma dos pontos dos cartões com a face pra cima) e tambem 0 1 0 0 1 (representação do numero 9 em binario)
+    \n Presione os cartões e experimente: \n
+        tente representarem os números 6 (cartões com 4 e 2 pontos), 15 (cartões com 8 , 4 , 2 e 1
+pontos e, em seguida, 21 (cartões com 16, 4 e 1 ponto). \n Aproveite e fique a vontade para experimentar outros numeros...
+    </string>
 
 </resources>
