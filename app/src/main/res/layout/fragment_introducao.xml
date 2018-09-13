@@ -8,162 +8,195 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-        <TextView
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:text="@string/string_intro_01"
-            android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold" />
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/string_intro_01"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta16" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta8" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta4" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta2" />
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta1" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:background="@drawable/cardshape"
+            android:orientation="vertical">
 
-            <ImageButton
-                android:layout_weight="1"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta16" />
+                android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-            <ImageButton
-                android:layout_weight="1"
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta8" />
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:layout_weight="1"
+                <RadioButton
+                    android:id="@+id/certo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="Cada cartão é duas vezes
+maior que o proximo"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <RadioButton
+                    android:id="@+id/errado11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="Cada cartão tem um valor aleatorio"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/errado12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="Cada cartão tem o valor da proxima mais a anterior"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta4" />
+                android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-            <ImageButton
-                android:layout_weight="1"
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta2" />
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta1" />
+                <RadioButton
+                    android:id="@+id/errado21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="24"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
+                <RadioButton
+                    android:id="@+id/errado22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
 
+                <RadioButton
+                    android:id="@+id/certo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="32"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </RadioGroup>
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-            android:layout_margin="5dp"
-            android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
-            android:textAlignment="center"
-            android:textStyle="bold" />
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="5dp"
-            android:elevation="5dp"
-            android:id="@+id/myRadioGroup1"
-            >
-
-            <RadioButton
-                android:id="@+id/certo1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Cada cartão é duas vezes
-maior que o proximo" />
-
-            <RadioButton
-                android:id="@+id/errado11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Cada cartão tem um valor aleatorio" />
-
-            <RadioButton
-                android:id="@+id/errado12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Cada cartão tem o valor da proxima mais a anterior" />
-        </RadioGroup>
-
-        <TextView
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
-            android:textAlignment="center"
-            android:textStyle="bold" />
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="5dp"
-            android:elevation="5dp"
-            android:id="@+id/myRadioGroup2"
-            android:background="@drawable/cardshape"
-            >
-
-            <RadioButton
-                android:id="@+id/errado21"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="24" />
-
-            <RadioButton
-                android:id="@+id/errado22"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="20" />
-
-            <RadioButton
-                android:id="@+id/certo2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="32" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
             android:layout_margin="5dp"
             android:background="@drawable/cardshape"
             android:elevation="5dp"
@@ -174,188 +207,202 @@ maior que o proximo" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:elevation="5dp"
             android:background="@drawable/cardshape"
-            >
+            android:elevation="5dp"
+            android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/carta16"
-                android:layout_weight="1"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/carta16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/fundocarta" />
+
+                <ImageButton
+                    android:id="@+id/carta8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta8" />
+
+                <ImageButton
+                    android:id="@+id/carta4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/fundocarta" />
+
+                <ImageButton
+                    android:id="@+id/carta2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/fundocarta" />
+
+                <ImageButton
+                    android:id="@+id/carta1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/carta1" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/fundocarta" />
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/carta8"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta8" />
+                <TextView
+                    android:id="@+id/num16"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/carta4"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/fundocarta" />
+                <TextView
+                    android:id="@+id/num8"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/carta2"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/fundocarta" />
+                <TextView
+                    android:id="@+id/num4"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/carta1"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:background="@mipmap/carta1" />
+                <TextView
+                    android:id="@+id/num2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/num1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColorPrimary"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-            >
-
-            <TextView
-                android:id="@+id/num16"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:text="0"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/num8"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:textColor="@color/textColorPrimary"
-                android:text="1"
-                android:textStyle="bold" />
-
-            <TextView
-                android:textColor="@color/textColorPrimary"
-                android:id="@+id/num4"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:text="0"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/num2"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:textColor="@color/textColorPrimary"
-                android:text="0"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/num1"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:gravity="center"
-                android:text="1"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
-
-
-        </LinearLayout>
 
         <TextView
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
             android:text="@string/string_intro_03"
             android:textAlignment="center"
             android:textColor="@color/textColorPrimary"
             android:textStyle="bold" />
 
-        <TextView
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
-            android:text="3. Como seria o número 17 em binário ?"
-            android:textAlignment="center"
-            android:textStyle="bold" />
-
-
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:elevation="5dp"
             android:background="@drawable/cardshape"
-            android:id="@+id/myRadioGroup3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="5dp">
+            android:elevation="5dp"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/errado31"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="01101" />
+                android:text="3. Como seria o número 17 em binário ?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/certo3"
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="10001" />
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/errado32"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="10011" />
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/errado31"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="01101"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/certo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="10001"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/errado32"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:gravity="center"
+                    android:text="10011"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </RadioGroup>
+        </LinearLayout>
 
         <Button
-            android:layout_margin="5dp"
             android:id="@+id/button2"
-            android:background="@drawable/buttonshape"
-            android:text="Finalizar"
-            android:fontFamily="@font/bungee"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-             />
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/bungee"
+            android:text="Finalizar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
