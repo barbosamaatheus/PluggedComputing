@@ -21,8 +21,11 @@ public class IntroducaoFragment extends Fragment {
 
     private ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16;
     private TextView num1, num2, num4, num8, num16;
+    private RadioGroup radioGroup1, radioGroup2, radioGroup3;
+    private RadioButton certo1, certo2, certo3, errado11, errado12, errado21, errado22, errado31, errado32;
     private Carta carta01, carta02, carta04, carta08, carta16;
     private boolean passou1, passou2, passou3;
+
 
     public IntroducaoFragment() {
         // Required empty public constructor
@@ -72,6 +75,24 @@ public class IntroducaoFragment extends Fragment {
             }
         });
 
+        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                onRadioButtonClicked1(checkedId);
+            }
+        });
+        radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                onRadioButtonClicked2(checkedId);
+            }
+        });
+        radioGroup3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                onRadioButtonClicked3(checkedId);
+            }
+        });
         return view;
     }
 
@@ -117,17 +138,43 @@ public class IntroducaoFragment extends Fragment {
     }
 
     private void initViews(View view) {
-        mCarta1 = (ImageButton) view.findViewById(R.id.carta1);
-        mCarta2 = (ImageButton) view.findViewById(R.id.carta2);
-        mCarta4 = (ImageButton) view.findViewById(R.id.carta4);
-        mCarta8 = (ImageButton) view.findViewById(R.id.carta8);
-        mCarta16 = (ImageButton) view.findViewById(R.id.carta16);
+        initCartas(view);
+        initNum(view);
+        createCartas();
+        initRadioGroups(view);
+    }
+
+    private void initRadioGroups(View view) {
+        radioGroup1 = (RadioGroup) view.findViewById(R.id.myRadioGroup1);
+        certo1 = (RadioButton) view.findViewById(R.id.certo1);
+        errado11 = (RadioButton) view.findViewById(R.id.errado11);
+        errado12 = (RadioButton) view.findViewById(R.id.errado12);
+
+        radioGroup2 = (RadioGroup) view.findViewById(R.id.myRadioGroup2);
+        certo2 = (RadioButton) view.findViewById(R.id.certo2);
+        errado21 = (RadioButton) view.findViewById(R.id.errado21);
+        errado22 = (RadioButton) view.findViewById(R.id.errado22);
+
+        radioGroup3 = (RadioGroup) view.findViewById(R.id.myRadioGroup3);
+        certo3 = (RadioButton) view.findViewById(R.id.certo3);
+        errado31 = (RadioButton) view.findViewById(R.id.errado31);
+        errado32 = (RadioButton) view.findViewById(R.id.errado32);
+    }
+
+    private void initNum(View view) {
         num1 = (TextView) view.findViewById(R.id.num1);
         num2 = (TextView) view.findViewById(R.id.num2);
         num4 = (TextView) view.findViewById(R.id.num4);
         num8 = (TextView) view.findViewById(R.id.num8);
         num16 = (TextView) view.findViewById(R.id.num16);
-        createCartas();
+    }
+
+    private void initCartas(View view) {
+        mCarta1 = (ImageButton) view.findViewById(R.id.carta1);
+        mCarta2 = (ImageButton) view.findViewById(R.id.carta2);
+        mCarta4 = (ImageButton) view.findViewById(R.id.carta4);
+        mCarta8 = (ImageButton) view.findViewById(R.id.carta8);
+        mCarta16 = (ImageButton) view.findViewById(R.id.carta16);
     }
 
     private void createCartas() {
@@ -140,67 +187,47 @@ public class IntroducaoFragment extends Fragment {
 
     }
 
-    public void onRadioButtonClicked1(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
+    public void onRadioButtonClicked1(int checked) {
+        switch (checked) {
             case R.id.certo1:
-                if (checked)
                     passou1 = true;
                     break;
             case R.id.errado11:
-                if (checked)
                     passou1 = false;
                     break;
 
             case R.id.errado12:
-                if (checked)
                     passou1 = false;
                     break;
         }
     }
 
-    public void onRadioButtonClicked2(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
+    public void onRadioButtonClicked2(int checked) {
+        switch (checked) {
             case R.id.certo2:
-                if (checked)
                     passou2 = true;
                     break;
             case R.id.errado21:
-                if (checked)
                     passou2 = false;
                     break;
 
             case R.id.errado22:
-                if (checked)
                     passou2 = false;
                     break;
         }
     }
 
-    public void onRadioButtonClicked3(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
+    public void onRadioButtonClicked3(int checked) {
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
+        switch (checked) {
             case R.id.certo3:
-                if (checked)
                     passou3 = true;
                     break;
             case R.id.errado31:
-                if (checked)
                     passou3 = false;
                     break;
 
             case R.id.errado32:
-                if (checked)
                     passou3 = false;
                     break;
         }

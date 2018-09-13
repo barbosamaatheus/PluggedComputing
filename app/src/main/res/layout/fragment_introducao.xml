@@ -86,7 +86,7 @@
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:elevation="5dp"
-            android:background="@drawable/cardshape"
+            android:id="@+id/myRadioGroup1"
             >
 
             <RadioButton
@@ -95,7 +95,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked1"
                 android:text="Cada cartão é duas vezes
 maior que o proximo" />
 
@@ -105,7 +104,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked1"
                 android:text="Cada cartão tem um valor aleatorio" />
 
             <RadioButton
@@ -114,7 +112,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked1"
                 android:text="Cada cartão tem o valor da proxima mais a anterior" />
         </RadioGroup>
 
@@ -134,6 +131,7 @@ maior que o proximo" />
             android:orientation="horizontal"
             android:layout_margin="5dp"
             android:elevation="5dp"
+            android:id="@+id/myRadioGroup2"
             android:background="@drawable/cardshape"
             >
 
@@ -143,7 +141,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked2"
                 android:text="24" />
 
             <RadioButton
@@ -152,7 +149,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked2"
                 android:text="20" />
 
             <RadioButton
@@ -161,17 +157,16 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked2"
                 android:text="32" />
         </RadioGroup>
 
         <TextView
-            android:elevation="5dp"
-            android:background="@drawable/cardshape"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
             android:text="@string/string_intro_02"
             android:textAlignment="center"
             android:textColor="@color/textColorPrimary"
@@ -319,7 +314,7 @@ maior que o proximo" />
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:elevation="5dp"
             android:background="@drawable/cardshape"
-
+            android:id="@+id/myRadioGroup3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -331,7 +326,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked3"
                 android:text="01101" />
 
             <RadioButton
@@ -340,7 +334,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked3"
                 android:text="10001" />
 
             <RadioButton
@@ -349,7 +342,6 @@ maior que o proximo" />
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:onClick="onRadioButtonClicked3"
                 android:text="10011" />
         </RadioGroup>
 
