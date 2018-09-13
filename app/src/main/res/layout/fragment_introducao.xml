@@ -101,7 +101,7 @@ adicionando os pontos dos cartões com a face para cima."
                 android:layout_width="60dp"
                 android:layout_height="90dp"
                 android:layout_margin="5dp"
-                android:background="@mipmap/fundoCarta" />
+                android:background="@mipmap/fundocarta" />
 
             <ImageButton
                 android:id="@+id/carta8"
@@ -115,14 +115,14 @@ adicionando os pontos dos cartões com a face para cima."
                 android:layout_width="60dp"
                 android:layout_height="90dp"
                 android:layout_margin="5dp"
-                android:background="@mipmap/fundoCarta" />
+                android:background="@mipmap/fundocarta" />
 
             <ImageButton
                 android:id="@+id/carta2"
                 android:layout_width="60dp"
                 android:layout_height="90dp"
                 android:layout_margin="5dp"
-                android:background="@mipmap/fundoCarta" />
+                android:background="@mipmap/fundocarta" />
 
             <ImageButton
                 android:id="@+id/carta1"
