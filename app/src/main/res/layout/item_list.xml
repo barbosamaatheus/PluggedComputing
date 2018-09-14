@@ -11,9 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-
         card_view:cardBackgroundColor="@color/colorAccent"
-        card_view:cardCornerRadius="20dp"
+        card_view:cardCornerRadius="10dp"
         card_view:cardElevation="5dp">
 
         <RelativeLayout
@@ -21,15 +20,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:padding="5dp"
                 android:id="@+id/tituloEX"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
                 android:text="Trabalhar com Números Binários "
-                android:textColor="@android:color/black"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="18dp"
                 android:textStyle="bold" />
 

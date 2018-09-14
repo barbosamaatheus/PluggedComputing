@@ -109,7 +109,7 @@ public class IntroducaoFragment extends Fragment {
             public void onClick(View view) {
                 validarPerguntas();
                 Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
             }
         });
         return view;

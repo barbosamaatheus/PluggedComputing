@@ -24,16 +24,17 @@
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:justificationMode="inter_word"
                 android:text="@string/string_intro_02"
                 android:textColor="@color/textColorPrimary"
-                android:justificationMode="inter_word"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Presione o cartão para vira-lo"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="10dp" />
 
 
@@ -159,7 +160,7 @@
                 android:fontFamily="casual"
                 android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup1"
@@ -178,7 +179,7 @@
                     android:gravity="center"
                     android:text="É duas vezes
 maior que o proximo"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="12sp" />
 
                 <RadioButton
@@ -191,7 +192,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="São valores aleatórios"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="12sp" />
 
                 <RadioButton
@@ -204,7 +205,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="É a soma do proxim com o anterior"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="12sp" />
             </RadioGroup>
         </LinearLayout>
@@ -224,7 +225,7 @@ maior que o proximo"
                 android:fontFamily="casual"
                 android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup2"
@@ -242,7 +243,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="24"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/errado22"
@@ -254,7 +255,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="20"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/certo2"
@@ -266,7 +267,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="32"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
             </RadioGroup>
         </LinearLayout>
 
@@ -280,12 +281,12 @@ maior que o proximo"
 
             <TextView
                 android:id="@+id/perg3_intro"
-                android:fontFamily="casual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="casual"
                 android:text="3. Como seria o número 17 em binário ?"
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textColor="@color/textColorPrimary" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -304,7 +305,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="01101"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/certo3"
@@ -316,7 +317,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="10001"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/errado32"
@@ -328,7 +329,7 @@ maior que o proximo"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="10011"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/textColorPrimary" />
             </RadioGroup>
         </LinearLayout>
 
