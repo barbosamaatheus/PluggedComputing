@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class MainActivity extends AppCompatActivity {
     private Button mInicar, mSobre;
 
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         initViews();
         mInicar.setOnClickListener(new View.OnClickListener() {

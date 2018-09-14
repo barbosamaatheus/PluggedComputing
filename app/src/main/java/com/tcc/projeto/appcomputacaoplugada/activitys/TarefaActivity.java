@@ -8,6 +8,8 @@ import android.os.Bundle;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.fragments.IntroducaoFragment;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class TarefaActivity extends AppCompatActivity {
     private FragmentManager fm = getSupportFragmentManager();
 
@@ -15,6 +17,7 @@ public class TarefaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarefa);
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initFragment();
     }
     private void initFragment() {

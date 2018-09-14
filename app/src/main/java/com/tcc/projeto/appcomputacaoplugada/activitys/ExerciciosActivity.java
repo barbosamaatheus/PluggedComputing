@@ -17,6 +17,8 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class ExerciciosActivity extends AppCompatActivity implements RecyclerViewOnClickListener {
     private RecyclerView mRecyclerView;
     private ExercicioAdapter mAdapter;
@@ -25,6 +27,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercicio);
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initviews();
         mostrarFinalizados();
     }

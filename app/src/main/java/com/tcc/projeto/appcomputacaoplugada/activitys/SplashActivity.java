@@ -7,6 +7,8 @@ import android.os.Bundle;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class SplashActivity extends AppCompatActivity implements Runnable{
     private static final long delay = 3000;
 
@@ -14,6 +16,7 @@ public class SplashActivity extends AppCompatActivity implements Runnable{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
 
         Handler handler = new Handler();
         handler.postDelayed(this,delay);

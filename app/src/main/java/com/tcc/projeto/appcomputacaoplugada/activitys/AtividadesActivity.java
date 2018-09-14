@@ -17,6 +17,8 @@ import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
+
 public class AtividadesActivity extends AppCompatActivity implements RecyclerViewOnClickListener {
     private RecyclerView mRecyclerView;
     private CardAdapter mAdapter;
@@ -25,6 +27,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atividades);
+        setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initviews();
     }
 
