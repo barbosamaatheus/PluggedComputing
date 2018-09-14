@@ -13,7 +13,7 @@ adicionando os pontos dos cartões com a face para cima. Quando um cartão está
     <string name="string_intro_03">Na imagem a cima, podemos observer a representação do numero 9 (Soma dos pontos dos cartões com a face pra cima) e tambem 0 1 0 0 1 (representação do numero 9 em binario)
     \n Presione os cartões e experimente: \n
         tente representarem os números 6 (cartões com 4 e 2 pontos), 15 (cartões com 8 , 4 , 2 e 1
-pontos e, em seguida, 21 (cartões com 16, 4 e 1 ponto). \n Aproveite e fique a vontade para experimentar outros numeros...
+pontos e, em seguida, 21 (cartões com 16, 4 e 1 ponto). \n\n Aproveite e fique a vontade para experimentar outros numeros...
     </string>
 
 </resources>

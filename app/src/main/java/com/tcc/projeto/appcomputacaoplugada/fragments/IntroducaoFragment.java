@@ -1,17 +1,22 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 import java.util.ArrayList;
@@ -24,7 +29,10 @@ public class IntroducaoFragment extends Fragment {
     private RadioGroup radioGroup1, radioGroup2, radioGroup3;
     private RadioButton certo1, certo2, certo3, errado11, errado12, errado21, errado22, errado31, errado32;
     private Carta carta01, carta02, carta04, carta08, carta16;
+    private TextView perg1, perg2, perg3;
+    private Button finalizar;
     private boolean passou1, passou2, passou3;
+    private boolean exibir;
 
 
     public IntroducaoFragment() {
@@ -74,7 +82,6 @@ public class IntroducaoFragment extends Fragment {
                 virarCarta(carta16, num16, mCarta16);
             }
         });
-
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -93,7 +100,48 @@ public class IntroducaoFragment extends Fragment {
                 onRadioButtonClicked3(checkedId);
             }
         });
+        finalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validarPerguntas();
+            }
+        });
         return view;
+    }
+
+    private void validarPerguntas() {
+        validarCampos();
+        if (!exibir) {
+            Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
+        }
+        //Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
+    }
+
+    private boolean validarCampos() {
+        View focus = null;
+        exibir = false;
+        if (!passou1) {
+            perg1.setError("Resposta incorreta, tente outra opção");
+            focus = perg1;
+            exibir = true;
+        }
+        if (!passou2) {
+            perg2.setError("Resposta incorreta, tente outra opção");
+            focus = perg2;
+            exibir = true;
+        }
+        if (!passou3) {
+            perg3.setError("Resposta incorreta, tente outra opção");
+            focus = perg3;
+            exibir = true;
+            Log.d("onRadioButtonClicked3", "exibir:" + exibir);
+        }
+        if (exibir) {
+            Log.d("onRadioButtonClicked3", "exibir: --" + exibir);
+            focus.requestFocus();
+        }
+        return exibir;
     }
 
     private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
@@ -138,10 +186,19 @@ public class IntroducaoFragment extends Fragment {
     }
 
     private void initViews(View view) {
+        finalizar = (Button) view.findViewById(R.id.btn_finalizar);
         initCartas(view);
         initNum(view);
         createCartas();
         initRadioGroups(view);
+        initPerguntas(view);
+
+    }
+
+    private void initPerguntas(View view) {
+        perg1 = (TextView) view.findViewById(R.id.perg1_intro);
+        perg2 = (TextView) view.findViewById(R.id.perg2_intro);
+        perg3 = (TextView) view.findViewById(R.id.perg3_intro);
     }
 
     private void initRadioGroups(View view) {
@@ -188,48 +245,51 @@ public class IntroducaoFragment extends Fragment {
     }
 
     public void onRadioButtonClicked1(int checked) {
+        passou1 = false;
         switch (checked) {
             case R.id.certo1:
-                    passou1 = true;
-                    break;
+                passou1 = true;
+                break;
             case R.id.errado11:
-                    passou1 = false;
-                    break;
-
+                passou1 = false;
+                break;
             case R.id.errado12:
-                    passou1 = false;
-                    break;
+                passou1 = false;
+                break;
         }
     }
 
     public void onRadioButtonClicked2(int checked) {
+        passou2 = false;
         switch (checked) {
             case R.id.certo2:
-                    passou2 = true;
-                    break;
+                passou2 = true;
+                break;
             case R.id.errado21:
-                    passou2 = false;
-                    break;
+                passou2 = false;
+                break;
 
             case R.id.errado22:
-                    passou2 = false;
-                    break;
+                passou2 = false;
+                break;
         }
     }
 
     public void onRadioButtonClicked3(int checked) {
-
+        passou3 = false;
         switch (checked) {
             case R.id.certo3:
-                    passou3 = true;
-                    break;
+                passou3 = true;
+                Log.d("onRadioButtonClicked3", "certo3");
+                break;
             case R.id.errado31:
-                    passou3 = false;
-                    break;
-
+                Log.d("onRadioButtonClicked3", "errado31");
+                passou3 = false;
+                break;
             case R.id.errado32:
-                    passou3 = false;
-                    break;
+                Log.d("onRadioButtonClicked3", "errado32");
+                passou3 = false;
+                break;
         }
     }
 }
