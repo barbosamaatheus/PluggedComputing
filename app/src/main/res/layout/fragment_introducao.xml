@@ -21,199 +21,20 @@
 
 
             <TextView
+                android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/string_intro_01"
-                android:textAlignment="center"
+                android:text="@string/string_intro_02"
                 android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@mipmap/carta16" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@mipmap/carta8" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@mipmap/carta4" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@mipmap/carta2" />
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@mipmap/carta1" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:background="@drawable/cardshape"
-            android:orientation="vertical">
+                android:justificationMode="inter_word"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"/>
 
             <TextView
-                android:id="@+id/perg1_intro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/certo1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="Cada cartão é duas vezes
-maior que o proximo"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold"
-                    android:typeface="sans" />
-
-                <RadioButton
-                    android:id="@+id/errado11"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="Cada cartão tem um valor aleatorio"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/errado12"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="Cada cartão tem o valor da proxima mais a anterior"
-                    android:textColor="@android:color/white"
-                    android:textStyle="bold" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:background="@drawable/cardshape"
-            android:elevation="5dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/perg2_intro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/errado21"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="24"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/errado22"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="20"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/certo2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="3dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:gravity="center"
-                    android:text="32"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/cardshape"
-            android:elevation="5dp"
-            android:text="@string/string_intro_02"
-            android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:background="@drawable/cardshape"
-            android:elevation="5dp"
-            android:orientation="vertical">
+                android:text="Presione o cartão para vira-lo"
+                android:textSize="10dp" />
 
 
             <LinearLayout
@@ -320,19 +141,134 @@ maior que o proximo"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
+
+
         </LinearLayout>
 
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/perg1_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/certo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="É duas vezes
+maior que o proximo"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/errado11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="São valores aleatórios"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <RadioButton
+                    android:id="@+id/errado12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="É a soma do proxim com o anterior"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:background="@drawable/cardshape"
             android:elevation="5dp"
-            android:text="@string/string_intro_03"
-            android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/perg2_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/errado21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="24"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/errado22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="20"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/certo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="32"
+                    android:textColor="#FFFFFF" />
+            </RadioGroup>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -344,6 +280,7 @@ maior que o proximo"
 
             <TextView
                 android:id="@+id/perg3_intro"
+                android:fontFamily="casual"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="3. Como seria o número 17 em binário ?"
@@ -364,10 +301,10 @@ maior que o proximo"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="01101"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
+                    android:textColor="#FFFFFF" />
 
                 <RadioButton
                     android:id="@+id/certo3"
@@ -376,10 +313,10 @@ maior que o proximo"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="10001"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
+                    android:textColor="#FFFFFF" />
 
                 <RadioButton
                     android:id="@+id/errado32"
@@ -388,10 +325,10 @@ maior que o proximo"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:text="10011"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold" />
+                    android:textColor="#FFFFFF" />
             </RadioGroup>
         </LinearLayout>
 
@@ -405,6 +342,7 @@ maior que o proximo"
             android:text="Finalizar"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+
     </LinearLayout>
 
 

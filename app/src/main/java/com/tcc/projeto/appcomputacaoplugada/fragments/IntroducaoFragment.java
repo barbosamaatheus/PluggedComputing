@@ -2,7 +2,9 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +23,8 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
 public class IntroducaoFragment extends Fragment {
 
@@ -104,6 +108,8 @@ public class IntroducaoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 validarPerguntas();
+                Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
+                startActivity(intent);
             }
         });
         return view;
@@ -113,7 +119,6 @@ public class IntroducaoFragment extends Fragment {
         validarCampos();
         if (!exibir) {
             Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
         }
         //Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
     }

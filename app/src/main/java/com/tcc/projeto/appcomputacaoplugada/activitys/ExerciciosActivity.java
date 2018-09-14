@@ -26,6 +26,11 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercicio);
         initviews();
+        mostrarFinalizados();
+    }
+
+    private void mostrarFinalizados() {
+
     }
 
     private void initviews(){
