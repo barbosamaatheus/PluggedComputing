@@ -25,11 +25,12 @@ public class TarefaActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         int position = bundle.getInt("positon");
-        Log.d("TarefaActivity", "position: "+position);
+        Log.d("TarefaActivity", "position: " + position);
         initFragment(position);
     }
+
     private void initFragment(int position) {
-        switch (position){
+        switch (position) {
             case 1:
                 initFragment1();
                 break;
@@ -64,24 +65,31 @@ public class TarefaActivity extends AppCompatActivity {
         ft.add(R.id.fragment_content, introducaoFragment);
         ft.commit();
     }
+
     private void initFragment2() {
-        Toast.makeText(TarefaActivity.this, "Fragment2", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Fragment2", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment3() {
         Toast.makeText(getApplicationContext(), "Fragment3", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment4() {
         Toast.makeText(getApplicationContext(), "Fragment4", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment5() {
         Toast.makeText(getApplicationContext(), "Fragment5", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment6() {
         Toast.makeText(getApplicationContext(), "Fragment6", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment7() {
         Toast.makeText(getApplicationContext(), "Fragment7", Toast.LENGTH_LONG).show();
     }
+
     private void initFragment8() {
         Toast.makeText(getApplicationContext(), "Fragment8", Toast.LENGTH_LONG).show();
     }

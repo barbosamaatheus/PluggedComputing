@@ -31,14 +31,10 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         setContentView(R.layout.activity_exercicio);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initviews();
-        mostrarFinalizados();
-    }
-
-    private void mostrarFinalizados() {
 
     }
 
-    private void initviews(){
+    private void initviews() {
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_exercicios);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -50,8 +46,8 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     }
 
     public String[] getExerciciosList() {
-        String [] exerciciosList = new String[]{
-                "Introdução","Números Binários","Trabalhar com Números Binários","Enviar Mensagens Secretas","Correio Eletrônico e Modems","Contar acima de 31","Mais Sobre Números Binários",
+        String[] exerciciosList = new String[]{
+                "Introdução", "Números Binários", "Trabalhar com Números Binários", "Enviar Mensagens Secretas", "Correio Eletrônico e Modems", "Contar acima de 31", "Mais Sobre Números Binários",
                 "De que se trata tudo isso?"
         };
 
@@ -64,13 +60,10 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     public void onClickListener(View view, int positon) {
         Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putInt("positon", positon+1);
-        Log.d("TarefaActivity", "positon: "+positon);
+        bundle.putInt("positon", positon + 1);
         intent.putExtras(bundle);
         startActivity(intent);
-        finish();
-
-
     }
+
 }
 

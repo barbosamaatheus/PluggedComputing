@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Switch;
 
 import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 import com.tcc.projeto.appcomputacaoplugada.adapter.CardAdapter;
@@ -63,8 +64,12 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-        Intent intent = new Intent(getApplicationContext(), ExerciciosActivity.class);
-        startActivity(intent);
-        finish();
+        switch(positon +1){
+            case 1:
+                Intent intent = new Intent(getApplicationContext(), ExerciciosActivity.class);
+                startActivity(intent);
+                break;
+        }
+
     }
 }
