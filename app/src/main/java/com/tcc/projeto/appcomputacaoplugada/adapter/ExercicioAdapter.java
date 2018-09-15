@@ -8,11 +8,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
 
@@ -22,8 +24,10 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     private String[] mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListener mRecyclerViewOnClickListener;
+    private int estado;
 
-    public ExercicioAdapter(ExerciciosActivity aexerciciosActivity, String[] exercicios) {
+    public ExercicioAdapter(ExerciciosActivity aexerciciosActivity, String[] exercicios, int estado) {
+        this.estado = estado;
         this.mList = exercicios;
         mLayoutInflater = (LayoutInflater) aexerciciosActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
@@ -43,6 +47,9 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
+        if (position <= (estado - 1)){
+            setVisibility(holder);
+        }
         Log.d("onBindViewHolder", "position " + position);
         //Log.d("onBindViewHolder", "getTituloEX " + mList.get(position).getTitulo());
     }
@@ -56,10 +63,12 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTitulo;
+        public ImageView mCheck;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             mTitulo = (TextView) itemView.findViewById(R.id.tituloEX);
+            mCheck = (ImageView) itemView.findViewById(R.id.check);
             itemView.setOnClickListener(this);
         }
 
@@ -68,7 +77,12 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
             if (mRecyclerViewOnClickListener != null) {
                 mRecyclerViewOnClickListener.onClickListener(view, getPosition());
             }
-
         }
+    }
+
+    private void setVisibility(MyViewHolder holder){
+        holder.mCheck.setVisibility(View.VISIBLE);
+
+
     }
 }

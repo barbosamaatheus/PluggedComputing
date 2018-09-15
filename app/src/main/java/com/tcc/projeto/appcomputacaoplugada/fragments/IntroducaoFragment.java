@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class IntroducaoFragment extends Fragment {
     private Button finalizar;
     private boolean passou1, passou2, passou3;
     private boolean exibir;
+    private MyApplication myApplication;
 
 
     public IntroducaoFragment() {
@@ -108,8 +110,6 @@ public class IntroducaoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 validarPerguntas();
-                Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-                //startActivity(intent);
             }
         });
         return view;
@@ -118,9 +118,11 @@ public class IntroducaoFragment extends Fragment {
     private void validarPerguntas() {
         validarCampos();
         if (!exibir) {
-            Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
+            myApplication.setPositionExercicio(1);
+            Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
+            startActivity(intent);
+            //Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
         }
-        //Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
     }
 
     private boolean validarCampos() {
@@ -191,6 +193,7 @@ public class IntroducaoFragment extends Fragment {
     }
 
     private void initViews(View view) {
+        myApplication = (MyApplication) getActivity().getApplicationContext();
         finalizar = (Button) view.findViewById(R.id.btn_finalizar);
         initCartas(view);
         initNum(view);

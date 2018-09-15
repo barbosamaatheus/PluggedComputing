@@ -11,6 +11,7 @@ import android.view.View;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
 
@@ -22,6 +23,7 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 public class ExerciciosActivity extends AppCompatActivity implements RecyclerViewOnClickListener {
     private RecyclerView mRecyclerView;
     private ExercicioAdapter mAdapter;
+    private MyApplication myApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,8 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new ExercicioAdapter(this, getExerciciosList());
+        myApplication = (MyApplication) getApplicationContext();
+        mAdapter = new ExercicioAdapter(this, getExerciciosList(), myApplication.getPositionExercicio());
         mAdapter.setRecyclerViewOnClickListener(this);
         mRecyclerView.setAdapter(mAdapter);
     }
