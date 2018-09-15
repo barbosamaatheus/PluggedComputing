@@ -63,6 +63,10 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     @Override
     public void onClickListener(View view, int positon) {
         Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("positon", positon+1);
+        Log.d("TarefaActivity", "positon: "+positon);
+        intent.putExtras(bundle);
         startActivity(intent);
         finish();
 
