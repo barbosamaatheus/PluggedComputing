@@ -9,5 +9,7 @@
        \n\nAs cartas abaixo estão representando o numero 9, aproveite e fique a vontade para experimentar outros numeros... </string>
     <string name="string_intro_03">
     </string>
+    <string name="textoSobre">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</string>
+    <string name="textoFimSobre">Desenvolvido por: \nMatheus Barbosa de Oliveira\nIvonildo Pereira Gomes Neto\nTodos os Direitos Reservados \n© 2018</string>
 
 </resources>

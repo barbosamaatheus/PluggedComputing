@@ -1,8 +1,13 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
@@ -25,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
                 startActivity(intent);
-                finish();
+            }
+        });
+        mSobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onCreateDialog();
             }
         });
 
@@ -33,5 +43,13 @@ public class MainActivity extends AppCompatActivity {
     private void initViews(){
         mInicar = (Button) findViewById(R.id.btn_iniciar);
         mSobre = (Button) findViewById(R.id.btn_sobre);
+    }
+
+    @SuppressLint("NewApi")
+    public void onCreateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setView(R.layout.alert_sobre);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
