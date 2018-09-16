@@ -186,7 +186,7 @@
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
-                    android:text="É duas vezes
+                    android:text="São duas vezes
 maior que o proximo"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="12sp" />
@@ -213,7 +213,7 @@ maior que o proximo"
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
-                    android:text="É a soma do proxim com o anterior"
+                    android:text="São a soma do proxim com o anterior"
                     android:textColor="@color/textColorPrimary"
                     android:textSize="12sp" />
             </RadioGroup>
