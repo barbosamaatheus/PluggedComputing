@@ -5,8 +5,8 @@
 
     <string name="string_intro_01">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
 
-    <string name="string_intro_02">Podemos usar estes cartões para representar números binarios. Cartas viradas para cima, representam o bit um, viradas para baixo o bit zero.
-       \n\nAs cartas abaixo estão representando o numero 9, aproveite e fique a vontade para experimentar outros numeros... </string>
+    <string name="string_intro_02">Podemos usar estes cartões para representar números binários. Cartas viradas para cima, representam o bit 1, viradas para baixo o bit 0.
+       \n\nAs cartas abaixo estão representando o numero 9. Aproveite e fique à vontade para experimentar outros numeros... </string>
     <string name="string_intro_03">
     </string>
     <string name="textoSobre">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</string>
