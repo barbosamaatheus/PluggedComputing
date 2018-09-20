@@ -58,6 +58,7 @@ public class IntroducaoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_introducao, container, false);
+
         initViews(view);
         validarCampos();
 
@@ -131,12 +132,6 @@ public class IntroducaoFragment extends Fragment {
         }
 
     }
-
-    private void restartFragment() {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.detach(this).attach(this).commit();
-    }
-
 
     private boolean validarCampos() {
         View focus = null;
@@ -312,6 +307,11 @@ public class IntroducaoFragment extends Fragment {
                 passou3 = false;
                 break;
         }
+    }
+
+    private void restartFragment() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
     }
 }
 

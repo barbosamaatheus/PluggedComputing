@@ -22,29 +22,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:orientation="vertical"
-                android:padding="5dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="casual"
                     android:justificationMode="inter_word"
-                    android:text="@string/textoSobre"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="@string/text_sobre"
+                    android:textColor="@color/textColorPrimary"
+                    android:layout_marginBottom="3dp"/>
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
-                    android:fontFamily="monospace"
+                    android:fontFamily="@font/bungee"
                     android:gravity="center"
                     android:justificationMode="inter_word"
                     android:text="@string/textoFimSobre"
                     android:textAlignment="center"
                     android:textColor="@color/textColorPrimary" />
+
+
             </LinearLayout>
+
 
         </android.support.v7.widget.CardView>
     </ScrollView>

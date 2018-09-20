@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">ComputacaoPlugada</string>
-    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
 
+    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
 
     <string name="string_intro_01">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
 
     <string name="string_intro_02">Podemos usar estes cartões para representar números binários. Cartas viradas para cima, representam o bit 1, viradas para baixo o bit 0.
        \n\nAs cartas abaixo estão representando o numero 9. Aproveite e fique à vontade para experimentar outros numeros... </string>
-    <string name="string_intro_03">
-    </string>
-    <string name="textoSobre">Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</string>
+
     <string name="textoFimSobre">Desenvolvido por: \nMatheus Barbosa de Oliveira\nIvonildo Pereira Gomes Neto\nTodos os Direitos Reservados \n© 2018</string>
+
+    <string name="text_sobre"><![CDATA[O aplicativo computação plugada, inspirado no livro de Bell, T.; Witten, I. e Fellows, M. (2011). “Computer Science Unplugged – Ensinando Ciência da Computação sem o uso do Computador”. Tradução de Luciano Porto Barreto, 2011. Disponível em: <http://csunplugged.org/>. Apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. O mesmo engloba técnicas fáceis para seu uso, tornando-se disponível para todos. Sua prática é fácil não só em salas de aula mas também fora, pela sua abordagem simples e inteligente, podendo ser fácil administrado por professores e compreendido por crianças. O aplicativo é uma grande inovação para as técnicas de aprendizagem, apresentando temas complexos de uma forma elementar para o conhecimento.]]></string>
 
 </resources>
