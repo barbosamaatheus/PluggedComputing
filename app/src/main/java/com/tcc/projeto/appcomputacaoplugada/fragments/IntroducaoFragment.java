@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +37,9 @@ public class IntroducaoFragment extends Fragment {
     private Carta carta01, carta02, carta04, carta08, carta16;
     private TextView perg1, perg2, perg3;
     private Button finalizar;
-    private boolean passou1, passou2, passou3;
+    private boolean passou1 = true;
+    private boolean passou2 = true;
+    private boolean passou3 = true;
     private boolean exibir;
     private MyApplication myApplication;
 
@@ -56,6 +59,7 @@ public class IntroducaoFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_introducao, container, false);
         initViews(view);
+        validarCampos();
 
         mCarta1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,8 +126,17 @@ public class IntroducaoFragment extends Fragment {
             Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
             startActivity(intent);
             //Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
+        } else {
+            restartFragment();
         }
+
     }
+
+    private void restartFragment() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
+    }
+
 
     private boolean validarCampos() {
         View focus = null;

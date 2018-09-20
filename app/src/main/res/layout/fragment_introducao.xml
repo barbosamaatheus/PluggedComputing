@@ -170,6 +170,8 @@
                 android:fontFamily="casual"
                 android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
                 android:textAlignment="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -235,7 +237,9 @@ maior que o proximo"
                 android:fontFamily="casual"
                 android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textColor="@color/textColorPrimary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup2"
@@ -296,7 +300,9 @@ maior que o proximo"
                 android:fontFamily="casual"
                 android:text="3. Como seria o número 17 em binário ?"
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textColor="@color/textColorPrimary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
