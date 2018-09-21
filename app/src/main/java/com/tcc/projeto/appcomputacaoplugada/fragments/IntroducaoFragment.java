@@ -1,10 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
+import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -16,17 +14,12 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
+import com.tcc.projeto.appcomputacaoplugada.activitys.MainActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
 public class IntroducaoFragment extends Fragment {
 
@@ -37,9 +30,7 @@ public class IntroducaoFragment extends Fragment {
     private Carta carta01, carta02, carta04, carta08, carta16;
     private TextView perg1, perg2, perg3;
     private Button finalizar;
-    private boolean passou1 = true;
-    private boolean passou2 = true;
-    private boolean passou3 = true;
+    private boolean passou1, passou2, passou3, checked;
     private boolean exibir;
     private MyApplication myApplication;
 
@@ -114,14 +105,15 @@ public class IntroducaoFragment extends Fragment {
         finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validarPerguntas();
+
+                validarCampos();
+                validarPerguntasSemRespostas();
+                validarAcertos();
             }
         });
         return view;
     }
-
-    private void validarPerguntas() {
-        validarCampos();
+    private void validarAcertos() {
         if (!exibir) {
             myApplication.setPositionExercicio(1);
             Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
@@ -132,31 +124,39 @@ public class IntroducaoFragment extends Fragment {
         }
 
     }
+    private void validarPerguntasSemRespostas() {
+        if(!this.checked){
+            this.exibir= true;
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage("Você esqueceu de responder alguma pergunta");
+            // Create the AlertDialog object and return it
+            builder.create().show();
 
-    private boolean validarCampos() {
+        }
+
+    }
+
+    private void validarCampos() {
         View focus = null;
         exibir = false;
         if (!passou1) {
-            perg1.setError("Resposta incorreta, tente outra opção");
+            perg1.setError("Resposta incorreta");
             focus = perg1;
             exibir = true;
         }
         if (!passou2) {
-            perg2.setError("Resposta incorreta, tente outra opção");
+            perg2.setError("Resposta incorreta");
             focus = perg2;
             exibir = true;
         }
         if (!passou3) {
-            perg3.setError("Resposta incorreta, tente outra opção");
+            perg3.setError("Resposta incorreta");
             focus = perg3;
             exibir = true;
-            Log.d("onRadioButtonClicked3", "exibir:" + exibir);
         }
         if (exibir) {
-            Log.d("onRadioButtonClicked3", "exibir: --" + exibir);
             focus.requestFocus();
         }
-        return exibir;
     }
 
     private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
@@ -200,6 +200,7 @@ public class IntroducaoFragment extends Fragment {
         }
     }
 
+
     private void initViews(View view) {
         myApplication = (MyApplication) getActivity().getApplicationContext();
         finalizar = (Button) view.findViewById(R.id.btn_finalizar);
@@ -208,8 +209,18 @@ public class IntroducaoFragment extends Fragment {
         createCartas();
         initRadioGroups(view);
         initPerguntas(view);
+        initBooleans();
 
     }
+
+    private void initBooleans() {
+        passou1 = true;
+        passou2 = true;
+        passou3 = true;
+        checked = false;
+
+    }
+
 
     private void initPerguntas(View view) {
         perg1 = (TextView) view.findViewById(R.id.perg1_intro);
@@ -261,6 +272,7 @@ public class IntroducaoFragment extends Fragment {
     }
 
     public void onRadioButtonClicked1(int checked) {
+        this.checked = true;
         passou1 = false;
         switch (checked) {
             case R.id.certo1:
@@ -276,6 +288,7 @@ public class IntroducaoFragment extends Fragment {
     }
 
     public void onRadioButtonClicked2(int checked) {
+        this.checked = true;
         passou2 = false;
         switch (checked) {
             case R.id.certo2:
@@ -292,6 +305,7 @@ public class IntroducaoFragment extends Fragment {
     }
 
     public void onRadioButtonClicked3(int checked) {
+        this.checked = true;
         passou3 = false;
         switch (checked) {
             case R.id.certo3:
