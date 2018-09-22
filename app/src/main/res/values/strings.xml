@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">ComputacaoPlugada</string>
 
-    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zerose uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
+    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
 
-    <string name="string_intro_01">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
+    <string name="texto_nb_02">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
 
     <string name="string_intro_02">Podemos usar estes cartões para representar números binários. Cartas viradas para cima, representam o bit 1, viradas para baixo o bit 0.
        \n\nAs cartas abaixo estão representando o número 9. Aproveite e fique à vontade para experimentar outros números... </string>
@@ -15,6 +15,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="texto_nb_01">Então, você achava que sabia contar ? Bem, aqui está uma nova forma de fazer isso ! Sabia que os computadores utilizam apenas zeros e uns ? Tudo o que você vê ou ouve no computador - palavras, imagens, números, filmes e até mesmo o som - são armazenados usando apenas estes dois numerais ! Estas atividades ensinarão como enviar mensagens secretas aos seus amigos usando exatamente o mesmo método que um computador.</string>
+    <string name="texto_nb_01">Então, você achava que sabia contar? Bem, aqui está uma nova forma de fazer isso! Sabia que os computadores utilizam apenas zeros e uns? Tudo o que você vê ou ouve no computador - palavras, imagens, números, filmes e até mesmo o som - são armazenados usando apenas estes dois numerais! Estas atividades ensinarão como enviar mensagens secretas aos seus amigos usando exatamente o mesmo método que um computador.</string>
+    <string name="texto_EMS">Tom está preso no último andar de uma loja. É noite de Natal e ele quer ir para casa com seus
+        presentes. O que ele pode fazer? Ele tentou chamar alguém, até mesmo gritar, mas não há ninguém por perto.
+        Do outro lado da rua ele pode ver uma pessoa ainda trabalhando em seu computador até tarde da noite.
+        Como ele poderia atrair sua atenção? Tom olha em volta para ver o que poderia usar.
+        Então, ele tem uma brilhante idéia: utilizar as lâmpadas da árvore de Natal para enviar uma mensagem!
+        Ele coletou todas as lâmpadas disponíveis e as conectou aos bocais de forma que pudesse acendê-las ou apagá-las.
+        Ele usou um código binário simples, que ele sabia ser de conhecimento da mulher do outro lado da rua.
+        Você pode identificar a mensagem enviada por Tom?</string>
 
 </resources>

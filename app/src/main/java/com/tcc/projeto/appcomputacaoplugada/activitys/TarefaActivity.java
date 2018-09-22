@@ -9,7 +9,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.fragments.EnviarMensagensSecretasFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.IntroducaoFragment;
+import com.tcc.projeto.appcomputacaoplugada.fragments.NumerosBinariosFragment;
+import com.tcc.projeto.appcomputacaoplugada.fragments.TrabalharComNumerosBinariosFragment;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
@@ -67,15 +70,24 @@ public class TarefaActivity extends AppCompatActivity {
     }
 
     private void initFragment2() {
-        Toast.makeText(getApplicationContext(), "Fragment2", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        NumerosBinariosFragment numerosBinariosFragment = new NumerosBinariosFragment();
+        ft.add(R.id.fragment_content, numerosBinariosFragment);
+        ft.commit();
     }
 
     private void initFragment3() {
-        Toast.makeText(getApplicationContext(), "Fragment3", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        TrabalharComNumerosBinariosFragment trabalharComNumerosBinariosFragment = new TrabalharComNumerosBinariosFragment();
+        ft.add(R.id.fragment_content, trabalharComNumerosBinariosFragment);
+        ft.commit();
     }
 
     private void initFragment4() {
-        Toast.makeText(getApplicationContext(), "Fragment4", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        EnviarMensagensSecretasFragment enviarMensagensSecretasFragment = new EnviarMensagensSecretasFragment();
+        ft.add(R.id.fragment_content, enviarMensagensSecretasFragment);
+        ft.commit();
     }
 
     private void initFragment5() {
