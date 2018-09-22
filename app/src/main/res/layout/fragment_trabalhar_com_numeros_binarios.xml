@@ -1,14 +1,381 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fundo"
+    android:orientation="vertical"
     tools:context=".fragments.TrabalharComNumerosBinariosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:justificationMode="inter_word"
+                android:text="@string/texto_tnb"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/x" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num1TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/mao" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num2TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/seta" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num3TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/xx" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num4TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/bola" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num5TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/setas_giratorias" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num6TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/correios" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num7TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/triangulo" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num8TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/rosto" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num9TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/cardshape"
+                android:elevation="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="@mipmap/naipe" />
+
+                <EditText
+                    android:fontFamily="casual"
+                    android:textStyle="bold"
+                    android:id="@+id/num10TNB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="..."
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_finalizar_tnb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/bungee"
+            android:text="Finalizar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</ScrollView>

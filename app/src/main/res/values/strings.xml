@@ -24,5 +24,6 @@
         Ele coletou todas as lâmpadas disponíveis e as conectou aos bocais de forma que pudesse acendê-las ou apagá-las.
         Ele usou um código binário simples, que ele sabia ser de conhecimento da mulher do outro lado da rua.
         Você pode identificar a mensagem enviada por Tom?</string>
+    <string name="texto_tnb">O sistema binário utiliza o zero e o um para representar se um cartão está virado para cima ou não. O 0 indica que os pontos do cartão estão escondidos, e o 1 significa que os pontos do cartão são visíveis. Tente decifrar os seguintes números codificados:</string>
 
 </resources>
