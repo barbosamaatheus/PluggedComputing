@@ -13,4 +13,8 @@
     <string name="text_sobre"><![CDATA[O aplicativo computação plugada, inspirado no livro de Bell, T.; Witten, I. e Fellows, M. (2011). “Computer Science Unplugged – Ensinando Ciência da Computação sem o uso do Computador”. Tradução de Luciano Porto Barreto, 2011. Disponível em: <http://csunplugged.org/>. Apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. O mesmo engloba técnicas fáceis para seu uso, tornando-se disponível para todos. Sua prática é fácil não só em salas de aula mas também fora, pela sua abordagem simples e inteligente, podendo ser fácil administrado por professores e compreendido por crianças. O aplicativo é uma grande inovação para as técnicas de aprendizagem, apresentando temas complexos de uma forma elementar para o conhecimento.]]></string>
     <string name="texto_alert_sem_resposta">Parace que você não respondeu todas as perguntas... \nArrisque-se, marque alguma opção!</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto_nb_01">Então, você achava que sabia contar ? Bem, aqui está uma nova forma de fazer isso ! Sabia que os computadores utilizam apenas zeros e uns ? Tudo o que você vê ou ouve no computador - palavras, imagens, números, filmes e até mesmo o som - são armazenados usando apenas estes dois numerais ! Estas atividades ensinarão como enviar mensagens secretas aos seus amigos usando exatamente o mesmo método que um computador.</string>
+
 </resources>
