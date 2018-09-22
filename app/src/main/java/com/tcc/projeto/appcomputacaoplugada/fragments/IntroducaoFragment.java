@@ -2,10 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -17,18 +14,11 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
-import com.tcc.projeto.appcomputacaoplugada.activitys.MainActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
 
 public class IntroducaoFragment extends Fragment {
 
@@ -119,23 +109,22 @@ public class IntroducaoFragment extends Fragment {
         finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (respostasIsEmpty()){
+                if (respostasIsEmpty()) {
                     onCreateDialog();
-                }else {
+                } else {
                     validarCampos();
-                    validarPerguntas();
+                    gerenciarResultados();
                 }
             }
         });
         return view;
     }
 
-    private void validarPerguntas() {
+    private void gerenciarResultados() {
 
         if (!exibir) {
             myApplication.setPositionExercicio(1);
-            Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-            startActivity(intent);
+            callNextFragment();
             //Toast.makeText(getContext().getApplicationContext(), "Sucesso", Toast.LENGTH_LONG).show();
         } else {
             restartFragment();
@@ -143,11 +132,11 @@ public class IntroducaoFragment extends Fragment {
 
     }
 
-    private boolean respostasIsEmpty(){
+    private boolean respostasIsEmpty() {
         boolean isEmpty;
-        if(!checked1 || !checked2 || !checked3){
+        if (!checked1 || !checked2 || !checked3) {
             isEmpty = true;
-        }else{
+        } else {
             isEmpty = false;
         }
         return isEmpty;
@@ -185,7 +174,6 @@ public class IntroducaoFragment extends Fragment {
         } else {
             num.setText("0");
         }
-
     }
 
     private void alterarEstadoCarta(Carta carta) {
@@ -274,8 +262,6 @@ public class IntroducaoFragment extends Fragment {
         carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, false);
         carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
         carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, false);
-
-
     }
 
     public void onRadioButtonClicked1(int checked) {
@@ -334,10 +320,16 @@ public class IntroducaoFragment extends Fragment {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(this).attach(this).commit();
     }
+
     public void onCreateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
         builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    private void callNextFragment() {
+        Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
+        startActivity(intent);
     }
 }

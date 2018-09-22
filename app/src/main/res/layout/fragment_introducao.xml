@@ -73,8 +73,8 @@
                     android:id="@+id/carta2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
+                    android:layout_weight="1"
                     android:background="@mipmap/fundocarta" />
 
                 <ImageButton
@@ -97,11 +97,11 @@
                     android:id="@+id/num16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
-                    android:textAlignment="center"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="0"
+                    android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
 
@@ -109,11 +109,11 @@
                     android:id="@+id/num8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
-                    android:textAlignment="center"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="1"
+                    android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
 
@@ -121,11 +121,11 @@
                     android:id="@+id/num4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
-                    android:textAlignment="center"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="0"
+                    android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
 
@@ -133,11 +133,11 @@
                     android:id="@+id/num2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
-                    android:textAlignment="center"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:text="0"
+                    android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
 
@@ -145,10 +145,10 @@
                     android:id="@+id/num1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_margin="3dp"
-                    android:textAlignment="center"
+                    android:layout_weight="1"
                     android:text="1"
+                    android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -167,11 +167,12 @@
                 android:id="@+id/perg1_intro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:fontFamily="casual"
                 android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
                 android:textAlignment="center"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -188,11 +189,10 @@
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
-                    android:textAlignment="center"
                     android:text="São duas vezes
 maior que o próximo"
-                    android:textColor="@color/textColorPrimary"
-                    />
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/errado11"
@@ -202,10 +202,9 @@ maior que o próximo"
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
-                    android:textAlignment="center"
                     android:text="São valores aleatórios"
-                    android:textColor="@color/textColorPrimary"
-                    />
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
                     android:id="@+id/errado12"
@@ -215,10 +214,9 @@ maior que o próximo"
                     android:layout_weight="1"
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
-                    android:textAlignment="center"
                     android:text="São a soma do próximo com o anterior"
-                    android:textColor="@color/textColorPrimary"
-                    />
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
             </RadioGroup>
         </LinearLayout>
 
@@ -234,12 +232,13 @@ maior que o próximo"
                 android:id="@+id/perg2_intro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:fontFamily="casual"
                 android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:focusable="true"
-                android:focusableInTouchMode="true"/>
+                android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup2"
@@ -297,12 +296,13 @@ maior que o próximo"
                 android:id="@+id/perg3_intro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:fontFamily="casual"
                 android:text="3. Como seria o número 17 em binário ?"
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:focusable="true"
-                android:focusableInTouchMode="true"/>
+                android:textColor="@color/textColorPrimary" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
