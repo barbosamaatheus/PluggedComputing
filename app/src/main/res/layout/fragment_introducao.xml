@@ -190,7 +190,7 @@
                     android:fontFamily="@font/bungee"
                     android:textAlignment="center"
                     android:text="São duas vezes
-maior que o proximo"
+maior que o próximo"
                     android:textColor="@color/textColorPrimary"
                     />
 
@@ -216,7 +216,7 @@ maior que o proximo"
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
                     android:textAlignment="center"
-                    android:text="São a soma do proxim com o anterior"
+                    android:text="São a soma do próximo com o anterior"
                     android:textColor="@color/textColorPrimary"
                     />
             </RadioGroup>
