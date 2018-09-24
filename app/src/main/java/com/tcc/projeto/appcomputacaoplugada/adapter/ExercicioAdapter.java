@@ -47,11 +47,15 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
-        if (position <= (estado - 1)){
-            setVisibility(holder);
+        if(position!=0){
+            holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }
-        Log.d("onBindViewHolder", "position " + position);
-        //Log.d("onBindViewHolder", "getTituloEX " + mList.get(position).getTitulo());
+        if (position <= (estado - 1)){
+            holder.mCheck.setBackgroundResource(R.drawable.ic_check_black_24dp);
+        }
+        if (position == (estado)){
+            holder.mCheck.setVisibility(View.GONE);
+        }
     }
 
     @Override

@@ -12,11 +12,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
 public class MainActivity extends AppCompatActivity {
     private Button mInicar, mSobre;
+    private MyApplication myApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myApplication.setPositionExercicio(0);
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
                 startActivity(intent);
             }
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void initViews(){
+        myApplication = (MyApplication) getApplicationContext();
         mInicar = (Button) findViewById(R.id.btn_iniciar);
         mSobre = (Button) findViewById(R.id.btn_sobre);
     }

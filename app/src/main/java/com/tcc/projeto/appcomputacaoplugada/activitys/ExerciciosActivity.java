@@ -1,5 +1,6 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,12 +59,25 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-        Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("positon", positon + 1);
-        intent.putExtras(bundle);
-        startActivity(intent);
+        Log.d("positon", "onClickListener: " + positon +  "--" + 0 + myApplication.getPositionExercicio());
+        if (positon <= myApplication.getPositionExercicio()) {
+            Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("positon", positon + 1);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        } else {
+            onCreateDialog();
+        }
+
     }
 
+    public void onCreateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ExerciciosActivity.this, R.style.DialogStyle);
+        builder.setMessage("Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear")
+                .setTitle("Algo deu errado :(");
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 }
 
