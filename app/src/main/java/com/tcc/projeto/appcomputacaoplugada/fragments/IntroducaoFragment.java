@@ -15,6 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.tcc.projeto.appcomputacaoplugada.CartasFragment;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -49,7 +50,9 @@ public class IntroducaoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_introducao, container, false);
 
         initViews(view);
-        validarCampos();
+        if (!respostasIsEmpty()) {
+            validarCampos();
+        }
 
         mCarta1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,23 +164,16 @@ public class IntroducaoFragment extends Fragment {
     }
 
     private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
-        alterarEstadoCarta(carta);
-        mCarta.setBackgroundResource(carta.getImagem());
-        if (carta.isFrente()) {
-            num.setText("1");
-        } else {
-            num.setText("0");
-        }
-    }
-
-    private void alterarEstadoCarta(Carta carta) {
         if (carta.isFrente()) {
             carta.setFrente(false);
             carta.setImagem(R.mipmap.fundocarta);
+            num.setText("1");
         } else {
             carta.setFrente(true);
             mudarImagem(carta);
+            num.setText("0");
         }
+        mCarta.setBackgroundResource(carta.getImagem());
     }
 
     private void mudarImagem(Carta carta) {
@@ -297,14 +293,11 @@ public class IntroducaoFragment extends Fragment {
         switch (checked) {
             case R.id.certo3:
                 passou3 = true;
-                Log.d("onRadioButtonClicked3", "certo3");
                 break;
             case R.id.errado31:
-                Log.d("onRadioButtonClicked3", "errado31");
                 passou3 = false;
                 break;
             case R.id.errado32:
-                Log.d("onRadioButtonClicked3", "errado32");
                 passou3 = false;
                 break;
         }

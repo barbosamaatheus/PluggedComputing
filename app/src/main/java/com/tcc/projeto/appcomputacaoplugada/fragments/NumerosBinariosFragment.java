@@ -167,23 +167,16 @@ public class NumerosBinariosFragment extends Fragment {
     }
 
     private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
-        alterarEstadoCarta(carta);
-        mCarta.setBackgroundResource(carta.getImagem());
-        if (carta.isFrente()) {
-            num.setText("1");
-        } else {
-            num.setText("0");
-        }
-    }
-
-    private void alterarEstadoCarta(Carta carta) {
         if (carta.isFrente()) {
             carta.setFrente(false);
             carta.setImagem(R.mipmap.fundocarta);
+            num.setText("1");
         } else {
             carta.setFrente(true);
             mudarImagem(carta);
+            num.setText("0");
         }
+        mCarta.setBackgroundResource(carta.getImagem());
     }
 
     private void mudarImagem(Carta carta) {
