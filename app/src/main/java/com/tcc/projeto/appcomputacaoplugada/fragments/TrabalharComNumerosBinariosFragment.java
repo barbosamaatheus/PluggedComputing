@@ -21,8 +21,6 @@ import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 
 public class TrabalharComNumerosBinariosFragment extends MyFragments {
-    private EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10;
-    private Button mFinalizar;
 
     public TrabalharComNumerosBinariosFragment() {
         // Required empty public constructor
@@ -33,9 +31,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_trabalhar_com_numeros_binarios, container, false);
         initViews(view);
-        if (!respostasIsEmpty()) {
-            validarCampos();
-        }
+        initVerify();
 
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,30 +40,17 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados(3);
+                    gerenciarResultados(3, getActivity());
                 }
             }
         });
         return view;
     }
 
-    protected void gerenciarResultados(int position) {
-        if (!exibir) {
-            editarPositionExercicio(position);
-            callNextFragment();
-        } else {
-            restartFragment();
-        }
 
-    }
-
-    private void editarPositionExercicio(int position) {
-        myApplication.setPositionExercicio(position);
-    }
 
     @Override
     protected boolean validarCampos() {
-        Log.d("Numeros", "validarCampos: " + num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10);
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("9")) {

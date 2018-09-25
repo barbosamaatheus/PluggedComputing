@@ -20,11 +20,8 @@ import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
-    private EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11, mNum12, mNum13, mNum14, mNum15, mTextoTraduzido;
-    private TextView mNumerosSelecionados;
-    private Button mFinalizar, mGetNumeros;
+    private Button mGetNumeros;
     private String textoTraduzido = "";
-
 
     public EnviarMensagensSecretasFragment() {
         // Required empty public constructor
@@ -36,10 +33,8 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
         View view = inflater.inflate(R.layout.fragment_enviar_mensagens_secretas, container, false);
         initViews(view);
-        if (!respostasIsEmpty()) {
-            mNumerosSelecionados.setText(montarNumeros());
-            validarCampos();
-        }
+        initVerify();
+        mNumerosSelecionados.setText(montarNumeros());
 
         mGetNumeros.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,26 +50,12 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados(4);
+                    gerenciarResultados(4, getActivity());
                 }
             }
         });
 
         return view;
-    }
-
-    protected void gerenciarResultados(int position) {
-        if (!exibir) {
-            editarPositionExercicio(position);
-            callNextFragment();
-        } else {
-            restartFragment();
-        }
-
-    }
-
-    private void editarPositionExercicio(int position) {
-        myApplication.setPositionExercicio(position);
     }
 
     private void validarClicked() {
@@ -122,7 +103,6 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         num14 = mNum14.getText().toString();
         num15 = mNum15.getText().toString();
         textoTraduzido = mTextoTraduzido.getText().toString();
-        Log.d("getTextDoEditText", "getTextDoEditText: " + num1);
     }
 
     private boolean validarTexto() {
@@ -243,6 +223,17 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
+        initEditText(view);
+
+        mNumerosSelecionados = (TextView) view.findViewById(R.id.numerosSelecionados);
+
+        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_ems);
+        mGetNumeros = (Button) view.findViewById(R.id.getNumeros);
+    }
+
+    private void initEditText(View view) {
+        mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
+
         mNum1 = (EditText) view.findViewById(R.id.num1EMS);
         mNum2 = (EditText) view.findViewById(R.id.num2EMS);
         mNum3 = (EditText) view.findViewById(R.id.num3EMS);
@@ -260,13 +251,6 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         mNum13 = (EditText) view.findViewById(R.id.num13EMS);
         mNum14 = (EditText) view.findViewById(R.id.num14EMS);
         mNum15 = (EditText) view.findViewById(R.id.num15EMS);
-
-        mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
-
-        mNumerosSelecionados = (TextView) view.findViewById(R.id.numerosSelecionados);
-
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_ems);
-        mGetNumeros = (Button) view.findViewById(R.id.getNumeros);
     }
 
 }

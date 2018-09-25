@@ -25,17 +25,11 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 
 public class NumerosBinariosFragment extends MyFragments {
-    private ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16;
-    private TextView num1, num2, num4, num8, num16;
-    private RadioGroup radioGroup2, radioGroup3;
-    private RadioButton certo1, certo2, certo3, errado11, errado12, errado21, errado22, errado31, errado32;
-    private Carta carta01, carta02, carta04, carta08, carta16;
-    private TextView perg1, perg2, perg3;
-    private Button finalizar;
+
     private EditText mMaiorValor, mMenorValor;
     private String maiorValor = "";
     private String menorValor = "";
-    private MyApplication myApplication;
+
 
     public NumerosBinariosFragment() {
         // Required empty public constructor
@@ -48,40 +42,37 @@ public class NumerosBinariosFragment extends MyFragments {
         View view = inflater.inflate(R.layout.fragment_numeros_binarios, container, false);
 
         initViews(view);
-        if (!respostasIsEmpty()) {
-            validarCampos();
-        }
-
+        initVerify();
 
         mCarta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta01, num1, mCarta1);
+                virarCarta(carta01, numTxt1, mCarta1);
             }
         });
         mCarta2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta02, num2, mCarta2);
+                virarCarta(carta02, numTxt2, mCarta2);
 
             }
         });
         mCarta4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta04, num4, mCarta4);
+                virarCarta(carta04, numTxt4, mCarta4);
             }
         });
         mCarta8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta08, num8, mCarta8);
+                virarCarta(carta08, numTxt8, mCarta8);
             }
         });
         mCarta16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta16, num16, mCarta16);
+                virarCarta(carta16, numTxt16, mCarta16);
             }
         });
         radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -96,14 +87,14 @@ public class NumerosBinariosFragment extends MyFragments {
                 onRadioButtonClicked3(checkedId);
             }
         });
-        finalizar.setOnClickListener(new View.OnClickListener() {
+        mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados(2);
+                    gerenciarResultados(2, getActivity());
                 }
             }
         });
@@ -111,19 +102,6 @@ public class NumerosBinariosFragment extends MyFragments {
         return view;
     }
 
-    protected void gerenciarResultados(int position) {
-        if (!exibir) {
-            editarPositionExercicio(position);
-            callNextFragment();
-        } else {
-            restartFragment();
-        }
-
-    }
-
-    private void editarPositionExercicio(int position) {
-        myApplication.setPositionExercicio(position);
-    }
 
     @Override
     protected boolean respostasIsEmpty() {
@@ -170,7 +148,7 @@ public class NumerosBinariosFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        finalizar = (Button) view.findViewById(R.id.btn_finalizar_nb);
+        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_nb);
         mMaiorValor = (EditText) view.findViewById(R.id.valorMaiorNB);
         mMenorValor = (EditText) view.findViewById(R.id.valorMenorNB);
         initCartas(view);
@@ -200,11 +178,11 @@ public class NumerosBinariosFragment extends MyFragments {
     }
 
     private void initNum(View view) {
-        num1 = (TextView) view.findViewById(R.id.num1NB);
-        num2 = (TextView) view.findViewById(R.id.num2NB);
-        num4 = (TextView) view.findViewById(R.id.num4NB);
-        num8 = (TextView) view.findViewById(R.id.num8NB);
-        num16 = (TextView) view.findViewById(R.id.num16NB);
+        numTxt1 = (TextView) view.findViewById(R.id.num1NB);
+        numTxt2 = (TextView) view.findViewById(R.id.num2NB);
+        numTxt4 = (TextView) view.findViewById(R.id.num4NB);
+        numTxt8 = (TextView) view.findViewById(R.id.num8NB);
+        numTxt16 = (TextView) view.findViewById(R.id.num16NB);
     }
 
     private void initCartas(View view) {

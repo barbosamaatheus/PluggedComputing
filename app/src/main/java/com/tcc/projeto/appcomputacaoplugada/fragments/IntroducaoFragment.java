@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,14 +23,6 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 public class IntroducaoFragment extends MyFragments {
 
-    private ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16;
-    private TextView num1, num2, num4, num8, num16;
-    private RadioGroup radioGroup1, radioGroup2, radioGroup3;
-    private RadioButton certo1, certo2, certo3, errado11, errado12, errado21, errado22, errado31, errado32;
-    private Carta carta01, carta02, carta04, carta08, carta16;
-    private TextView perg1, perg2, perg3;
-    private Button finalizar;
-
     public IntroducaoFragment() {
         // Required empty public constructor
     }
@@ -40,37 +33,36 @@ public class IntroducaoFragment extends MyFragments {
         View view = inflater.inflate(R.layout.fragment_introducao, container, false);
 
         initViews(view);
-        if (!respostasIsEmpty()) {
-            validarCampos();
-        }
+        initVerify();
+
         mCarta1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta01, num1, mCarta1);
+                virarCarta(carta01, numTxt1, mCarta1);
             }
         });
         mCarta2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta02, num2, mCarta2);
+                virarCarta(carta02, numTxt2, mCarta2);
             }
         });
         mCarta4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta04, num4, mCarta4);
+                virarCarta(carta04, numTxt4, mCarta4);
             }
         });
         mCarta8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta08, num8, mCarta8);
+                virarCarta(carta08, numTxt8, mCarta8);
             }
         });
         mCarta16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                virarCarta(carta16, num16, mCarta16);
+                virarCarta(carta16, numTxt16, mCarta16);
             }
         });
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -91,33 +83,20 @@ public class IntroducaoFragment extends MyFragments {
                 onRadioButtonClicked3(checkedId);
             }
         });
-        finalizar.setOnClickListener(new View.OnClickListener() {
+        mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados(1);
+                    gerenciarResultados(1, getActivity());
                 }
             }
         });
         return view;
     }
 
-    protected void gerenciarResultados(int position) {
-        if (!exibir) {
-            editarPositionExercicio(position);
-            callNextFragment();
-        } else {
-            restartFragment();
-        }
-
-    }
-
-    private void editarPositionExercicio(int position) {
-        myApplication.setPositionExercicio(position);
-    }
 
     @Override
     protected boolean validarCampos() {
@@ -156,18 +135,25 @@ public class IntroducaoFragment extends MyFragments {
 
     }
 
+    @Override
+    protected void createCartas() {
+        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
+        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, false);
+        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, false);
+        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
+        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, false);
+    }
 
     @Override
     protected void initViews(View view) {
-        finalizar = (Button) view.findViewById(R.id.btn_finalizar);
+        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar);
         initCartas(view);
         initNum(view);
         createCartas();
         initRadioGroups(view);
         initPerguntas(view);
-
     }
-
+    
     private void initPerguntas(View view) {
         perg1 = (TextView) view.findViewById(R.id.perg1_intro);
         perg2 = (TextView) view.findViewById(R.id.perg2_intro);
@@ -192,11 +178,11 @@ public class IntroducaoFragment extends MyFragments {
     }
 
     private void initNum(View view) {
-        num1 = (TextView) view.findViewById(R.id.num1);
-        num2 = (TextView) view.findViewById(R.id.num2);
-        num4 = (TextView) view.findViewById(R.id.num4);
-        num8 = (TextView) view.findViewById(R.id.num8);
-        num16 = (TextView) view.findViewById(R.id.num16);
+        numTxt1 = (TextView) view.findViewById(R.id.num1);
+        numTxt2 = (TextView) view.findViewById(R.id.num2);
+        numTxt4 = (TextView) view.findViewById(R.id.num4);
+        numTxt8 = (TextView) view.findViewById(R.id.num8);
+        numTxt16 = (TextView) view.findViewById(R.id.num16);
     }
 
     private void initCartas(View view) {
@@ -205,15 +191,6 @@ public class IntroducaoFragment extends MyFragments {
         mCarta4 = (ImageButton) view.findViewById(R.id.carta4);
         mCarta8 = (ImageButton) view.findViewById(R.id.carta8);
         mCarta16 = (ImageButton) view.findViewById(R.id.carta16);
-    }
-
-    @Override
-    protected void createCartas() {
-        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
-        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, false);
-        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, false);
-        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
-        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, false);
     }
 
 
