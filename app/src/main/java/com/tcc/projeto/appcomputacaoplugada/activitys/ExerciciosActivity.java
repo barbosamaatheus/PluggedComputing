@@ -59,12 +59,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-        Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putInt("positon", positon + 1);
-        intent.putExtras(bundle);
-        startActivity(intent);
-        /*if (positon <= myApplication.getPositionExercicio()) {
+        if (positon <= myApplication.getPositionExercicio()) {
             Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
             Bundle bundle = new Bundle();
             bundle.putInt("positon", positon + 1);
@@ -72,7 +67,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
             startActivity(intent);
         } else {
             onCreateDialog();
-        }*/
+        }
 
     }
 

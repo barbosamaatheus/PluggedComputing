@@ -74,7 +74,7 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
     }
 
     private boolean validarCampos() {
-        Log.d("Numeros", "validarCampos: " + num1+num2+num3+num4+num5+num6+num7+num8+num9+num10 );
+        Log.d("Numeros", "validarCampos: " + num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10);
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("9")) {
