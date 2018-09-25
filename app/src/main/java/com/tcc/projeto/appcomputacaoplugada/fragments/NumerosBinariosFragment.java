@@ -24,7 +24,7 @@ import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 
-public class NumerosBinariosFragment extends Fragment {
+public class NumerosBinariosFragment extends MyFragments {
     private ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16;
     private TextView num1, num2, num4, num8, num16;
     private RadioGroup radioGroup2, radioGroup3;
@@ -33,12 +33,6 @@ public class NumerosBinariosFragment extends Fragment {
     private TextView perg1, perg2, perg3;
     private Button finalizar;
     private EditText mMaiorValor, mMenorValor;
-    private boolean passou2 = true;
-    private boolean passou3 = true;
-    private boolean checked1 = false;
-    private boolean checked3 = false;
-    private boolean checked2 = false;
-    private boolean exibir;
     private String maiorValor = "";
     private String menorValor = "";
     private MyApplication myApplication;
@@ -109,7 +103,7 @@ public class NumerosBinariosFragment extends Fragment {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados();
+                    gerenciarResultados(2);
                 }
             }
         });
@@ -117,16 +111,22 @@ public class NumerosBinariosFragment extends Fragment {
         return view;
     }
 
-    private void gerenciarResultados() {
+    protected void gerenciarResultados(int position) {
         if (!exibir) {
-            myApplication.setPositionExercicio(2);
+            editarPositionExercicio(position);
             callNextFragment();
         } else {
             restartFragment();
         }
+
     }
 
-    private boolean respostasIsEmpty() {
+    private void editarPositionExercicio(int position) {
+        myApplication.setPositionExercicio(position);
+    }
+
+    @Override
+    protected boolean respostasIsEmpty() {
         validarClicked1();
         boolean isEmpty;
         if (!checked1 || !checked2 || !checked3) {
@@ -137,7 +137,8 @@ public class NumerosBinariosFragment extends Fragment {
         return isEmpty;
     }
 
-    private boolean validarCampos() {
+    @Override
+    protected boolean validarCampos() {
         View focus = null;
         exibir = false;
         if (!maiorValor.equals("31")) {
@@ -166,41 +167,9 @@ public class NumerosBinariosFragment extends Fragment {
         return exibir;
     }
 
-    private void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
-        if (carta.isFrente()) {
-            carta.setFrente(false);
-            carta.setImagem(R.mipmap.fundocarta);
-            num.setText("0");
-        } else {
-            carta.setFrente(true);
-            mudarImagem(carta);
-            num.setText("");
-        }
-        mCarta.setBackgroundResource(carta.getImagem());
-    }
 
-    private void mudarImagem(Carta carta) {
-        switch (carta.getNumero()) {
-            case 1:
-                carta.setImagem(R.mipmap.carta1);
-                break;
-            case 2:
-                carta.setImagem(R.mipmap.carta2);
-                break;
-            case 4:
-                carta.setImagem(R.mipmap.carta4);
-                break;
-            case 8:
-                carta.setImagem(R.mipmap.carta8);
-                break;
-            case 16:
-                carta.setImagem(R.mipmap.carta16);
-                break;
-        }
-    }
-
-    private void initViews(View view) {
-        myApplication = (MyApplication) getActivity().getApplicationContext();
+    @Override
+    protected void initViews(View view) {
         finalizar = (Button) view.findViewById(R.id.btn_finalizar_nb);
         mMaiorValor = (EditText) view.findViewById(R.id.valorMaiorNB);
         mMenorValor = (EditText) view.findViewById(R.id.valorMenorNB);
@@ -246,7 +215,8 @@ public class NumerosBinariosFragment extends Fragment {
         mCarta16 = (ImageButton) view.findViewById(R.id.carta16NB);
     }
 
-    private void createCartas() {
+    @Override
+    protected void createCartas() {
         carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
         carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
         carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, true);
@@ -262,9 +232,9 @@ public class NumerosBinariosFragment extends Fragment {
             this.menorValor = mMenorValor.getText().toString();
             checked1 = true;
         }
-        if (maiorValor.isEmpty() || menorValor.isEmpty()){
+        if (maiorValor.isEmpty() || menorValor.isEmpty()) {
             checked1 = false;
-        }else {
+        } else {
             checked1 = true;
         }
     }
@@ -302,20 +272,4 @@ public class NumerosBinariosFragment extends Fragment {
         }
     }
 
-    private void restartFragment() {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.detach(this).attach(this).commit();
-    }
-
-    public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
-        builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-    private void callNextFragment() {
-        Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-        startActivity(intent);
-    }
 }

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,28 +19,10 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
-public class EnviarMensagensSecretasFragment extends Fragment {
+public class EnviarMensagensSecretasFragment extends MyFragments {
     private EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11, mNum12, mNum13, mNum14, mNum15, mTextoTraduzido;
     private TextView mNumerosSelecionados;
     private Button mFinalizar, mGetNumeros;
-    private boolean checked = false;
-    private MyApplication myApplication;
-    private boolean exibir;
-    private String num1 = "";
-    private String num2 = "";
-    private String num3 = "";
-    private String num4 = "";
-    private String num5 = "";
-    private String num6 = "";
-    private String num7 = "";
-    private String num8 = "";
-    private String num9 = "";
-    private String num10 = "";
-    private String num11 = "";
-    private String num12 = "";
-    private String num13 = "";
-    private String num14 = "";
-    private String num15 = "";
     private String textoTraduzido = "";
 
 
@@ -61,6 +44,7 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         mGetNumeros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                validarClicked();
                 mNumerosSelecionados.setText(montarNumeros());
             }
         });
@@ -71,7 +55,7 @@ public class EnviarMensagensSecretasFragment extends Fragment {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados();
+                    gerenciarResultados(4);
                 }
             }
         });
@@ -79,9 +63,9 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         return view;
     }
 
-    private void gerenciarResultados() {
+    protected void gerenciarResultados(int position) {
         if (!exibir) {
-            myApplication.setPositionExercicio(4);
+            editarPositionExercicio(position);
             callNextFragment();
         } else {
             restartFragment();
@@ -89,7 +73,72 @@ public class EnviarMensagensSecretasFragment extends Fragment {
 
     }
 
-    private boolean validarCampos() {
+    private void editarPositionExercicio(int position) {
+        myApplication.setPositionExercicio(position);
+    }
+
+    private void validarClicked() {
+        if (mNum1.getText().toString().isEmpty() || mNum2.getText().toString().isEmpty() || mNum3.getText().toString().isEmpty() ||
+                mNum4.getText().toString().isEmpty() || mNum5.getText().toString().isEmpty() || mNum6.getText().toString().isEmpty() ||
+                mNum7.getText().toString().isEmpty() || mNum8.getText().toString().isEmpty() || mNum9.getText().toString().isEmpty() ||
+                mNum10.getText().toString().isEmpty() || mNum11.getText().toString().isEmpty() || mNum12.getText().toString().isEmpty() ||
+                mNum13.getText().toString().isEmpty() || mNum14.getText().toString().isEmpty() || mNum15.getText().toString().isEmpty()) {
+            checked1 = false;
+        } else {
+            getTextDoEditText();
+            checked1 = true;
+        }
+
+        if (num1.isEmpty() || num2.isEmpty() || num3.isEmpty() ||
+                num4.isEmpty() || num5.isEmpty() || num6.isEmpty() ||
+                num7.isEmpty() || num8.isEmpty() || num9.isEmpty() ||
+                num10.isEmpty() || num11.isEmpty() || num12.isEmpty() ||
+                num13.isEmpty() || num14.isEmpty() || num15.isEmpty() || textoTraduzido.isEmpty()) {
+            checked1 = false;
+        } else {
+            checked1 = true;
+        }
+        if (textoTraduzido.isEmpty()) {
+            checked1 = false;
+        } else {
+            checked1 = true;
+        }
+    }
+
+    private void getTextDoEditText() {
+        num1 = mNum1.getText().toString();
+        num2 = mNum2.getText().toString();
+        num3 = mNum3.getText().toString();
+        num4 = mNum4.getText().toString();
+        num5 = mNum5.getText().toString();
+        num6 = mNum6.getText().toString();
+        num7 = mNum7.getText().toString();
+        num8 = mNum8.getText().toString();
+        num9 = mNum9.getText().toString();
+        num10 = mNum10.getText().toString();
+        num11 = mNum11.getText().toString();
+        num12 = mNum12.getText().toString();
+        num13 = mNum13.getText().toString();
+        num14 = mNum14.getText().toString();
+        num15 = mNum15.getText().toString();
+        textoTraduzido = mTextoTraduzido.getText().toString();
+        Log.d("getTextDoEditText", "getTextDoEditText: " + num1);
+    }
+
+    private boolean validarTexto() {
+        boolean certo;
+        String textoTraduzido = mTextoTraduzido.getText().toString();
+        String respostaCorreta = "ajude estou preso";
+        if (textoTraduzido.equalsIgnoreCase(respostaCorreta)) {
+            certo = true;
+        } else {
+            certo = false;
+        }
+        return certo;
+    }
+
+    @Override
+    protected boolean validarCampos() {
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("1")) {
@@ -180,70 +229,11 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         return exibir;
     }
 
-    private void validarClicked() {
-        if (mNum1.getText().toString().isEmpty() || mNum2.getText().toString().isEmpty() || mNum3.getText().toString().isEmpty() ||
-                mNum4.getText().toString().isEmpty() || mNum5.getText().toString().isEmpty() || mNum6.getText().toString().isEmpty() ||
-                mNum7.getText().toString().isEmpty() || mNum8.getText().toString().isEmpty() || mNum9.getText().toString().isEmpty() ||
-                mNum10.getText().toString().isEmpty() || mNum11.getText().toString().isEmpty() || mNum12.getText().toString().isEmpty() ||
-                mNum13.getText().toString().isEmpty() || mNum14.getText().toString().isEmpty() || mNum15.getText().toString().isEmpty() ||
-                mTextoTraduzido.getText().toString().isEmpty()) {
-            checked = false;
-        } else {
-            getTextDoEditText();
-            checked = true;
-        }
-        if (num1.isEmpty() || num2.isEmpty() || num3.isEmpty() ||
-                num4.isEmpty() || num5.isEmpty() || num6.isEmpty() ||
-                num7.isEmpty() || num8.isEmpty() || num9.isEmpty() ||
-                num10.isEmpty() || num11.isEmpty() || num12.isEmpty() ||
-                num13.isEmpty() || num14.isEmpty() || num15.isEmpty() || textoTraduzido.isEmpty()) {
-            checked = false;
-        } else {
-            checked = true;
-        }
-    }
-
-    private void getTextDoEditText() {
-        num1 = mNum1.getText().toString();
-        num2 = mNum2.getText().toString();
-        num3 = mNum3.getText().toString();
-        num4 = mNum4.getText().toString();
-        num5 = mNum5.getText().toString();
-        num6 = mNum6.getText().toString();
-        num7 = mNum7.getText().toString();
-        num8 = mNum8.getText().toString();
-        num9 = mNum9.getText().toString();
-        num10 = mNum10.getText().toString();
-        num11 = mNum11.getText().toString();
-        num12 = mNum12.getText().toString();
-        num13 = mNum13.getText().toString();
-        num14 = mNum14.getText().toString();
-        num15 = mNum15.getText().toString();
-        textoTraduzido = mTextoTraduzido.getText().toString();
-    }
-
-    private boolean validarTexto() {
-        boolean certo;
-        String textoTraduzido = mTextoTraduzido.getText().toString();
-        String respostaCorreta = "ajude estou preso";
-        if (textoTraduzido.equalsIgnoreCase(respostaCorreta)) {
-            certo = true;
-        } else {
-            certo = false;
-        }
-        return certo;
-    }
-
-    private String montarNumeros() {
-        return num1 + " " + num2 + " " + num3 + " " + num4 + " " + num5 + " - " +
-                num6 + " " + num7 + " " + num8 + " " +num9+ " " + num10 + " - " +
-                num11 + " " + num12 + " " + num13 + " " + num14 + " " + num15;
-    }
-
-    private boolean respostasIsEmpty() {
+    @Override
+    protected boolean respostasIsEmpty() {
         validarClicked();
         boolean isEmpty;
-        if (!checked) {
+        if (!checked1) {
             isEmpty = true;
         } else {
             isEmpty = false;
@@ -251,26 +241,8 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         return isEmpty;
     }
 
-    public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
-        builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
-    private void callNextFragment() {
-        Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-        startActivity(intent);
-    }
-
-    private void restartFragment() {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.detach(this).attach(this).commit();
-    }
-
-    private void initViews(View view) {
-        myApplication = (MyApplication) getActivity().getApplicationContext();
-
+    @Override
+    protected void initViews(View view) {
         mNum1 = (EditText) view.findViewById(R.id.num1EMS);
         mNum2 = (EditText) view.findViewById(R.id.num2EMS);
         mNum3 = (EditText) view.findViewById(R.id.num3EMS);

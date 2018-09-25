@@ -20,22 +20,9 @@ import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 
-public class TrabalharComNumerosBinariosFragment extends Fragment {
+public class TrabalharComNumerosBinariosFragment extends MyFragments {
     private EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10;
-    private String num1 = "";
-    private String num2 = "";
-    private String num3 = "";
-    private String num4 = "";
-    private String num5 = "";
-    private String num6 = "";
-    private String num7 = "";
-    private String num8 = "";
-    private String num9 = "";
-    private String num10 = "";
     private Button mFinalizar;
-    private MyApplication myApplication;
-    private boolean checked = false;
-    private boolean exibir;
 
     public TrabalharComNumerosBinariosFragment() {
         // Required empty public constructor
@@ -57,23 +44,29 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
                     onCreateDialog();
                 } else {
                     validarCampos();
-                    gerenciarResultados();
+                    gerenciarResultados(3);
                 }
             }
         });
         return view;
     }
 
-    private void gerenciarResultados() {
+    protected void gerenciarResultados(int position) {
         if (!exibir) {
-            myApplication.setPositionExercicio(3);
+            editarPositionExercicio(position);
             callNextFragment();
         } else {
             restartFragment();
         }
+
     }
 
-    private boolean validarCampos() {
+    private void editarPositionExercicio(int position) {
+        myApplication.setPositionExercicio(position);
+    }
+
+    @Override
+    protected boolean validarCampos() {
         Log.d("Numeros", "validarCampos: " + num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10);
         View focus = null;
         exibir = false;
@@ -134,10 +127,11 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
         return exibir;
     }
 
-    private boolean respostasIsEmpty() {
+    @Override
+    protected boolean respostasIsEmpty() {
         validarClicked();
         boolean isEmpty;
-        if (!checked) {
+        if (!checked1) {
             isEmpty = true;
         } else {
             isEmpty = false;
@@ -150,18 +144,18 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
                 mNum4.getText().toString().isEmpty() || mNum5.getText().toString().isEmpty() || mNum6.getText().toString().isEmpty() ||
                 mNum7.getText().toString().isEmpty() || mNum8.getText().toString().isEmpty() || mNum9.getText().toString().isEmpty() ||
                 mNum10.getText().toString().isEmpty()) {
-            checked = false;
+            checked1 = false;
         } else {
             getTextDoEditText();
-            checked = true;
+            checked1 = true;
         }
         if (num1.isEmpty() || num2.isEmpty() || num3.isEmpty() ||
                 num4.isEmpty() || num5.isEmpty() || num6.isEmpty() ||
                 num7.isEmpty() || num8.isEmpty() || num9.isEmpty() ||
                 num10.isEmpty()) {
-            checked = false;
+            checked1 = false;
         } else {
-            checked = true;
+            checked1 = true;
         }
     }
 
@@ -185,18 +179,8 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
         dialog.show();
     }
 
-    private void callNextFragment() {
-        Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
-        startActivity(intent);
-    }
-
-    private void restartFragment() {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.detach(this).attach(this).commit();
-    }
-
-    private void initViews(View view) {
-        myApplication = (MyApplication) getActivity().getApplicationContext();
+    @Override
+    protected void initViews(View view) {
         initEditText(view);
         mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_tnb);
 
@@ -216,5 +200,8 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
         mNum10 = (EditText) view.findViewById(R.id.num10TNB);
     }
 
+    @Override
+    protected void createCartas() {
+    }
 
 }
