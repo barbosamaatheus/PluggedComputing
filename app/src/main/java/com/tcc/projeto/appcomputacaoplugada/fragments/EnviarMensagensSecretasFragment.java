@@ -37,7 +37,7 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_enviar_mensagens_secretas, container, false);
         initViews(view);
         if (!respostasIsEmpty()) {
-           // validarCampos();
+            validarCampos();
         }
 
         mGetNumeros.setOnClickListener(new View.OnClickListener() {
@@ -49,35 +49,145 @@ public class EnviarMensagensSecretasFragment extends Fragment {
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validarResposta();
+                if (respostasIsEmpty()) {
+                    onCreateDialog();
+                } else {
+                    validarCampos();
+                    gerenciarResultados();
+                }
             }
         });
 
         return view;
     }
+    private void gerenciarResultados() {
+        if (!exibir) {
+            myApplication.setPositionExercicio(4);
+            callNextFragment();
+        } else {
+            restartFragment();
+        }
 
-    private void validarResposta() {
-
-        validarTexto();
     }
 
-    private void validarTexto() {
-        String textoTraduzido = mTextoTraduzido.getText().toString();
-        String respostaCorreta = "ajuda estou preso";
-        if(textoTraduzido.equalsIgnoreCase(respostaCorreta)){
-            myApplication.setPositionExercicio(1);
-            callNextFragment();
-        }else {
-            restartFragment();
+    private boolean validarCampos() {
 
+        View focus = null;
+        exibir = false;
+        /*if (mNum1.getText().toString().equalsIgnoreCase("1")) {
+            mNum1.setError("Resposta incorreta");
+            focus = mNum1;
+            exibir = true;
         }
+        if (mNum2.getText().toString().equalsIgnoreCase("10")) {
+            mNum2.setError("Resposta incorreta");
+            focus = mNum2;
+            exibir = true;
+        }
+        if (mNum3.getText().toString().equalsIgnoreCase("21")) {
+            mNum3.setError("Resposta incorreta");
+            focus = mNum3;
+            exibir = true;
+        }
+        if (mNum4.getText().toString().equalsIgnoreCase("4")) {
+            mNum4.setError("Resposta incorreta");
+            focus = mNum4;
+            exibir = true;
+        }
+        if (mNum5.getText().toString().equalsIgnoreCase("5")) {
+            mNum5.setError("Resposta incorreta");
+            focus = mNum5;
+            exibir = true;
+        }
+
+        if (mNum6.getText().toString().equalsIgnoreCase("5")) {
+            mNum6.setError("Resposta incorreta");
+            focus = mNum6;
+            exibir = true;
+        }
+        if (mNum7.getText().toString().equalsIgnoreCase("19")) {
+            mNum7.setError("Resposta incorreta");
+            focus = mNum7;
+            exibir = true;
+        }
+        if (mNum8.getText().toString().equalsIgnoreCase("20")) {
+            mNum8.setError("Resposta incorreta");
+            focus = mNum8;
+            exibir = true;
+        }
+        if (mNum9.getText().toString().equalsIgnoreCase("15")) {
+            mNum9.setError("Resposta incorreta");
+            focus = mNum9;
+            exibir = true;
+        }
+        if (mNum10.getText().toString().equalsIgnoreCase("21")) {
+            mNum10.setError("Resposta incorreta");
+            focus = mNum10;
+            exibir = true;
+        }
+        if (mNum11.getText().toString().equalsIgnoreCase("16")) {
+            mNum11.setError("Resposta incorreta");
+            focus = mNum11;
+            exibir = true;
+        }
+        if (mNum12.getText().toString().equalsIgnoreCase("18")) {
+            mNum12.setError("Resposta incorreta");
+            focus = mNum12;
+            exibir = true;
+        }
+        if (mNum13.getText().toString().equalsIgnoreCase("5")) {
+            mNum13.setError("Resposta incorreta");
+            focus = mNum13;
+            exibir = true;
+        }
+        if (mNum14.getText().toString().equalsIgnoreCase("19")) {
+            mNum14.setError("Resposta incorreta");
+            focus = mNum14;
+            exibir = true;
+        }
+        if (mNum15.getText().toString().equalsIgnoreCase("15")) {
+            mNum15.setError("Resposta incorreta");
+            focus = mNum15;
+            exibir = true;
+        }*/
+        if (montarNumeros().equalsIgnoreCase("1 10 21 4 5 - 5 19 20 15 21 - 16 18 5 19 15")) {
+            mNumerosSelecionados.setError("Resposta incorreta");
+            focus = mNumerosSelecionados;
+            exibir = true;
+        }
+        if (!validarTexto()) {
+            mTextoTraduzido.setError("Resposta incorreta");
+            focus = mTextoTraduzido;
+            exibir = true;
+        }
+
+        if (exibir) {
+            focus.requestFocus();
+        }
+        return exibir;
+    }
+
+    private boolean validarTexto() {
+        boolean certo = false;
+        String textoTraduzido = mTextoTraduzido.getText().toString();
+        String respostaCorreta = "ajude estou preso";
+        if (!textoTraduzido.isEmpty()){
+            checked1 = true;
+        }
+        if(textoTraduzido.equalsIgnoreCase(respostaCorreta)){
+            certo = true;
+        }else {
+            certo = false;
+        }
+        return certo;
     }
 
     private String montarNumeros() {
-        return mNum1.getText().toString()+" "+mNum2.getText().toString()+" "+mNum3.getText().toString()+" "+mNum4.getText().toString()+" "+mNum5.getText().toString()+" "+"-"+
-                mNum6.getText().toString()+" "+mNum7.getText().toString()+" "+mNum8.getText().toString()+" "+mNum9.getText().toString()+" "+mNum10.getText().toString()+" "+"-"+
+        return mNum1.getText().toString()+" "+mNum2.getText().toString()+" "+mNum3.getText().toString()+" "+mNum4.getText().toString()+" "+mNum5.getText().toString()+" - "+
+                mNum6.getText().toString()+" "+mNum7.getText().toString()+" "+mNum8.getText().toString()+" "+mNum9.getText().toString()+" "+mNum10.getText().toString()+" - "+
                 mNum11.getText().toString()+" "+mNum12.getText().toString()+" "+mNum13.getText().toString()+" "+mNum14.getText().toString()+" "+mNum15.getText().toString();
     }
+
     private boolean respostasIsEmpty() {
         boolean isEmpty;
         if (!checked1) {

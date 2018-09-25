@@ -170,11 +170,11 @@ public class NumerosBinariosFragment extends Fragment {
         if (carta.isFrente()) {
             carta.setFrente(false);
             carta.setImagem(R.mipmap.fundocarta);
-            num.setText("1");
+            num.setText("0");
         } else {
             carta.setFrente(true);
             mudarImagem(carta);
-            num.setText("0");
+            num.setText("");
         }
         mCarta.setBackgroundResource(carta.getImagem());
     }

@@ -1,17 +1,41 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 
 public class TrabalharComNumerosBinariosFragment extends Fragment {
+    private EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10;
+    private String num1 = "";
+    private String num2 = "";
+    private String num3 = "";
+    private String num4 = "";
+    private String num5 = "";
+    private String num6 = "";
+    private String num7 = "";
+    private String num8 = "";
+    private String num9 = "";
+    private String num10 = "";
+    private Button mFinalizar;
+    private MyApplication myApplication;
+    private boolean checked = false;
+    private boolean exibir;
 
     public TrabalharComNumerosBinariosFragment() {
         // Required empty public constructor
@@ -20,11 +44,177 @@ public class TrabalharComNumerosBinariosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_trabalhar_com_numeros_binarios, container, false);
+        View view = inflater.inflate(R.layout.fragment_trabalhar_com_numeros_binarios, container, false);
+        initViews(view);
+        if (!respostasIsEmpty()) {
+            validarCampos();
+        }
 
-
-
+        mFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (respostasIsEmpty()) {
+                    onCreateDialog();
+                } else {
+                    validarCampos();
+                    gerenciarResultados();
+                }
+            }
+        });
         return view;
     }
+
+    private void gerenciarResultados() {
+        if (!exibir) {
+            myApplication.setPositionExercicio(3);
+            callNextFragment();
+        } else {
+            restartFragment();
+        }
+    }
+
+    private boolean validarCampos() {
+        Log.d("Numeros", "validarCampos: " + num1+num2+num3+num4+num5+num6+num7+num8+num9+num10 );
+        View focus = null;
+        exibir = false;
+        if (!num1.equalsIgnoreCase("9")) {
+            mNum1.setError("Resposta incorreta");
+            focus = mNum1;
+            exibir = true;
+        }
+        if (!num2.equalsIgnoreCase("10")) {
+            mNum2.setError("Resposta incorreta");
+            focus = mNum2;
+            exibir = true;
+        }
+        if (!num3.equalsIgnoreCase("5")) {
+            mNum3.setError("Resposta incorreta");
+            focus = mNum3;
+            exibir = true;
+        }
+        if (!num4.equalsIgnoreCase("11")) {
+            mNum4.setError("Resposta incorreta");
+            focus = mNum4;
+            exibir = true;
+        }
+        if (!num5.equalsIgnoreCase("0")) {
+            mNum5.setError("Resposta incorreta");
+            focus = mNum5;
+            exibir = true;
+        }
+
+        if (!num6.equalsIgnoreCase("17")) {
+            mNum6.setError("Resposta incorreta");
+            focus = mNum6;
+            exibir = true;
+        }
+        if (!num7.equalsIgnoreCase("2")) {
+            mNum7.setError("Resposta incorreta");
+            focus = mNum7;
+            exibir = true;
+        }
+        if (!num8.equalsIgnoreCase("20")) {
+            mNum8.setError("Resposta incorreta");
+            focus = mNum8;
+            exibir = true;
+        }
+        if (!num9.equalsIgnoreCase("0")) {
+            mNum9.setError("Resposta incorreta");
+            focus = mNum9;
+            exibir = true;
+        }
+        if (!num10.equalsIgnoreCase("31")) {
+            mNum10.setError("Resposta incorreta");
+            focus = mNum10;
+            exibir = true;
+        }
+        if (exibir) {
+            focus.requestFocus();
+        }
+        return exibir;
+    }
+
+    private boolean respostasIsEmpty() {
+        validarClicked();
+        boolean isEmpty;
+        if (!checked) {
+            isEmpty = true;
+        } else {
+            isEmpty = false;
+        }
+        return isEmpty;
+    }
+
+    private void validarClicked() {
+        if (mNum1.getText().toString().isEmpty() || mNum2.getText().toString().isEmpty() || mNum3.getText().toString().isEmpty() ||
+                mNum4.getText().toString().isEmpty() || mNum5.getText().toString().isEmpty() || mNum6.getText().toString().isEmpty() ||
+                mNum7.getText().toString().isEmpty() || mNum8.getText().toString().isEmpty() || mNum9.getText().toString().isEmpty() ||
+                mNum10.getText().toString().isEmpty()) {
+            checked = false;
+        } else {
+            getTextDoEditText();
+            checked = true;
+        }
+        if (num1.isEmpty() || num2.isEmpty() || num3.isEmpty() ||
+                num4.isEmpty() || num5.isEmpty() || num6.isEmpty() ||
+                num7.isEmpty() || num8.isEmpty() || num9.isEmpty() ||
+                num10.isEmpty()) {
+            checked = false;
+        } else {
+            checked = true;
+        }
+    }
+
+    private void getTextDoEditText() {
+        num1 = mNum1.getText().toString();
+        num2 = mNum2.getText().toString();
+        num3 = mNum3.getText().toString();
+        num4 = mNum4.getText().toString();
+        num5 = mNum5.getText().toString();
+        num6 = mNum6.getText().toString();
+        num7 = mNum7.getText().toString();
+        num8 = mNum8.getText().toString();
+        num9 = mNum9.getText().toString();
+        num10 = mNum10.getText().toString();
+    }
+
+    public void onCreateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
+        builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void callNextFragment() {
+        Intent intent = new Intent(getActivity().getApplicationContext(), ExerciciosActivity.class);
+        startActivity(intent);
+    }
+
+    private void restartFragment() {
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
+    }
+
+    private void initViews(View view) {
+        myApplication = (MyApplication) getActivity().getApplicationContext();
+        initEditText(view);
+        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_tnb);
+
+    }
+
+    private void initEditText(View view) {
+        mNum1 = (EditText) view.findViewById(R.id.num1TNB);
+        mNum2 = (EditText) view.findViewById(R.id.num2TNB);
+        mNum3 = (EditText) view.findViewById(R.id.num3TNB);
+        mNum4 = (EditText) view.findViewById(R.id.num4TNB);
+        mNum5 = (EditText) view.findViewById(R.id.num5TNB);
+
+        mNum6 = (EditText) view.findViewById(R.id.num6TNB);
+        mNum7 = (EditText) view.findViewById(R.id.num7TNB);
+        mNum8 = (EditText) view.findViewById(R.id.num8TNB);
+        mNum9 = (EditText) view.findViewById(R.id.num9TNB);
+        mNum10 = (EditText) view.findViewById(R.id.num10TNB);
+    }
+
 
 }

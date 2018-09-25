@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.tcc.projeto.appcomputacaoplugada.CartasFragment;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -167,11 +166,11 @@ public class IntroducaoFragment extends Fragment {
         if (carta.isFrente()) {
             carta.setFrente(false);
             carta.setImagem(R.mipmap.fundocarta);
-            num.setText("1");
+            num.setText("0");
         } else {
             carta.setFrente(true);
             mudarImagem(carta);
-            num.setText("0");
+            num.setText("1");
         }
         mCarta.setBackgroundResource(carta.getImagem());
     }
