@@ -239,7 +239,7 @@
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:fontFamily="casual"
-                android:text="2. A sequencia em binário 10001 corresponde a que numero decimal?"
+                android:text="2. A sequencia em binário 10011 corresponde a que numero decimal?"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
