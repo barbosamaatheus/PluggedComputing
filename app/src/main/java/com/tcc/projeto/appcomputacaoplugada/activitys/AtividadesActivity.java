@@ -45,7 +45,6 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     public List<Atividade> getAtividadesList() {
         List<Atividade> atividadesList = new ArrayList<Atividade>();
         atividadesList.add(criarAtiviade());
-        Log.d("onBindViewHolder", "getAtividadesList: " + atividadesList.toString());
         return atividadesList;
     }
 

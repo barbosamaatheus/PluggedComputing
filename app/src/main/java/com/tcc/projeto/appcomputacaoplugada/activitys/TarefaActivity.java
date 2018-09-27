@@ -24,11 +24,13 @@ public class TarefaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tarefa);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+        getDadosBundle();
+    }
 
+    private void getDadosBundle() {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         int position = bundle.getInt("positon");
-        Log.d("TarefaActivity", "position: " + position);
         initFragment(position);
     }
 

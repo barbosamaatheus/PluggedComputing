@@ -51,15 +51,13 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
                 "Introdução", "Números Binários", "Trabalhar com Números Binários", "Enviar Mensagens Secretas", "Correio Eletrônico e Modems", "Contar acima de 31", "Mais Sobre Números Binários",
                 "De que se trata tudo isso?"
         };
-
-        Log.d("onBindViewHolder", "getExerciciosList: " + exerciciosList.toString());
         return exerciciosList;
     }
 
 
     @Override
     public void onClickListener(View view, int positon) {
-        if (positon <= myApplication.getPositionExercicio()) {
+        if (positon >= myApplication.getPositionExercicio()) {
             Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
             Bundle bundle = new Bundle();
             bundle.putInt("positon", positon + 1);

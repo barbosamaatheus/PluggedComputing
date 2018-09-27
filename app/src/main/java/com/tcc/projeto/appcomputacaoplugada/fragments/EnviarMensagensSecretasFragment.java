@@ -107,7 +107,6 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
     private boolean validarTexto() {
         boolean certo;
-        String textoTraduzido = mTextoTraduzido.getText().toString();
         String respostaCorreta = "ajude estou preso";
         if (textoTraduzido.equalsIgnoreCase(respostaCorreta)) {
             certo = true;
