@@ -53,8 +53,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
         Atividade tarefa01 = new Atividade();
         tarefa01.setTitulo("Contando os Pontos");
         tarefa01.setSubTitulo("Números Binários");
-        tarefa01.setDescricao("Os dados são armazenados em computadores e transmitidos como uma série de zeros e" +
-                        "uns. Como podemos representar palavras e números usando apenas estes dois símbolos ?");
+        tarefa01.setDescricao(getString(R.string.descricao_card));
         tarefa01.setMaterias("Matematica");
         tarefa01.setHabilidades("Contar, Correlacionar, Ordenar");
         tarefa01.setIdade("A partir de 7 anos");

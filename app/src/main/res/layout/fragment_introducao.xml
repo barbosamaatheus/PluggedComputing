@@ -21,12 +21,20 @@
 
 
             <TextView
-                android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
                 android:justificationMode="inter_word"
-                android:text="@string/string_intro_02"
+                android:text="@string/texto_intro_01"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:justificationMode="inter_word"
+                android:text="@string/texto_intro_02"
                 android:textColor="@color/textColorPrimary"
                 android:textStyle="bold" />
 

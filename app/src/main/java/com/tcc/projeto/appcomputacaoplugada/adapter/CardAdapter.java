@@ -41,15 +41,10 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
         holder.mTitulo.setText(mList.get(position).getTitulo());
-        Log.d("onBindViewHolder", "getTitulo " + mList.get(position).getTitulo());
         holder.mSubTitulo.setText(mList.get(position).getSubTitulo());
-        Log.d("onBindViewHolder", "getSubTitulo " + mList.get(position).getSubTitulo());
         holder.mDescricao.setText(mList.get(position).getDescricao());
-        Log.d("onBindViewHolder", "getDescricao " + mList.get(position).getDescricao());
         holder.mMateria.setText(mList.get(position).getMaterias());
-        Log.d("onBindViewHolder", "getMaterias " + mList.get(position).getMaterias());
         holder.mHabilidades.setText(mList.get(position).getHabilidades());
-        Log.d("onBindViewHolder", "getHabilidades " + mList.get(position).getHabilidades());
         holder.mIdade.setText(mList.get(position).getIdade());
     }
 

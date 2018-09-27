@@ -60,7 +60,6 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
 
     @Override
     public int getItemCount() {
-        Log.d("onBindViewHolder", "Tamanho [] " + mList.length);
         return mList.length;
 
     }
