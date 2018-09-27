@@ -103,17 +103,17 @@ public class IntroducaoFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!passou1) {
-            perg1.setError("Resposta incorreta");
+            perg1.setError(getString(R.string.resposta_incorreta));
             focus = perg1;
             exibir = true;
         }
         if (!passou2) {
-            perg2.setError("Resposta incorreta");
+            perg2.setError(getString(R.string.resposta_incorreta));
             focus = perg2;
             exibir = true;
         }
         if (!passou3) {
-            perg3.setError("Resposta incorreta");
+            perg3.setError(getString(R.string.resposta_incorreta));
             focus = perg3;
             exibir = true;
         }

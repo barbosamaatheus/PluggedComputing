@@ -121,83 +121,83 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("1")) {
-            mNum1.setError("Resposta incorreta");
+            mNum1.setError(getString(R.string.resposta_incorreta));
             focus = mNum1;
             exibir = true;
         }
         if (!num2.equalsIgnoreCase("10")) {
-            mNum2.setError("Resposta incorreta");
+            mNum2.setError(getString(R.string.resposta_incorreta));
             focus = mNum2;
             exibir = true;
         }
         if (!num3.equalsIgnoreCase("21")) {
-            mNum3.setError("Resposta incorreta");
+            mNum3.setError(getString(R.string.resposta_incorreta));
             focus = mNum3;
             exibir = true;
         }
         if (!num4.equalsIgnoreCase("4")) {
-            mNum4.setError("Resposta incorreta");
+            mNum4.setError(getString(R.string.resposta_incorreta));
             focus = mNum4;
             exibir = true;
         }
         if (!num5.equalsIgnoreCase("5")) {
-            mNum5.setError("Resposta incorreta");
+            mNum5.setError(getString(R.string.resposta_incorreta));
             focus = mNum5;
             exibir = true;
         }
 
         if (!num6.equalsIgnoreCase("5")) {
-            mNum6.setError("Resposta incorreta");
+            mNum6.setError(getString(R.string.resposta_incorreta));
             focus = mNum6;
             exibir = true;
         }
         if (!num7.equalsIgnoreCase("19")) {
-            mNum7.setError("Resposta incorreta");
+            mNum7.setError(getString(R.string.resposta_incorreta));
             focus = mNum7;
             exibir = true;
         }
         if (!num8.equalsIgnoreCase("20")) {
-            mNum8.setError("Resposta incorreta");
+            mNum8.setError(getString(R.string.resposta_incorreta));
             focus = mNum8;
             exibir = true;
         }
         if (!num9.equalsIgnoreCase("15")) {
-            mNum9.setError("Resposta incorreta");
+            mNum9.setError(getString(R.string.resposta_incorreta));
             focus = mNum9;
             exibir = true;
         }
         if (!num10.equalsIgnoreCase("21")) {
-            mNum10.setError("Resposta incorreta");
+            mNum10.setError(getString(R.string.resposta_incorreta));
             focus = mNum10;
             exibir = true;
         }
         if (!num11.equalsIgnoreCase("16")) {
-            mNum11.setError("Resposta incorreta");
+            mNum11.setError(getString(R.string.resposta_incorreta));
             focus = mNum11;
             exibir = true;
         }
         if (!num12.equalsIgnoreCase("18")) {
-            mNum12.setError("Resposta incorreta");
+            mNum12.setError(getString(R.string.resposta_incorreta));
             focus = mNum12;
             exibir = true;
         }
         if (!num13.equalsIgnoreCase("5")) {
-            mNum13.setError("Resposta incorreta");
+            mNum13.setError(getString(R.string.resposta_incorreta));
             focus = mNum13;
             exibir = true;
         }
         if (!num14.equalsIgnoreCase("19")) {
-            mNum14.setError("Resposta incorreta");
+            mNum14.setError(getString(R.string.resposta_incorreta));
             focus = mNum14;
             exibir = true;
         }
         if (!num15.equalsIgnoreCase("15")) {
-            mNum15.setError("Resposta incorreta");
+            mNum15.setError(getString(R.string.resposta_incorreta));
             focus = mNum15;
             exibir = true;
         }
         if (!validarTexto()) {
-            mTextoTraduzido.setError("Resposta incorreta");
+            mTextoTraduzido.setError(getString(R.string.resposta_incorreta));
             focus = mTextoTraduzido;
             exibir = true;
         }

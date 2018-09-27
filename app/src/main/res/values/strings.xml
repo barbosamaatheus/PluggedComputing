@@ -25,5 +25,6 @@
         Ele usou um código binário simples, que ele sabia ser de conhecimento da mulher do outro lado da rua.
         Você pode identificar a mensagem enviada por Tom?</string>
     <string name="texto_tnb">Já sabemos que o sistema binário utiliza o zero e o um para representar todos os dados de um computador. \nTente decifrar os seguintes números codificados:</string>
+    <string name="resposta_incorreta">Resposta incorreta</string>
 
 </resources>

@@ -120,22 +120,22 @@ public class NumerosBinariosFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!maiorValor.equals("31")) {
-            mMaiorValor.setError("Resposta incorreta");
+            mMaiorValor.setError(getString(R.string.resposta_incorreta));
             focus = mMaiorValor;
             exibir = true;
         }
         if (!menorValor.equals("0")) {
-            mMenorValor.setError("Resposta incorreta");
+            mMenorValor.setError(getString(R.string.resposta_incorreta));
             focus = mMenorValor;
             exibir = true;
         }
         if (!passou2) {
-            perg2.setError("Resposta incorreta");
+            perg2.setError(getString(R.string.resposta_incorreta));
             focus = perg2;
             exibir = true;
         }
         if (!passou3) {
-            perg3.setError("Resposta incorreta");
+            perg3.setError(getString(R.string.resposta_incorreta));
             focus = perg3;
             exibir = true;
         }
@@ -193,14 +193,7 @@ public class NumerosBinariosFragment extends MyFragments {
         mCarta16 = (ImageButton) view.findViewById(R.id.carta16NB);
     }
 
-    @Override
-    protected void createCartas() {
-        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
-        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
-        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, true);
-        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
-        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, true);
-    }
+
 
     public void validarClicked1() {
         if (mMenorValor.getText().toString().isEmpty() || mMaiorValor.getText().toString().isEmpty()) {

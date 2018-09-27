@@ -186,6 +186,11 @@ public abstract class MyFragments extends Fragment {
     protected void initViews(View view) {}
 
     protected void createCartas() {
+        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
+        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
+        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, true);
+        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
+        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, true);
 
     }
 
