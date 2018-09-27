@@ -161,7 +161,12 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-
+            <ImageButton
+                android:id="@+id/dicasINTRO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardshape"
+                android:src="@drawable/ic_help_outline_black_24dp" />
         </LinearLayout>
 
         <LinearLayout

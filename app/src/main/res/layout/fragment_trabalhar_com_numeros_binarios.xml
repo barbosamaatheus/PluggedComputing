@@ -32,6 +32,12 @@
                 android:textColor="@color/textColorPrimary"
                 android:textStyle="bold" />
 
+            <ImageButton
+                android:id="@+id/dicasTNB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardshape"
+                android:src="@drawable/ic_help_outline_black_24dp" />
         </LinearLayout>
 
         <LinearLayout

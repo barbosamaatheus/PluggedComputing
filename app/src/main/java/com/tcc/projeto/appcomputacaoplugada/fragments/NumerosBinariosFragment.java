@@ -99,6 +99,13 @@ public class NumerosBinariosFragment extends MyFragments {
             }
         });
 
+        mDicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCreateDialog("Dicas", getString(R.string.dicas_nb) );
+            }
+        });
+
         return view;
     }
 
@@ -149,6 +156,7 @@ public class NumerosBinariosFragment extends MyFragments {
     @Override
     protected void initViews(View view) {
         mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_nb);
+        mDicas = (ImageButton) view.findViewById(R.id.dicasNB);
         mMaiorValor = (EditText) view.findViewById(R.id.valorMaiorNB);
         mMenorValor = (EditText) view.findViewById(R.id.valorMenorNB);
         initCartas(view);

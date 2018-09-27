@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -52,6 +53,12 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
                     validarCampos();
                     gerenciarResultados(4, getActivity());
                 }
+            }
+        });
+        mDicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCreateDialog("Dicas", getString(R.string.dicas_ems) );
             }
         });
 
@@ -232,6 +239,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
     private void initEditText(View view) {
         mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
+        mDicas = (ImageButton) view.findViewById(R.id.dicasEMS);
 
         mNum1 = (EditText) view.findViewById(R.id.num1EMS);
         mNum2 = (EditText) view.findViewById(R.id.num2EMS);

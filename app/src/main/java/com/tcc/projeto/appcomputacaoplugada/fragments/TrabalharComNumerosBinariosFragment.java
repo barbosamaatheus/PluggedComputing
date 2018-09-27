@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -44,9 +45,14 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
                 }
             }
         });
+        mDicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCreateDialog("Dicas", getString(R.string.dicas_nb));
+            }
+        });
         return view;
     }
-
 
 
     @Override
@@ -166,6 +172,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
     protected void initViews(View view) {
         initEditText(view);
         mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_tnb);
+        mDicas = (ImageButton) view.findViewById(R.id.dicasTNB);
 
     }
 

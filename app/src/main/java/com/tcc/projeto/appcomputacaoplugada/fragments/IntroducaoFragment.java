@@ -94,6 +94,12 @@ public class IntroducaoFragment extends MyFragments {
                 }
             }
         });
+        mDicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onCreateDialog("Dicas", getString(R.string.dicas_intro) );
+            }
+        });
         return view;
     }
 
@@ -147,6 +153,7 @@ public class IntroducaoFragment extends MyFragments {
     @Override
     protected void initViews(View view) {
         mFinalizar = (Button) view.findViewById(R.id.btn_finalizar);
+        mDicas = (ImageButton) view.findViewById(R.id.dicasINTRO);
         initCartas(view);
         initNum(view);
         createCartas();
