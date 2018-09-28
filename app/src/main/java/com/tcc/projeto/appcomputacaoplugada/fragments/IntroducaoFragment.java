@@ -87,7 +87,7 @@ public class IntroducaoFragment extends MyFragments {
             @Override
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
-                    onCreateDialog();
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
                 } else {
                     validarCampos();
                     gerenciarResultados(1, getActivity());
@@ -97,7 +97,7 @@ public class IntroducaoFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_intro) );
+                onCreateDialog("Dicas", getString(R.string.dicas_intro), R.drawable.ic_help_outline_black_24dp);
             }
         });
         return view;

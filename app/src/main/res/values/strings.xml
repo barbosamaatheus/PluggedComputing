@@ -1,26 +1,37 @@
 <resources>
-<string name="app_name">ComputacaoPlugada</string>
+    <string name="app_name">ComputacaoPlugada</string>
 
-<string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns. Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
+    <string name="descricao_card">Os dados são armazenados em computadores e transmitidos como uma série de zeros e uns.
+        Como podemos representar palavras e números usando apenas estes dois símbolos?</string>
 
-<string name="texto_nb_02">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
+    <string name="texto_nb_02">Para esta atividade, são necessários cinco cartões. Os cartões devem estar na seguinte ordem: </string>
 
-<string name="texto_nb_01">Podemos usar estes cartões para representar números binários. Cartas viradas para cima, representam o bit 1, viradas para baixo o bit 0.</string>
+    <string name="texto_nb_01">Podemos usar estes cartões para representar números binários. Cartas viradas para cima,
+        representam o bit 1, viradas para baixo o bit 0.</string>
 
-<string name="texto_intro_02">As cartas abaixo estão representando o número 9. Aproveite e fique à vontade para experimentar outros números...</string>
-<string name="textoFimSobre">Desenvolvido por: \nMatheus Barbosa de Oliveira\nIvonildo Pereira Gomes Neto\nTodos os Direitos Reservados \n© 2018</string>
+    <string name="texto_intro_02">As cartas abaixo estão representando o número 9. Aproveite e fique à vontade para
+        experimentar outros números…</string>
+    <string name="textoFimSobre">Desenvolvido por: \nMatheus Barbosa de Oliveira\nIvonildo Pereira Gomes Neto
+        \nTodos os Direitos Reservados \n© 2018</string>
 
-<string name="text_sobre"><![CDATA[O aplicativo computação plugada, inspirado no livro de Bell, T.; Witten, I. e Fellows, M. (2011). “Computer Science Unplugged – Ensinando Ciência da Computação sem o uso do Computador”. Tradução de Luciano Porto Barreto, 2011. Disponível em: <http://csunplugged.org/>. Apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. O mesmo engloba técnicas fáceis para seu uso, tornando-se disponível para todos. Sua prática é fácil não só em salas de aula mas também fora, pela sua abordagem simples e inteligente, podendo ser fácil administrado por professores e compreendido por crianças. O aplicativo é uma grande inovação para as técnicas de aprendizagem, apresentando temas complexos de uma forma elementar para o conhecimento.]]></string>
-<string name="texto_alert_sem_resposta">Parace que você não respondeu todas as perguntas... \nArrisque-se, marque alguma opção!</string>
+    <string name="text_sobre"><![CDATA[O aplicativo computação plugada, inspirado no livro de Bell, T.; Witten, I. e Fellows,
+     M. (2011). “Computer Science Unplugged – Ensinando Ciência da Computação sem o uso do Computador”.
+     Tradução de Luciano Porto Barreto, 2011. Disponível em: <http://csunplugged.org/>. Apresenta atividades práticas,
+     lúdicas e acessíveis sobre diversos temas da ciência da computação. O mesmo engloba técnicas fáceis para seu uso,
+     tornando-se disponível para todos. Sua prática é fácil não só em salas de aula mas também fora, pela sua abordagem
+     simples e inteligente, podendo ser fácil administrado por professores e compreendido por crianças. O aplicativo é uma grande inovação para as técnicas de aprendizagem, apresentando temas complexos de uma forma elementar para o conhecimento.]]></string>
 
-<!-- TODO: Remove or change this placeholder text -->
-<string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="texto_alert_sem_resposta">Você não completou a atividade, responda todas as perguntas e tente novamente.</string>
 
-<string name="texto_intro_01">Então, você achava que sabia contar? Bem, aqui está uma nova forma de fazer isso! Sabia que os computadores utilizam apenas zeros e uns?
-        Tudo o que você vê ou ouve no computador - palavras, imagens, números, filmes e até mesmo o som - são armazenados usando apenas estes dois numerais!
-        Estas atividades ensinarão como enviar mensagens secretas aos seus amigos usando exatamente o mesmo método que um computador.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<string name="texto_EMS">Tom está preso no último andar de uma loja. É noite de Natal e ele quer ir para casa com seus
+    <string name="texto_intro_01">Então, você achava que sabia contar? Bem, aqui está uma nova forma de fazer isso!
+        Sabia que os computadores utilizam apenas zeros e uns? Tudo o que você vê ou ouve no computador - palavras,
+        imagens, números, filmes e até mesmo o som - são armazenados usando apenas estes dois numerais! Estas atividades
+        ensinarão como enviar mensagens secretas aos seus amigos usando exatamente o mesmo método que um computador.</string>
+
+    <string name="texto_EMS">Tom está preso no último andar de uma loja. É noite de Natal e ele quer ir para casa com seus
         presentes. O que ele pode fazer? Ele tentou chamar alguém, até mesmo gritar, mas não há ninguém por perto.
         Do outro lado da rua ele pode ver uma pessoa ainda trabalhando em seu computador até tarde da noite.
         Como ele poderia atrair sua atenção? Tom olha em volta para ver o que poderia usar.
@@ -29,13 +40,25 @@
         Ele usou um código binário simples, que ele sabia ser de conhecimento da mulher do outro lado da rua.
         Você pode identificar a mensagem enviada por Tom?</string>
 
-<string name="texto_tnb">Já sabemos que o sistema binário utiliza o zero e o um para representar todos os dados de um computador. \nEntão vamos tentar decifrar os seguintes números codificados:</string>
-<string name="resposta_incorreta">Resposta incorreta</string>
-<string name="dicas_intro">1. Presione o cartão para vira-lo  2. A soma dos pontos dos cartões representam o numero decimal  3. Os numero decimal é representado pela sequencia de zeros e uns
-        4. Responda todas as perguntas corretamente para completar a tarefa</string>
-<string name="dicas_nb">1. Presione o cartão para vira-lo  2. A soma dos pontos dos cartões representam o numero decimal  3. Os numero decimal é representado pela sequencia de zeros e uns
-        4. Decore a posição das cartas, você vai precisar... 5. Responda todas as perguntas corretamente para completar a tarefa</string>
-<string name="dicas_tnb">1. Os campos devems ser preenchidos com valores decimais 2. Responda todas as perguntas corretamente para completar a tarefa</string>
-<string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais 2. Responda todos os numeros e ao final clique no botão para obter seus numeros 3. Responda todas as perguntas corretamente para completar a tarefa</string>
+    <string name="texto_tnb">Já sabemos que o sistema binário utiliza o zero e o um para representar todos os dados de um computador. \nEntão vamos tentar decifrar os seguintes números codificados:</string>
+    <string name="resposta_incorreta">Resposta incorreta</string>
+
+    <string name="dicas_intro">1. Presione o cartão para vira-lo;
+        \n2. A soma dos pontos dos cartões representam o numero decimal;
+        \n3. Os numero decimal é representado pela sequencia de zeros e uns;
+        \n4. Responda todas as perguntas corretamente para completar a tarefa.</string>
+
+    <string name="dicas_nb">1. Presione o cartão para vira-lo;
+        \n2. A soma dos pontos dos cartões representam o numero decimal;
+        \n3. Os numero decimal é representado pela sequencia de zeros e uns;
+        \n4. Decore a posição das cartas, você vai precisar…;
+        \n5. Responda todas as perguntas corretamente para completar a tarefa.</string>
+
+    <string name="dicas_tnb">1. Os campos devems ser preenchidos com valores decimais;
+        \n2. Responda todas as perguntas corretamente para completar a tarefa</string>
+
+    <string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais;
+        \n2. Responda todos os numeros e ao final clique no botão para obter seus numeros;
+        \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
 </resources>

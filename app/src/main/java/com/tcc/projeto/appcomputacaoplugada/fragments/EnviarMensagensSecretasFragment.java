@@ -48,7 +48,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
             @Override
             public void onClick(View v) {
                 if (respostasIsEmpty()) {
-                    onCreateDialog();
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
                 } else {
                     validarCampos();
                     gerenciarResultados(4, getActivity());
@@ -58,7 +58,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_ems) );
+                onCreateDialog("Dicas", getString(R.string.dicas_ems), R.drawable.ic_help_outline_black_24dp );
             }
         });
 

@@ -9,6 +9,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.fragments.ContarAcima31Fragment;
+import com.tcc.projeto.appcomputacaoplugada.fragments.CorreioEletronicoModemsFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.EnviarMensagensSecretasFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.IntroducaoFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.NumerosBinariosFragment;
@@ -93,11 +95,17 @@ public class TarefaActivity extends AppCompatActivity {
     }
 
     private void initFragment5() {
-        Toast.makeText(getApplicationContext(), "Fragment5", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        CorreioEletronicoModemsFragment correioEletronicoModemsFragment = new CorreioEletronicoModemsFragment();
+        ft.add(R.id.fragment_content, correioEletronicoModemsFragment);
+        ft.commit();
     }
 
     private void initFragment6() {
-        Toast.makeText(getApplicationContext(), "Fragment6", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        ContarAcima31Fragment contarAcima31Fragment = new ContarAcima31Fragment();
+        ft.add(R.id.fragment_content, contarAcima31Fragment);
+        ft.commit();
     }
 
     private void initFragment7() {

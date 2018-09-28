@@ -83,15 +83,9 @@ public abstract class MyFragments extends Fragment {
         ft.detach(this).attach(this).commit();
     }
 
-    protected void onCreateDialog() {
+    protected void onCreateDialog(String title, String mensagem, int icon) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
-        builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-    protected void onCreateDialog(String title, String mensagem) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
-        builder.setMessage(mensagem).setTitle(title);
+        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
     }
