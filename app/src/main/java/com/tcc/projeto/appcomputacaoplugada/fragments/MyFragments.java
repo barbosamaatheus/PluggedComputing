@@ -177,10 +177,12 @@ public abstract class MyFragments extends Fragment {
         }
     }
 
-    protected String montarNumeros() {
-        return num1 + " " + num2 + " " + num3 + " " + num4 + " " + num5 + " - " +
-                num6 + " " + num7 + " " + num8 + " " + num9 + " " + num10 + " - " +
-                num11 + " " + num12 + " " + num13 + " " + num14 + " " + num15;
+    protected String montarNumerosET() {
+        return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
+                + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "
+                + mNum7.getText().toString() + " " + mNum8.getText().toString() + " "  + mNum9.getText().toString() + " "
+                + mNum10.getText().toString() + " - " + mNum11.getText().toString() + " " + mNum12.getText().toString() + " "
+                + mNum13.getText().toString() + " " + mNum14.getText().toString() + " " + mNum15.getText().toString();
     }
 
     protected void initViews(View view) {}
