@@ -60,5 +60,7 @@
     <string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais;
         \n2. Decifre todos os numeros e ao final traduza a mensagem;
         \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
+    <string name="texto_CEM01">Os computadores conectados à Internet através de um equipamento conhecido por modem também utilizam o sistema binário para enviar mensagens. A única diferença é que eles usam um sinal sonoro ou bip. Um bip agudo é utilizado para o um e um bip grave é utilizado para o zero. Estes sinais são transmitidos rapidamente. Tão rápido, na verdade, que apenas ouvimos um horrível zumbido contínuo. Se você nunca o ouviu, ouça um modem conectar-se à Internet ou tente ligar para uma máquina de fax – as máquinas de fax também usam modems para enviar informação.</string>
+    <string name="texto_CEM02">Usando o mesmo código que Tom utilizou na loja, tente enviar uma mensagem de correio eletrônico ao seu amigo. Mas facilite as coisas para você e seu amigo, pois vocês não precisam ser tão rápidos quanto um modem de verdade !</string>
 
 </resources>

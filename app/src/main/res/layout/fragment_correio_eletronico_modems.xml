@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="360dp"
     android:layout_height="match_parent"
+    android:background="@mipmap/fundo"
+    android:orientation="vertical"
     tools:context=".fragments.CorreioEletronicoModemsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/texto_CEM01"
+                android:textColor="@color/textColorPrimary" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/arvore" />
+
+            <ImageButton
+                android:id="@+id/dicasCEM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardshape"
+                android:src="@drawable/ic_help_outline_black_24dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:justificationMode="inter_word"
+                android:text="@string/texto_CEM02"
+                android:textColor="@color/textColorPrimary" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/alfabeto" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fontFamily="casual"
+                android:text="Digite os numeros correspondentes ao seu nome"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+            <EditText
+                android:id="@+id/textoTraduzido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:hint="Digite aqui..."
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/colorHint" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/bipbop" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="Este é seu nome em binario:"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="000000000000000000000000000000"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_finalizar_cem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/bungee"
+            android:text="Finalizar"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
