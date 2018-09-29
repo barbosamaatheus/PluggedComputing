@@ -46,7 +46,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -63,7 +63,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -81,7 +81,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -99,7 +99,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -117,7 +117,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -135,7 +135,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -153,7 +153,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -171,7 +171,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -189,7 +189,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -207,7 +207,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -225,7 +225,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -243,7 +243,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -261,7 +261,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -279,7 +279,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 
@@ -297,7 +297,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != 0)
+                if (charSequence.length() != -1)
                     mNumerosSelecionados.setText(montarNumerosET());
             }
 

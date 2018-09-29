@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //myApplication.readDataBase();
                 myApplication.setPositionExercicio(0);
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
                 startActivity(intent);

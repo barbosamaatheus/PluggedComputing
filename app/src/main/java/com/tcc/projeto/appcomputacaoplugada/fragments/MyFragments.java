@@ -76,6 +76,7 @@ public abstract class MyFragments extends Fragment {
     protected void editarPositionExercicio(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
         myApplication.setPositionExercicio(position);
+        //myApplication.updateDataBase();;
     }
 
     protected void restartFragment() {
