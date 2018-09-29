@@ -34,8 +34,15 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="foregroundImage" value="C:\Users\User\Downloads\natal.jpg" />
+                                      <entry key="backgroundColor" value="212121" />
+                                      <entry key="foregroundImage" value="C:\Users\User\Downloads\arvore.jpg" />
+                                      <entry key="foregroundLayerName" value="ic_arvore_foregrond" />
+                                      <entry key="generateLegacyIcon" value="false" />
+                                      <entry key="generateRoundIcon" value="false" />
+                                      <entry key="legacyIconShape" value="HRECT" />
+                                      <entry key="outputName" value="ic_arvore" />
+                                      <entry key="previewDensity" value="XXXHIGH" />
+                                      <entry key="webIconShape" value="HRECT" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -65,19 +72,14 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="212121" />
                                       <entry key="cropped" value="true" />
-                                      <entry key="iconShape" value="VRECT" />
-                                      <entry key="imageAsset" value="C:\Users\User\Downloads\natal.jpg" />
-                                      <entry key="outputName" value="ic_natal" />
+                                      <entry key="iconShape" value="HRECT" />
+                                      <entry key="imageAsset" value="C:\Users\User\Downloads\arvore.jpg" />
+                                      <entry key="outputName" value="ic_arvore" />
                                     </map>
                                   </option>
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>
