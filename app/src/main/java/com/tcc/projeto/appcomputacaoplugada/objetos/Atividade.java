@@ -2,7 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.objetos;
 
 public class Atividade {
 
-    private java.lang.String titulo, subTitulo ,descricao, materias, habilidades, idade;
+    private String titulo, subTitulo ,descricao, materias, habilidades, idade;
 
     public Atividade() {
         this.titulo = "-";
@@ -13,7 +13,7 @@ public class Atividade {
         this.idade = "-";
     }
 
-    public Atividade(java.lang.String titulo, java.lang.String subTitulo, java.lang.String descricao, java.lang.String materias, java.lang.String habilidades, java.lang.String idade) {
+    public Atividade(String titulo, String subTitulo, String descricao, String materias, String habilidades, String idade) {
         this.titulo = titulo;
         this.subTitulo = subTitulo;
         this.descricao = descricao;
@@ -22,23 +22,23 @@ public class Atividade {
         this.idade = idade;
     }
 
-    public java.lang.String getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(java.lang.String titulo) {
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public java.lang.String getSubTitulo() {
+    public String getSubTitulo() {
         return subTitulo;
     }
 
-    public void setSubTitulo(java.lang.String subTitulo) {
+    public void setSubTitulo(String subTitulo) {
         this.subTitulo = subTitulo;
     }
 
-    public java.lang.String getDescricao() {
+    public String getDescricao() {
         return descricao;
     }
 
@@ -46,27 +46,27 @@ public class Atividade {
         this.descricao = descricao;
     }
 
-    public java.lang.String getMaterias() {
+    public String getMaterias() {
         return materias;
     }
 
-    public void setMaterias(java.lang.String materias) {
+    public void setMaterias(String materias) {
         this.materias = materias;
     }
 
-    public java.lang.String getHabilidades() {
+    public String getHabilidades() {
         return habilidades;
     }
 
-    public void setHabilidades(java.lang.String habilidades) {
+    public void setHabilidades(String habilidades) {
         this.habilidades = habilidades;
     }
 
-    public java.lang.String getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(java.lang.String idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 }

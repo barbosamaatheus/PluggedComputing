@@ -44,21 +44,15 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
 
     public List<Atividade> getAtividadesList() {
         List<Atividade> atividadesList = new ArrayList<Atividade>();
-        atividadesList.add(criarAtiviade());
+
+        atividadesList.add(new Atividade("Contando os Pontos","Números Binários", getString(R.string.descricao_card),
+                "Matematica","Contar, Correlacionar, Ordenar","A partir de 7 anos"));
+        atividadesList.add(new Atividade("Titulo", "SubTitulo", "Isso aqui é só uma demostração de como vai ficar quendo" +
+                "tiver mais de uma atividade para ser escolhida", "Materia", "Habilidades, Habilidades, Habilidades", "Idade"));
+
         return atividadesList;
     }
 
-    @NonNull
-    private Atividade criarAtiviade() {
-        Atividade tarefa01 = new Atividade();
-        tarefa01.setTitulo("Contando os Pontos");
-        tarefa01.setSubTitulo("Números Binários");
-        tarefa01.setDescricao(getString(R.string.descricao_card));
-        tarefa01.setMaterias("Matematica");
-        tarefa01.setHabilidades("Contar, Correlacionar, Ordenar");
-        tarefa01.setIdade("A partir de 7 anos");
-        return tarefa01;
-    }
 
     @Override
     public void onClickListener(View view, int positon) {
