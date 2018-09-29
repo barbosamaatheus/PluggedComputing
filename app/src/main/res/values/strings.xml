@@ -41,7 +41,28 @@
         Você pode identificar a mensagem enviada por Tom?</string>
 
     <string name="texto_tnb">Já sabemos que o sistema binário utiliza o zero e o um para representar todos os dados de um computador. \nEntão vamos tentar decifrar os seguintes números codificados:</string>
+
     <string name="resposta_incorreta">Resposta incorreta</string>
+
+    <string name="texto_CEM01">Os computadores conectados à Internet através de um equipamento conhecido por modem também
+        utilizam o sistema binário para enviar mensagens. A única diferença é que eles usam um sinal sonoro ou bip. Um bip
+        agudo é utilizado para o um e um bip grave é utilizado para o zero. Estes sinais são transmitidos rapidamente.
+        Tão rápido, na verdade, que apenas ouvimos um horrível zumbido contínuo. Se você nunca o ouviu, ouça um modem
+        conectar-se à Internet ou tente ligar para uma máquina de fax – as máquinas de fax também usam modems para enviar informação.</string>
+
+    <string name="texto_CEM02">Usando o mesmo código que Tom utilizou na loja, tente enviar uma mensagem de correio eletrônico ao seu amigo.
+        Mas facilite as coisas para você e seu amigo, pois vocês não precisam ser tão rápidos quanto um modem de verdade!</string>
+
+    <string name="texto_CA31_01">Você já colocou todos os seus dedos para trabalhar? Pois agora seus dedos podem contar e
+        ir muito além do número dez. Não, você não precisa ser de outro planeta! Se utilizar o sistema binário e deixar que cada
+        dedo de uma mão represente um dos cartões com pontos (Não esqueça a sequencia 1, 2, 4, 8, 16...),
+        então pode contar de zero a 31. Ao total, temos 32 números. (Não se esqueça de que o zero também é um número!)</string>
+
+    <string name="texto_CA31_02">Tente contar sequencialmente utilizando seus dedos. Se o dedo estiver para cima, é um, e, se estiver
+        para baixo, é zero. Você pode contar de 0 a 1023 se usar as duas mãos! São 1024 números!</string>
+
+    <string name="texto_CA31_03">Se os dedos dos seus pés forem realmente flexíveis (se você fosse de outro planeta),
+        seria possível obter números ainda maiores. Uma mão pode contar até 32 e duas mãos podem contar até 32 × 32 = 1024.</string>
 
     <string name="dicas_intro">1. Presione o cartão para vira-lo;
         \n2. A soma dos pontos dos cartões representam o numero decimal;
@@ -60,7 +81,13 @@
     <string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais;
         \n2. Decifre todos os numeros e ao final traduza a mensagem;
         \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
-    <string name="texto_CEM01">Os computadores conectados à Internet através de um equipamento conhecido por modem também utilizam o sistema binário para enviar mensagens. A única diferença é que eles usam um sinal sonoro ou bip. Um bip agudo é utilizado para o um e um bip grave é utilizado para o zero. Estes sinais são transmitidos rapidamente. Tão rápido, na verdade, que apenas ouvimos um horrível zumbido contínuo. Se você nunca o ouviu, ouça um modem conectar-se à Internet ou tente ligar para uma máquina de fax – as máquinas de fax também usam modems para enviar informação.</string>
-    <string name="texto_CEM02">Usando o mesmo código que Tom utilizou na loja, tente enviar uma mensagem de correio eletrônico ao seu amigo. Mas facilite as coisas para você e seu amigo, pois vocês não precisam ser tão rápidos quanto um modem de verdade !</string>
+
+    <string name="dicas_cem">1. Digite os numeros corespondentes ao seu nome;
+    \n2. Decifre a mensagem enviada pelo seu amigo;</string>
+
+    <string name="dicas_ca31">1. Não esqueça a sequencia dos cartões 1, 2, 4, 8, 16...;
+    \n2. senhorita “Flex” é a moça da imagem;
+    \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
+
 
 </resources>
