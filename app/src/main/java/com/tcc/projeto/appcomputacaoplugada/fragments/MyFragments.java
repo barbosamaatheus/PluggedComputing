@@ -24,7 +24,8 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
  */
 
 public abstract class MyFragments extends Fragment {
-    protected EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11, mNum12, mNum13, mNum14, mNum15, mTextoTraduzido;
+    protected EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11,
+            mNum12, mNum13, mNum14, mNum15, mTextoTraduzido, mTextoNome;
     protected ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16, mDicas;
     protected TextView numTxt1, numTxt2, numTxt4, numTxt8, numTxt16, perg1, perg2, perg3, mNumerosSelecionados;
     protected RadioGroup radioGroup1, radioGroup2, radioGroup3;
@@ -75,7 +76,10 @@ public abstract class MyFragments extends Fragment {
 
     protected void editarPositionExercicio(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
-        myApplication.setPositionExercicio(position);
+        if(myApplication.getPositionExercicio()<position){
+            myApplication.setPositionExercicio(position);
+        }
+
         //myApplication.updateDataBase();;
     }
 

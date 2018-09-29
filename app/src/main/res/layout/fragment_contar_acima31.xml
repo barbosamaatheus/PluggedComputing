@@ -31,7 +31,7 @@
 
 
             <ImageButton
-                android:id="@+id/dicasINTRO"
+                android:id="@+id/dicasCA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cardshape"
@@ -61,7 +61,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg1_intro"
+                android:id="@+id/perg1_CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
@@ -70,7 +70,7 @@
                 android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup1"
+                android:id="@+id/myRadioGroup1CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -122,7 +122,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg2_intro"
+                android:id="@+id/perg2_CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
@@ -131,7 +131,7 @@
                 android:textColor="@color/textColorPrimary" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup2"
+                android:id="@+id/myRadioGroup2CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -150,7 +150,6 @@
 
                 <RadioButton
                     android:id="@+id/certo2"
-
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
@@ -209,7 +208,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg3_intro"
+                android:id="@+id/perg3_CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
@@ -219,7 +218,7 @@
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup3"
+                android:id="@+id/myRadioGroup3CA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -233,7 +232,7 @@
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
-                    android:text="1.024"
+                    android:text="32.768"
                     android:textColor="@color/textColorPrimary" />
 
                 <RadioButton
@@ -264,7 +263,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_finalizar"
+            android:id="@+id/btn_finalizar_CA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"

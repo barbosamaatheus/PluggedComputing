@@ -115,9 +115,13 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_error_outline_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\User" />
+                            <entry key="height" value="591" />
+                            <entry key="outputName" value="ic_cartao_mae" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\User\Desktop\Cartão mae.psd" />
+                            <entry key="width" value="1063" />
                           </map>
                         </option>
                       </PersistentState>

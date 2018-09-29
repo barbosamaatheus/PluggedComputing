@@ -31,7 +31,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/arvore" />
+                android:src="@mipmap/pc" />
 
             <ImageButton
                 android:id="@+id/dicasCEM"
@@ -59,31 +59,70 @@
                 android:text="@string/texto_CEM02"
                 android:textColor="@color/textColorPrimary" />
 
+            <EditText
+                android:id="@+id/textoNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:hint="traduza o seu nome..."
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/colorHint" />
+
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@mipmap/alfabeto" />
 
-
             <TextView
+                android:id="@+id/nomeBinario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:fontFamily="casual"
-                android:text="Digite os numeros correspondentes ao seu nome"
+                android:text="Este é seu nome em binario: 000000000000000000000000000000"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
-            <EditText
-                android:id="@+id/textoTraduzido"
+            <Button
+                android:id="@+id/enviar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/bungee"
+                android:text="ENVIAR"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/enviando"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:fontFamily="casual"
-                android:hint="Digite aqui..."
+                android:text="Enviando: BipBopBopBopBopBipBip..."
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:textColorHint="@color/colorHint" />
+                android:textColor="@color/textColorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recebendo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="Recebendo: BopBopBipBipBopBip..."
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
 
             <ImageView
                 android:layout_width="match_parent"
@@ -94,17 +133,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="casual"
-                android:text="Este é seu nome em binario:"
+                android:text="Traduza a mensagem:"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
             <TextView
+                android:id="@+id/mensagemRecebida"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="casual"
                 android:text="000000000000000000000000000000"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
+
+            <EditText
+                android:id="@+id/textoTraduzidoCem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:hint="Digite a mensagem aqui..."
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/colorHint" />
 
 
         </LinearLayout>

@@ -47,8 +47,8 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
 
         atividadesList.add(new Atividade("Contando os Pontos","Números Binários", getString(R.string.descricao_card),
                 "Matematica","Contar, Correlacionar, Ordenar","A partir de 7 anos"));
-        atividadesList.add(new Atividade("Titulo", "SubTitulo", "Isso aqui é só uma demostração de como vai ficar quendo" +
-                "tiver mais de uma atividade para ser escolhida", "Materia", "Habilidades, Habilidades, Habilidades", "Idade"));
+        //atividadesList.add(new Atividade("Titulo", "SubTitulo", "Isso aqui é só uma demostração de como vai ficar quendo" +
+                //"tiver mais de uma atividade para ser escolhida", "Materia", "Habilidades, Habilidades, Habilidades", "Idade"));
 
         return atividadesList;
     }
