@@ -1,13 +1,7 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,10 +13,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
-import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
-import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
-
 
 public class NumerosBinariosFragment extends MyFragments {
 
@@ -102,7 +92,7 @@ public class NumerosBinariosFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_nb),R.drawable.ic_help_outline_black_24dp );
+                onCreateDialog("Dicas", getString(R.string.dicas_nb), R.drawable.ic_help_outline_black_24dp);
             }
         });
 
@@ -200,7 +190,6 @@ public class NumerosBinariosFragment extends MyFragments {
         mCarta8 = (ImageButton) view.findViewById(R.id.carta8NB);
         mCarta16 = (ImageButton) view.findViewById(R.id.carta16NB);
     }
-
 
 
     public void validarClicked1() {

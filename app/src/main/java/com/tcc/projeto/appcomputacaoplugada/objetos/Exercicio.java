@@ -6,6 +6,7 @@ public class Exercicio {
     public Exercicio(String titulo) {
         this.titulo = titulo;
     }
+
     public Exercicio() {
         this.titulo = "";
     }

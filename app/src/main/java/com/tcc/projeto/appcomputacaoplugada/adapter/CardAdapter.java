@@ -1,10 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.adapter;
 
-
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,16 +15,17 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder>{
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
     private List<Atividade> mList;
     private LayoutInflater mLayoutInflater;
     private RecyclerViewOnClickListener mRecyclerViewOnClickListener;
 
-    public CardAdapter(AtividadesActivity atividadesActivity, List<Atividade> tarefas){
+    public CardAdapter(AtividadesActivity atividadesActivity, List<Atividade> tarefas) {
         this.mList = tarefas;
         mLayoutInflater = (LayoutInflater) atividadesActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-    public void setRecyclerViewOnClickListener(RecyclerViewOnClickListener r){
+
+    public void setRecyclerViewOnClickListener(RecyclerViewOnClickListener r) {
         this.mRecyclerViewOnClickListener = r;
     }
 
@@ -39,7 +38,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position){
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList.get(position).getTitulo());
         holder.mSubTitulo.setText(mList.get(position).getSubTitulo());
         holder.mDescricao.setText(mList.get(position).getDescricao());
@@ -70,7 +69,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder>{
 
         @Override
         public void onClick(View view) {
-            if(mRecyclerViewOnClickListener != null){
+            if (mRecyclerViewOnClickListener != null) {
                 mRecyclerViewOnClickListener.onClickListener(view, getPosition());
             }
 

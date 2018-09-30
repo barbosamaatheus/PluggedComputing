@@ -1,15 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +12,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
-import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
-import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
     private String textoTraduzido = "";
@@ -38,7 +29,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         initVerify();
         mNumerosSelecionados.setText(montarNumerosET());
 
-        mNum1.addTextChangedListener (new TextWatcher() {
+        mNum1.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -54,25 +45,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
             public void afterTextChanged(Editable editable) {
             }
         });
-        mNum2.addTextChangedListener (new TextWatcher() {
-
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != -1)
-                    mNumerosSelecionados.setText(montarNumerosET());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        mNum3.addTextChangedListener (new TextWatcher() {
+        mNum2.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -90,7 +63,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum4.addTextChangedListener (new TextWatcher() {
+        mNum3.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -108,7 +81,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum5.addTextChangedListener (new TextWatcher() {
+        mNum4.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -126,7 +99,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum6.addTextChangedListener (new TextWatcher() {
+        mNum5.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -144,7 +117,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum7.addTextChangedListener (new TextWatcher() {
+        mNum6.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -162,7 +135,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum8.addTextChangedListener (new TextWatcher() {
+        mNum7.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -180,7 +153,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum9.addTextChangedListener (new TextWatcher() {
+        mNum8.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -198,7 +171,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum10.addTextChangedListener (new TextWatcher() {
+        mNum9.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -216,7 +189,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum11.addTextChangedListener (new TextWatcher() {
+        mNum10.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -234,7 +207,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum12.addTextChangedListener (new TextWatcher() {
+        mNum11.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -252,7 +225,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum13.addTextChangedListener (new TextWatcher() {
+        mNum12.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -270,7 +243,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum14.addTextChangedListener (new TextWatcher() {
+        mNum13.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -288,7 +261,25 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
             }
         });
-        mNum15.addTextChangedListener (new TextWatcher() {
+        mNum14.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() != -1)
+                    mNumerosSelecionados.setText(montarNumerosET());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+        mNum15.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -321,7 +312,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_ems), R.drawable.ic_help_outline_black_24dp );
+                onCreateDialog("Dicas", getString(R.string.dicas_ems), R.drawable.ic_help_outline_black_24dp);
             }
         });
 

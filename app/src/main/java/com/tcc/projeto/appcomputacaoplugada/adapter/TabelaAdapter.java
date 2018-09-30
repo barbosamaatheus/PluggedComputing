@@ -1,7 +1,5 @@
 package com.tcc.projeto.appcomputacaoplugada.adapter;
 
-import android.app.ActionBar;
-
 import com.tcc.projeto.appcomputacaoplugada.objetos.Tabela;
 
 import java.util.ArrayList;
@@ -10,11 +8,11 @@ import java.util.List;
 public class TabelaAdapter {
     private List<Tabela> tabela = new ArrayList<Tabela>();
 
-    public TabelaAdapter(){
+    public TabelaAdapter() {
         gerarTabela();
     }
 
-    public List<Tabela> getTabela(){
+    public List<Tabela> getTabela() {
         return this.tabela;
     }
 
@@ -47,25 +45,28 @@ public class TabelaAdapter {
         tabela.add(new Tabela("z", "26", "11010"));
 
     }
-    public String obterBinarioDaLetra(String letra){
-        for (Tabela tabela: tabela){
-            if(tabela.getLetra().equalsIgnoreCase(letra)){
+
+    public String obterBinarioDaLetra(String letra) {
+        for (Tabela tabela : tabela) {
+            if (tabela.getLetra().equalsIgnoreCase(letra)) {
                 return tabela.getBinario();
             }
         }
         return null;
     }
-    public String obterNumeroDoBinario(String binario){
-        for (Tabela tabela: tabela){
-            if(tabela.getBinario().equalsIgnoreCase(binario)){
+
+    public String obterNumeroDoBinario(String binario) {
+        for (Tabela tabela : tabela) {
+            if (tabela.getBinario().equalsIgnoreCase(binario)) {
                 return tabela.getNumero();
             }
         }
         return null;
     }
-    public String obterLetraDoNumero(String numero){
-        for (Tabela tabela: tabela){
-            if(tabela.getNumero().equalsIgnoreCase(numero)){
+
+    public String obterLetraDoNumero(String numero) {
+        for (Tabela tabela : tabela) {
+            if (tabela.getNumero().equalsIgnoreCase(numero)) {
                 return tabela.getLetra();
             }
         }

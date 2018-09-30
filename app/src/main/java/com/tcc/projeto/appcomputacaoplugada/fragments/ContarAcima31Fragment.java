@@ -2,7 +2,6 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 public class ContarAcima31Fragment extends MyFragments {
 
@@ -136,9 +134,6 @@ public class ContarAcima31Fragment extends MyFragments {
         errado31 = (RadioButton) view.findViewById(R.id.errado31);
         errado32 = (RadioButton) view.findViewById(R.id.errado32);
     }
-
-
-
 
 
 }

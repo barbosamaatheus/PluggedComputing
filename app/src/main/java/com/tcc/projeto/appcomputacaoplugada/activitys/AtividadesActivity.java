@@ -1,14 +1,11 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.Switch;
 
 import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 import com.tcc.projeto.appcomputacaoplugada.adapter.CardAdapter;
@@ -32,7 +29,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
         initviews();
     }
 
-    private void initviews(){
+    private void initviews() {
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_atividades);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -45,10 +42,10 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     public List<Atividade> getAtividadesList() {
         List<Atividade> atividadesList = new ArrayList<Atividade>();
 
-        atividadesList.add(new Atividade("Contando os Pontos","Números Binários", getString(R.string.descricao_card),
-                "Matematica","Contar, Correlacionar, Ordenar","A partir de 7 anos"));
+        atividadesList.add(new Atividade("Contando os Pontos", "Números Binários", getString(R.string.descricao_card),
+                "Matematica", "Contar, Correlacionar, Ordenar", "A partir de 7 anos"));
         //atividadesList.add(new Atividade("Titulo", "SubTitulo", "Isso aqui é só uma demostração de como vai ficar quendo" +
-                //"tiver mais de uma atividade para ser escolhida", "Materia", "Habilidades, Habilidades, Habilidades", "Idade"));
+        //"tiver mais de uma atividade para ser escolhida", "Materia", "Habilidades, Habilidades, Habilidades", "Idade"));
 
         return atividadesList;
     }
@@ -56,7 +53,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-        switch(positon +1){
+        switch (positon + 1) {
             case 1:
                 Intent intent = new Intent(getApplicationContext(), ExerciciosActivity.class);
                 startActivity(intent);

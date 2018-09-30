@@ -6,18 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 

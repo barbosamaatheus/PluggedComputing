@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,6 +63,7 @@ public abstract class MyFragments extends Fragment {
             validarCampos();
         }
     }
+
     protected void gerenciarResultados(int position, Context context) {
         if (!exibir) {
             editarPositionExercicio(position, context);
@@ -76,7 +76,7 @@ public abstract class MyFragments extends Fragment {
 
     protected void editarPositionExercicio(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
-        if(myApplication.getPositionExercicio()<position){
+        if (myApplication.getPositionExercicio() < position) {
             myApplication.setPositionExercicio(position);
         }
 
@@ -185,12 +185,13 @@ public abstract class MyFragments extends Fragment {
     protected String montarNumerosET() {
         return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
                 + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "
-                + mNum7.getText().toString() + " " + mNum8.getText().toString() + " "  + mNum9.getText().toString() + " "
+                + mNum7.getText().toString() + " " + mNum8.getText().toString() + " " + mNum9.getText().toString() + " "
                 + mNum10.getText().toString() + " - " + mNum11.getText().toString() + " " + mNum12.getText().toString() + " "
                 + mNum13.getText().toString() + " " + mNum14.getText().toString() + " " + mNum15.getText().toString();
     }
 
-    protected void initViews(View view) {}
+    protected void initViews(View view) {
+    }
 
     protected void createCartas() {
         carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);

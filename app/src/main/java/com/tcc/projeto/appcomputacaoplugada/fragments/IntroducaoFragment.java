@@ -1,12 +1,6 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
-import android.app.AlertDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +11,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
-import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
-import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
 public class IntroducaoFragment extends MyFragments {
@@ -160,7 +152,7 @@ public class IntroducaoFragment extends MyFragments {
         initRadioGroups(view);
         initPerguntas(view);
     }
-    
+
     private void initPerguntas(View view) {
         perg1 = (TextView) view.findViewById(R.id.perg1_intro);
         perg2 = (TextView) view.findViewById(R.id.perg2_intro);

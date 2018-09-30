@@ -2,12 +2,9 @@ package com.tcc.projeto.appcomputacaoplugada.activitys;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
@@ -27,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initViews();
 
-        onCreateDialog("Notas da versão 1.6.18", "1. Ajuste no posicionamento dos botões da tela inicial; \n" +
+        onCreateDialog("Notas da versão 1.6.1", "1. Ajuste no posicionamento dos botões da tela inicial; \n" +
                 "2. Correção na segunda questão da tela de NUMEROS BINARIOS; \n " +
                 "3. Correção do bug na resposta do enviar mensagens secrestas; \n" +
                 "4. Remoção de mensagem de erro nas perguntas; \n" +
@@ -37,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 "8. Melhorias no codigo; \n" +
                 "9. Notas da versão implementado; \n" +
                 "10. Mudança de estino nas mensagens de alerta \n" +
-                "11.Tarefas: Correio eletronico e Modems e Contar a cima de 31 implementadas", R.drawable.ic_error_outline_black_24dp);
+                "11. Tarefas: Correio eletronico e Modems e Contar a cima de 31 implementadas \n" +
+                "12. *Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private void initViews(){
+
+    private void initViews() {
         myApplication = (MyApplication) getApplicationContext();
         mInicar = (Button) findViewById(R.id.btn_iniciar);
         mSobre = (Button) findViewById(R.id.btn_sobre);
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
     private void onCreateDialog(String title, String mensagem, int icon) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogStyle);
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);

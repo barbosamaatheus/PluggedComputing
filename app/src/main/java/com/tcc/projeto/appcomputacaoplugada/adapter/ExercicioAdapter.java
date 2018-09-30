@@ -1,10 +1,9 @@
 package com.tcc.projeto.appcomputacaoplugada.adapter;
 
-
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +13,6 @@ import android.widget.TextView;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
-import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Exercicio;
-
-import java.util.List;
 
 public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyViewHolder> {
     private String[] mList;
@@ -47,13 +41,13 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
-        if(position!=0){
+        if (position != 0) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }
-        if (position <= (estado - 1)){
+        if (position <= (estado - 1)) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_check_black_24dp);
         }
-        if (position == (estado)){
+        if (position == (estado)) {
             holder.mCheck.setVisibility(View.GONE);
         }
     }
@@ -83,7 +77,7 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
         }
     }
 
-    private void setVisibility(MyViewHolder holder){
+    private void setVisibility(MyViewHolder holder) {
         holder.mCheck.setVisibility(View.VISIBLE);
 
 

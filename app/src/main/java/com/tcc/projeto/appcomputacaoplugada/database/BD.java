@@ -37,11 +37,11 @@ public class BD {
         String[] colunas = new String[]{"_id", "position"};
 
         Cursor cursor = database.query("registros", colunas, null, null, null, null, "position");
-        if(cursor.getCount() > 0){
+        if (cursor.getCount() > 0) {
             cursor.moveToFirst();
             do {
                 positions.add(cursor.getInt(1));
-            }while (cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
         return positions;
     }

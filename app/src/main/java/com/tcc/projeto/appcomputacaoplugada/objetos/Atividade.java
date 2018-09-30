@@ -2,7 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.objetos;
 
 public class Atividade {
 
-    private String titulo, subTitulo ,descricao, materias, habilidades, idade;
+    private String titulo, subTitulo, descricao, materias, habilidades, idade;
 
     public Atividade() {
         this.titulo = "-";
