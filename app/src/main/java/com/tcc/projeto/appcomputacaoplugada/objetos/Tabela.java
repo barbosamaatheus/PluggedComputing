@@ -1,41 +1,41 @@
 package com.tcc.projeto.appcomputacaoplugada.objetos;
 
 public class Tabela {
-    private char letra;
-    private int numero;
-    private double binario;
+    private String letra;
+    private String numero;
+    private String binario;
 
     public Tabela() {
     }
 
 
-    public Tabela(char letra, int numero, double binario) {
+    public Tabela(String letra, String numero, String binario) {
         this.letra = letra;
         this.numero = numero;
         this.binario = binario;
     }
 
-    public char getLetra() {
+    public String getLetra() {
         return letra;
     }
 
-    public void setLetra(char letra) {
+    public void setLetra(String letra) {
         this.letra = letra;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
-    public double getBinario() {
+    public String getBinario() {
         return binario;
     }
 
-    public void setBinario(double binario) {
+    public void setBinario(String binario) {
         this.binario = binario;
     }
 }

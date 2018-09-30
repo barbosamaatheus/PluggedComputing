@@ -59,6 +59,7 @@
                 android:text="@string/texto_CEM02"
                 android:textColor="@color/textColorPrimary" />
 
+
             <EditText
                 android:id="@+id/textoNome"
                 android:layout_width="match_parent"
@@ -73,7 +74,17 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@mipmap/alfabeto" />
+                android:src="@mipmap/bipbop" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fontFamily="casual"
+                android:text="Este é seu nome em binario:"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
 
             <TextView
                 android:id="@+id/nomeBinario"
@@ -81,7 +92,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:fontFamily="casual"
-                android:text="Este é seu nome em binario: 000000000000000000000000000000"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
@@ -103,7 +113,8 @@
                 android:fontFamily="casual"
                 android:text="Enviando: BipBopBopBopBopBipBip..."
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textColor="@color/textColorPrimary"
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout
@@ -121,17 +132,18 @@
                 android:fontFamily="casual"
                 android:text="Recebendo: BopBopBipBipBopBip..."
                 android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
-
+                android:textColor="@color/textColorPrimary"
+                android:visibility="gone" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/bipbop" />
+                android:background="@mipmap/alfabeto" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
                 android:fontFamily="casual"
                 android:text="Traduza a mensagem:"
                 android:textAlignment="center"

@@ -3,6 +3,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,11 +21,17 @@ import java.util.List;
 public class CorreioEletronicoModemsFragment extends MyFragments {
     private TextView envinado, recebendo, nomeBinario, mensagemRecebida;
     private Button mEnviar;
+    private String textoNome="";
+    private String textoTraduzido="";
+
+
+    private String numeroNomeBinarios = "";
 
 
     public CorreioEletronicoModemsFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +39,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         View view = inflater.inflate(R.layout.fragment_correio_eletronico_modems, container, false);
         initViews(view);
 
-        mTextoNome.addTextChangedListener (new TextWatcher() {
+        mTextoNome.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -40,8 +47,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() != -1){
-                    nomeBinario.setText(converterBinario(mTextoNome));
+                if (charSequence.length() != -1) {
+                    nomeBinario.setText(converterBinario(charSequence));
                 }
 
             }
@@ -53,36 +60,32 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         mEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                envinado.setVisibility(View.VISIBLE);
+                recebendo.setVisibility(View.VISIBLE);
+                mensagemRecebida.setText(converterNumero(nomeBinario.getText().toString()));
             }
         });
 
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textoNome = mTextoNome.getText().toString();
+                textoTraduzido = mTextoTraduzido.getText().toString();
 
+                if (respostasIsEmpty()) {
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                } else {
+                    validarCampos();
+                    gerenciarResultados(5, getActivity());
+                }
             }
         });
         return view;
     }
 
-    private String converterBinario(EditText mTextoNome) {
-        String textoDigitado = mTextoNome.getText().toString();
-        String nomeBinarios = "";
-        List<Tabela> tabela = new TabelaAdapter().getTabela();
-        for(int i = 0; i <textoDigitado.length(); i++){
-            char letra = textoDigitado.charAt(i);
-            for(Tabela t: tabela){
-                if (t.getNumero() == (letra)){
-                    nomeBinarios += t.getBinario();
-                }
-            }
-        }
-        return nomeBinarios;
-    }
 
     @Override
-    protected void initViews(View view){
+    protected void initViews(View view) {
         mDicas = (ImageButton) view.findViewById(R.id.dicasEMS);
         mTextoNome = (EditText) view.findViewById(R.id.textoNome);
         mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzidoCem);
@@ -96,17 +99,60 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         envinado = (TextView) view.findViewById(R.id.enviando);
         recebendo = (TextView) view.findViewById(R.id.recebendo);
         nomeBinario = (TextView) view.findViewById(R.id.nomeBinario);
-        mensagemRecebida= (TextView) view.findViewById(R.id.mensagemRecebida);
+        mensagemRecebida = (TextView) view.findViewById(R.id.mensagemRecebida);
 
     }
 
     @Override
     protected boolean respostasIsEmpty() {
+        if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzido.getText().toString().isEmpty()) {
+            return true;
+        }
         return false;
     }
 
     @Override
     protected boolean validarCampos() {
+        View focus = null;
+        exibir = false;
+        if (!validarTexto(mensagemRecebida.toString())) {
+            mTextoTraduzido.setError(getString(R.string.resposta_incorreta));
+            focus = mTextoTraduzido;
+            exibir = true;
+        }
+        if (exibir) {
+            focus.requestFocus();
+        }
+        return exibir;
+    }
+
+    private boolean validarTexto(String s) {
+        if (textoTraduzido.equalsIgnoreCase("ola, " + textoNome)) {
+            return true;
+        }
         return false;
+    }
+
+
+    private String converterNumero(String s) {
+        TabelaAdapter tabela = new TabelaAdapter();
+        String nomeNumero = "15 12 1, ";
+        int init = 0;
+        int end = 5;
+        for (int i = 0; i < mTextoNome.length(); i++) {
+            nomeNumero += tabela.obterNumeroDoBinario(s.substring(init, end)) + " ";
+            init = end;
+            end += 5;
+        }
+        return nomeNumero;
+    }
+
+    private String converterBinario(CharSequence mTextoNome) {
+        TabelaAdapter tabela = new TabelaAdapter();
+        String nomeBinarios = "";
+        for (int i = 0; i < mTextoNome.length(); i++) {
+            nomeBinarios += tabela.obterBinarioDaLetra(mTextoNome.charAt(i) + "");
+        }
+        return nomeBinarios;
     }
 }
