@@ -161,12 +161,6 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         num10 = mNum10.getText().toString();
     }
 
-    public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
-        builder.setMessage(R.string.texto_alert_sem_resposta).setTitle("Algo deu errado :(");
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
 
     @Override
     protected void initViews(View view) {
@@ -188,10 +182,6 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         mNum8 = (EditText) view.findViewById(R.id.num8TNB);
         mNum9 = (EditText) view.findViewById(R.id.num9TNB);
         mNum10 = (EditText) view.findViewById(R.id.num10TNB);
-    }
-
-    @Override
-    protected void createCartas() {
     }
 
 }

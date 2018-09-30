@@ -21,11 +21,9 @@ import java.util.List;
 public class CorreioEletronicoModemsFragment extends MyFragments {
     private TextView envinado, recebendo, nomeBinario, mensagemRecebida;
     private Button mEnviar;
-    private String textoNome="";
-    private String textoTraduzido="";
-
-
-    private String numeroNomeBinarios = "";
+    private String textoNome = "";
+    private String textoTraduzido = "";
+    private String textoRecebido = "";
 
 
     public CorreioEletronicoModemsFragment() {
@@ -38,6 +36,14 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_correio_eletronico_modems, container, false);
         initViews(view);
+        initVerify();
+        mensagemRecebida.setText(textoRecebido);
+        mDicas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onCreateDialog("Dicas", getString(R.string.dicas_cem), R.drawable.ic_help_outline_black_24dp);
+            }
+        });
 
         mTextoNome.addTextChangedListener(new TextWatcher() {
 
@@ -69,9 +75,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textoNome = mTextoNome.getText().toString();
-                textoTraduzido = mTextoTraduzido.getText().toString();
-
+                textoRecebido = mensagemRecebida.getText().toString();
                 if (respostasIsEmpty()) {
                     onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
                 } else {
@@ -105,10 +109,14 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
 
     @Override
     protected boolean respostasIsEmpty() {
-        if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzido.getText().toString().isEmpty()) {
-            return true;
+        validarClicked1();
+        boolean isEmpty;
+        if (!checked1) {
+            isEmpty = true;
+        } else {
+            isEmpty = false;
         }
-        return false;
+        return isEmpty;
     }
 
     @Override
@@ -124,6 +132,21 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
             focus.requestFocus();
         }
         return exibir;
+    }
+
+    public void validarClicked1() {
+        if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzido.getText().toString().isEmpty()) {
+            checked1 = false;
+        } else {
+            textoNome = mTextoNome.getText().toString();
+            textoTraduzido = mTextoTraduzido.getText().toString();
+            checked1 = true;
+        }
+        if (textoNome.isEmpty() || textoTraduzido.isEmpty()) {
+            checked1 = false;
+        } else {
+            checked1 = true;
+        }
     }
 
     private boolean validarTexto(String s) {
