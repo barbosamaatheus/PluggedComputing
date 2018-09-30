@@ -25,8 +25,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
         initViews();
+
+        onCreateDialog("Notas da versão 1.6.18", "1. Ajuste no posicionamento dos botões da tela inicial; \n" +
+                "2. Correção na segunda questão da tela de NUMEROS BINARIOS; \n " +
+                "3. Correção do bug na resposta do enviar mensagens secrestas; \n" +
+                "4. Remoção de mensagem de erro nas perguntas; \n" +
+                "5. Correção de alguns textos no app; \n" +
+                "6. Segundo Card para exemplificar tela de Atividades implementado; \n" +
+                "7. Botão de ajuda implementado em todas as terefas;" +
+                "8. Melhorias no codigo; \n" +
+                "9. Notas da versão implementado; \n" +
+                "10. Mudança de estino nas mensagens de alerta \n" +
+                "11.Tarefas: Correio eletronico e Modems e Contar a cima de 31 implementadas", R.drawable.ic_error_outline_black_24dp);
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
     public void onCreateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setView(R.layout.alert_sobre);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+    private void onCreateDialog(String title, String mensagem, int icon) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogStyle);
+        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
     }
