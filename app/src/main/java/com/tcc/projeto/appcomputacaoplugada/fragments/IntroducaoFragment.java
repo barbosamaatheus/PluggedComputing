@@ -1,5 +1,6 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -89,12 +90,11 @@ public class IntroducaoFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_intro), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas          ", getString(R.string.dicas_intro), R.drawable.ic_help_outline_black_24dp);
             }
         });
         return view;
     }
-
 
     @Override
     protected boolean validarCampos() {

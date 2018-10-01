@@ -24,18 +24,19 @@ public class MainActivity extends AppCompatActivity {
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initViews();
 
-        onCreateDialog("Notas da versão 1.6.1", "1. Ajuste no posicionamento dos botões da tela inicial; \n" +
+        onCreateDialog("Notas da versão 1.6.21", "1. Ajuste no posicionamento dos botões da tela inicial; \n" +
                 "2. Correção na segunda questão da tela de NUMEROS BINARIOS; \n " +
                 "3. Correção do bug na resposta do enviar mensagens secrestas; \n" +
                 "4. Remoção de mensagem de erro nas perguntas; \n" +
                 "5. Correção de alguns textos no app; \n" +
-                "6. Segundo Card para exemplificar tela de Atividades implementado; \n" +
+                "6. Captura automatica do EditText; \n" +
                 "7. Botão de ajuda implementado em todas as terefas;" +
                 "8. Melhorias no codigo; \n" +
                 "9. Notas da versão implementado; \n" +
                 "10. Mudança de estino nas mensagens de alerta \n" +
                 "11. Tarefas: Correio eletronico e Modems e Contar a cima de 31 implementadas \n" +
-                "12. *Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
+                "12. Mudança na orientação das resposatas da terceira pergunta da segunda tela \n" +
+                "13. *Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

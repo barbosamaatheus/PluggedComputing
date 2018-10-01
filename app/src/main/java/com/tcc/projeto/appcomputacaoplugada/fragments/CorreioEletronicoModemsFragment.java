@@ -86,7 +86,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        mDicas = (ImageButton) view.findViewById(R.id.dicasEMS);
+        mDicas = (ImageButton) view.findViewById(R.id.dicasCEM);
         mTextoNome = (EditText) view.findViewById(R.id.textoNome);
         mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzidoCem);
         mEnviar = (Button) view.findViewById(R.id.enviar);

@@ -9,14 +9,20 @@
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
     </style>
 
-    <style name="DialogStyle"  parent="@android:style/Theme.Material.Dialog" tools:ignore="NewApi">
+    <style name="DialogStyle"  parent="@android:style/Theme.Material.Dialog.Alert" tools:ignore="NewApi">
         <item name="android:textStyle">bold</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:windowBackground">@color/colorAccent</item>
         <item name="android:fontFamily">casual</item>
         <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
 
-
-
+    <style name="EditTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">#e91e63</item>
+        <item name="android:colorForeground">#33691e</item>
+        <item name="colorControlNormal">#f57f17</item>
+        <item name="android:textColorSecondary">#673ab7</item>
     </style>
 </resources>
