@@ -72,17 +72,15 @@
                     android:id="@+id/textoNome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
                     android:hint="Digite o seu nome..."
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint" />
+                    android:theme="@style/EditTextStyle" />
             </android.support.design.widget.TextInputLayout>
 
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
                 android:src="@mipmap/bipbop" />
 
 
@@ -90,12 +88,9 @@
                 android:id="@+id/enviar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/buttonshape"
-                android:fontFamily="@font/bungee"
                 android:text="ENVIAR"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                style="@style/ButtonStyle"
+                 />
 
             <ProgressBar
                 android:id="@+id/pb"
@@ -129,11 +124,12 @@
                 android:background="@mipmap/alfabeto" />
 
             <TextView
+                android:id="@+id/recebido"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:fontFamily="casual"
-                android:text="O Tom te enviou está mensagem, vamos traduzir?:"
+                android:text="O Tom te enviou está mensagem, vamos traduzir?"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
@@ -141,7 +137,7 @@
                 android:id="@+id/nomeBinario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
+                android:layout_margin="5dp"
                 android:fontFamily="casual"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
@@ -159,14 +155,8 @@
                     android:id="@+id/textoTraduzidoCem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:fontFamily="casual"
                     android:hint="Traduza a mensagem aqui..."
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    app:errorEnabled="true" />
+                    android:theme="@style/EditTextStyle" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -176,12 +166,9 @@
             android:id="@+id/btn_finalizar_cem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/buttonshape"
-            android:fontFamily="@font/bungee"
             android:text="Finalizar"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            style="@style/ButtonStyle"
+            />
 
     </LinearLayout>
 

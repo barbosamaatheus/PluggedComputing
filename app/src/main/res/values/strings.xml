@@ -50,7 +50,7 @@
         Tão rápido, na verdade, que apenas ouvimos um horrível zumbido contínuo. Se você nunca o ouviu, ouça um modem
         conectar-se à Internet ou tente ligar para uma máquina de fax – as máquinas de fax também usam modems para enviar informação.</string>
 
-    <string name="texto_CEM02">Usando o mesmo código que Tom utilizou na loja, tente enviar uma mensagem de correio eletrônico com seu nome ao seu amigo.
+    <string name="texto_CEM02">Tente enviar uma mensagem de correio eletrônico com seu nome ao seu amigo. Depois usando o mesmo código que Tom utilizou no exercicio anterior, decifre a resposta do seu amigo.
         Mas facilite as coisas para você e seu amigo, pois vocês não precisam ser tão rápidos quanto um modem de verdade!</string>
 
     <string name="texto_CA31_01">Você já colocou todos os seus dedos para trabalhar? Pois agora seus dedos podem contar e
@@ -82,7 +82,7 @@
         \n2. Decifre todos os numeros e ao final traduza a mensagem;
         \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
-    <string name="dicas_cem">1. Digite os numeros corespondentes ao seu nome;
+    <string name="dicas_cem">1. Digite o seu nome e clique em enviar;
     \n2. Decifre a mensagem enviada pelo seu amigo;</string>
 
     <string name="dicas_ca31">1. Não esqueça a sequencia dos cartões 1, 2, 4, 8, 16...;

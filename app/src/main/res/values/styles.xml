@@ -9,7 +9,7 @@
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
     </style>
 
-    <style name="DialogStyle"  parent="@android:style/Theme.Material.Dialog.Alert" tools:ignore="NewApi">
+    <style name="DialogStyle" parent="@android:style/Theme.Material.Dialog.Alert" tools:ignore="NewApi">
         <item name="android:textStyle">bold</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:windowBackground">@color/colorAccent</item>
@@ -31,7 +31,17 @@
         <item name="android:fontFamily" tools:targetApi="jelly_bean">casual</item>
 
     </style>
-    <style name="ProgressBarStyle" parent="EditTextStyle">
+
+    <style name="ButtonStyle" parent="AppTheme">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/bungee</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/buttonshape</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+
+    </style>
+
+    <style name="ProgressBarStyle" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/textColorPrimary</item>
