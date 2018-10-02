@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -85,24 +86,6 @@
                 android:src="@mipmap/bipbop" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:fontFamily="casual"
-                android:text="Este é seu nome em binario:"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
-
-            <TextView
-                android:id="@+id/nomeBinario"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:fontFamily="casual"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
-
             <Button
                 android:id="@+id/enviar"
                 android:layout_width="match_parent"
@@ -114,12 +97,18 @@
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 
+            <ProgressBar
+                android:id="@+id/pb"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ProgressBarStyle" />
+
             <TextView
                 android:id="@+id/enviando"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="casual"
-                android:text="Enviando: BipBopBopBopBopBipBip..."
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary"
                 android:visibility="gone" />
@@ -133,19 +122,10 @@
             android:elevation="5dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/recebendo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="casual"
-                android:text="Recebendo: BopBopBipBipBopBip..."
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:visibility="gone" />
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
                 android:background="@mipmap/alfabeto" />
 
             <TextView
@@ -153,14 +133,15 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
                 android:fontFamily="casual"
-                android:text="Traduza a mensagem:"
+                android:text="O Tom te enviou está mensagem, vamos traduzir?:"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
             <TextView
-                android:id="@+id/mensagemRecebida"
+                android:id="@+id/nomeBinario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
                 android:fontFamily="casual"
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
@@ -178,11 +159,14 @@
                     android:id="@+id/textoTraduzidoCem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:fontFamily="casual"
-                    android:hint="Digite a mensagem aqui..."
+                    android:hint="Traduza a mensagem aqui..."
                     android:textAlignment="center"
                     android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint" />
+                    android:textColorHint="@color/colorHint"
+                    app:errorEnabled="true" />
             </android.support.design.widget.TextInputLayout>
 
 
