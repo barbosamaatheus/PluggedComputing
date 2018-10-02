@@ -29,7 +29,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
     private Button mEnviar;
     private String textoNome = "";
     private String textoTraduzido = "";
-    private String textoBinario = "Primeiro envie uma resposta para obter uma resposta";
+    private String textoBinario = "Primeiro envie seu nome para obter uma resposta";
     private ProgressBar pb;
     private int progressStatus, end;
 

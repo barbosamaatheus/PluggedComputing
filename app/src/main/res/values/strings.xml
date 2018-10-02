@@ -72,11 +72,12 @@
     <string name="dicas_nb">1. Presione o cartão para vira-lo;
         \n2. A soma dos pontos dos cartões representam o numero decimal;
         \n3. Os numero decimal é representado pela sequencia de zeros e uns;
-        \n4. Decore a posição das cartas, você vai precisar…;
+        \n4. Decore a posição das cartas, você vai precisar…
         \n5. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
     <string name="dicas_tnb">1. Os campos devems ser preenchidos com valores decimais;
-        \n2. Responda todas as perguntas corretamente para completar a tarefa</string>
+        \n2. Talvez lembrar a sequencia das cartas (16 8 4 2 1) te ajude nesse exercicio;
+        \n3. Responda todas as perguntas corretamente para completar a tarefa</string>
 
     <string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais;
         \n2. Decifre todos os numeros e ao final traduza a mensagem;
@@ -85,8 +86,8 @@
     <string name="dicas_cem">1. Digite o seu nome e clique em enviar;
     \n2. Decifre a mensagem enviada pelo seu amigo;</string>
 
-    <string name="dicas_ca31">1. Não esqueça a sequencia dos cartões 1, 2, 4, 8, 16...;
-    \n2. senhorita “Flex” é a moça da imagem;
+    <string name="dicas_ca31">1. Não esqueça a sequencia dos cartões 16, 8, 4, 2, 1...
+    \n2. senhorita "Flex" é a mulher da imagem;
     \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
 

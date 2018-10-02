@@ -37,7 +37,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_nb), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_tnb), R.drawable.ic_help_outline_black_24dp);
             }
         });
         return view;
