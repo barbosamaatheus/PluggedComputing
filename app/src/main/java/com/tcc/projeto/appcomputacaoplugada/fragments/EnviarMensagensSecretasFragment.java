@@ -1,6 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -15,6 +17,8 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
     private String textoTraduzido = "";
+    private TextInputLayout textInputLayout;
+    private TextInputEditText mTextoTraduzido;
 
     public EnviarMensagensSecretasFragment() {
         // Required empty public constructor
@@ -491,7 +495,9 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
     }
 
     private void initEditText(View view) {
-        mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
+        textInputLayout = (TextInputLayout) view.findViewById(R.id.textInputLayout);
+        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzido);
+       // mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
         mDicas = (ImageButton) view.findViewById(R.id.dicasEMS);
 
         mNum1 = (EditText) view.findViewById(R.id.num1EMS);

@@ -203,9 +203,7 @@
                     android:fontFamily="@font/bungee"
                     android:hint="Maior..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint" />
+                    android:theme="@style/EditTextStyle" />
 
                 <EditText
                     android:maxLength="2"
@@ -218,9 +216,7 @@
                     android:fontFamily="@font/bungee"
                     android:hint="Menor..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint" />
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
 

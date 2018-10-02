@@ -59,16 +59,24 @@
                 android:text="@string/texto_CEM02"
                 android:textColor="@color/textColorPrimary" />
 
-
-            <EditText
-                android:id="@+id/textoNome"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:hint="traduza o seu nome..."
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:textColorHint="@color/colorHint" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:theme="@style/EditTextStyle">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textoNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:hint="Digite o seu nome..."
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </android.support.design.widget.TextInputLayout>
 
 
             <ImageView
@@ -157,15 +165,25 @@
                 android:textAlignment="center"
                 android:textColor="@color/textColorPrimary" />
 
-            <EditText
-                android:id="@+id/textoTraduzidoCem"
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:hint="Digite a mensagem aqui..."
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:textColorHint="@color/colorHint" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:theme="@style/EditTextStyle">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textoTraduzidoCem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:hint="Digite a mensagem aqui..."
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/colorHint" />
+            </android.support.design.widget.TextInputLayout>
 
 
         </LinearLayout>

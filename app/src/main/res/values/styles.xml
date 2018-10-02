@@ -17,12 +17,17 @@
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
-    <style name="EditTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="EditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorControlActivated">#e91e63</item>
-        <item name="android:colorForeground">#33691e</item>
-        <item name="colorControlNormal">#f57f17</item>
-        <item name="android:textColorSecondary">#673ab7</item>
+        <item name="colorAccent">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="colorControlActivated">@color/textColorPrimary</item>
+        <item name="colorControlNormal">@color/colorHint</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">casual</item>
+
     </style>
 </resources>

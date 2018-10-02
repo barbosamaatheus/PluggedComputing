@@ -1,6 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -15,6 +17,8 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.adapter.TabelaAdapter;
 
 public class CorreioEletronicoModemsFragment extends MyFragments {
+    private TextInputLayout textInputLayout1, textInputLayout2;
+    private TextInputEditText mTextoTraduzido;
     private TextView envinado, recebendo, nomeBinario, mensagemRecebida;
     private Button mEnviar;
     private String textoNome = "";
@@ -86,13 +90,19 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
+        initEditTexts(view);
+        initTextView(view);
         mDicas = (ImageButton) view.findViewById(R.id.dicasCEM);
-        mTextoNome = (EditText) view.findViewById(R.id.textoNome);
-        mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzidoCem);
         mEnviar = (Button) view.findViewById(R.id.enviar);
         mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_cem);
-        initTextView(view);
 
+    }
+
+    private void initEditTexts(View view) {
+        textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayout1);
+        textInputLayout2 = (TextInputLayout) view.findViewById(R.id.textInputLayout2);
+        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
+        mTextoNome =  (TextInputEditText) view.findViewById(R.id.textoNome);
     }
 
     private void initTextView(View view) {

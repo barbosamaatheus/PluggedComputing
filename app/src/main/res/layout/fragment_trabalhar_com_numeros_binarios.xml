@@ -67,13 +67,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -97,13 +93,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
         </LinearLayout>
@@ -135,13 +127,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -165,13 +153,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
                     android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
         </LinearLayout>
@@ -203,13 +188,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle"
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -233,13 +215,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -271,13 +249,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -301,13 +275,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
         </LinearLayout>
@@ -339,13 +309,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -369,13 +335,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="casual"
                     android:hint="..."
                     android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textColorHint="@color/colorHint"
-                    android:textStyle="bold" />
+                    android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
         </LinearLayout>
