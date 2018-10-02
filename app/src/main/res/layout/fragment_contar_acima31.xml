@@ -266,12 +266,8 @@
             android:id="@+id/btn_finalizar_CA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/buttonshape"
-            android:fontFamily="@font/bungee"
             android:text="Finalizar"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            style="@style/ButtonStyle" />
 
     </LinearLayout>
 
