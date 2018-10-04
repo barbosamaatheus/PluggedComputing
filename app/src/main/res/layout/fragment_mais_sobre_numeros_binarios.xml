@@ -1,14 +1,270 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fundo"
+    android:orientation="vertical"
     tools:context=".fragments.MaisSobreNumerosBinariosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:justificationMode="inter_word"
+                android:text="@string/texto_mnb_01"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/dicasMNB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardshape"
+                android:src="@drawable/ic_help_outline_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/perg1_mnb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="1. Mas o que acontece quando você coloca um 0 à direita de um número binário?"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/errado12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="Nada acontece"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/errado11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="é multiplicado por 10"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/certo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="O número é dobrado."
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/perg2_mnb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="2. Qual numero deve está no lugar da (?) interrogação?"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/binarioseta" />
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/errado21"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="90"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/certo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="18"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/errado22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:justificationMode="inter_word"
+                android:text="@string/texto_mnb_02"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/pclivro" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/cardshape"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/perg3_mnb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="3. Um computador precisa de 7 bits para armazenar todos os caracteres. Isto permite
+representar até quantos caracteres?"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary" />
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/myRadioGroup3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/errado31"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="64"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/certo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="128"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+
+                <RadioButton
+                    android:id="@+id/errado32"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/redioshape"
+                    android:fontFamily="@font/bungee"
+                    android:text="256"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorPrimary" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_finalizarMNB"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finalizar" />
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+

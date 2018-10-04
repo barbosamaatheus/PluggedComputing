@@ -118,22 +118,4 @@ public class ContarAcima31Fragment extends MyFragments {
         perg3 = (TextView) view.findViewById(R.id.perg3_CA);
     }
 
-    private void initRadioGroups(View view) {
-        radioGroup1 = (RadioGroup) view.findViewById(R.id.myRadioGroup1CA);
-        certo1 = (RadioButton) view.findViewById(R.id.certo1);
-        errado11 = (RadioButton) view.findViewById(R.id.errado11);
-        errado12 = (RadioButton) view.findViewById(R.id.errado12);
-
-        radioGroup2 = (RadioGroup) view.findViewById(R.id.myRadioGroup2CA);
-        certo2 = (RadioButton) view.findViewById(R.id.certo2);
-        errado21 = (RadioButton) view.findViewById(R.id.errado21);
-        errado22 = (RadioButton) view.findViewById(R.id.errado22);
-
-        radioGroup3 = (RadioGroup) view.findViewById(R.id.myRadioGroup3CA);
-        certo3 = (RadioButton) view.findViewById(R.id.certo3);
-        errado31 = (RadioButton) view.findViewById(R.id.errado31);
-        errado32 = (RadioButton) view.findViewById(R.id.errado32);
-    }
-
-
 }

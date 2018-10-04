@@ -90,7 +90,7 @@ public class IntroducaoFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas          ", getString(R.string.dicas_intro), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_intro), R.drawable.ic_help_outline_black_24dp);
             }
         });
         return view;
@@ -159,22 +159,6 @@ public class IntroducaoFragment extends MyFragments {
         perg3 = (TextView) view.findViewById(R.id.perg3_intro);
     }
 
-    private void initRadioGroups(View view) {
-        radioGroup1 = (RadioGroup) view.findViewById(R.id.myRadioGroup1);
-        certo1 = (RadioButton) view.findViewById(R.id.certo1);
-        errado11 = (RadioButton) view.findViewById(R.id.errado11);
-        errado12 = (RadioButton) view.findViewById(R.id.errado12);
-
-        radioGroup2 = (RadioGroup) view.findViewById(R.id.myRadioGroup2);
-        certo2 = (RadioButton) view.findViewById(R.id.certo2);
-        errado21 = (RadioButton) view.findViewById(R.id.errado21);
-        errado22 = (RadioButton) view.findViewById(R.id.errado22);
-
-        radioGroup3 = (RadioGroup) view.findViewById(R.id.myRadioGroup3);
-        certo3 = (RadioButton) view.findViewById(R.id.certo3);
-        errado31 = (RadioButton) view.findViewById(R.id.errado31);
-        errado32 = (RadioButton) view.findViewById(R.id.errado32);
-    }
 
     private void initNum(View view) {
         numTxt1 = (TextView) view.findViewById(R.id.num1);

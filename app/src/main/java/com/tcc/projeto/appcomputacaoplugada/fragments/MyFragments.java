@@ -186,6 +186,23 @@ public abstract class MyFragments extends Fragment {
         }
     }
 
+    protected void initRadioGroups(View view) {
+        radioGroup1 = (RadioGroup) view.findViewById(R.id.myRadioGroup1);
+        certo1 = (RadioButton) view.findViewById(R.id.certo1);
+        errado11 = (RadioButton) view.findViewById(R.id.errado11);
+        errado12 = (RadioButton) view.findViewById(R.id.errado12);
+
+        radioGroup2 = (RadioGroup) view.findViewById(R.id.myRadioGroup2);
+        certo2 = (RadioButton) view.findViewById(R.id.certo2);
+        errado21 = (RadioButton) view.findViewById(R.id.errado21);
+        errado22 = (RadioButton) view.findViewById(R.id.errado22);
+
+        radioGroup3 = (RadioGroup) view.findViewById(R.id.myRadioGroup3);
+        certo3 = (RadioButton) view.findViewById(R.id.certo3);
+        errado31 = (RadioButton) view.findViewById(R.id.errado31);
+        errado32 = (RadioButton) view.findViewById(R.id.errado32);
+    }
+
     protected String montarNumerosET() {
         return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
                 + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "

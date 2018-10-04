@@ -163,17 +163,6 @@ public class NumerosBinariosFragment extends MyFragments {
         perg3 = (TextView) view.findViewById(R.id.perg3_nb);
     }
 
-    private void initRadioGroups(View view) {
-        radioGroup2 = (RadioGroup) view.findViewById(R.id.myRadioGroup2NB);
-        certo2 = (RadioButton) view.findViewById(R.id.certo2);
-        errado21 = (RadioButton) view.findViewById(R.id.errado21);
-        errado22 = (RadioButton) view.findViewById(R.id.errado22);
-
-        radioGroup3 = (RadioGroup) view.findViewById(R.id.myRadioGroup3NB);
-        certo3 = (RadioButton) view.findViewById(R.id.certo3);
-        errado31 = (RadioButton) view.findViewById(R.id.errado31);
-        errado32 = (RadioButton) view.findViewById(R.id.errado32);
-    }
 
     private void initNum(View view) {
         numTxt1 = (TextView) view.findViewById(R.id.num1NB);
