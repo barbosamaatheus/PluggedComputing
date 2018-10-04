@@ -3,6 +3,8 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
@@ -23,8 +25,10 @@ import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
  */
 
 public abstract class MyFragments extends Fragment {
+    protected TextInputLayout textInputLayout1, textInputLayout2;
+    protected TextInputEditText mTextoTraduzido, mTextoNome;
     protected EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11,
-            mNum12, mNum13, mNum14, mNum15, mTextoTraduzido, mTextoNome;
+            mNum12, mNum13, mNum14, mNum15;
     protected ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16, mDicas;
     protected TextView numTxt1, numTxt2, numTxt4, numTxt8, numTxt16, perg1, perg2, perg3, mNumerosSelecionados;
     protected RadioGroup radioGroup1, radioGroup2, radioGroup3;
@@ -190,8 +194,7 @@ public abstract class MyFragments extends Fragment {
                 + mNum13.getText().toString() + " " + mNum14.getText().toString() + " " + mNum15.getText().toString();
     }
 
-    protected void initViews(View view) {
-    }
+    protected abstract void initViews(View view);
 
     protected void createCartas() {
         carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);

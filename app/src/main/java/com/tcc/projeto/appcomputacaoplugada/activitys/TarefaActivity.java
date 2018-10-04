@@ -10,8 +10,10 @@ import android.widget.Toast;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.fragments.ContarAcima31Fragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.CorreioEletronicoModemsFragment;
+import com.tcc.projeto.appcomputacaoplugada.fragments.DeQueSeTrataTudoIssoFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.EnviarMensagensSecretasFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.IntroducaoFragment;
+import com.tcc.projeto.appcomputacaoplugada.fragments.MaisSobreNumerosBinariosFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.NumerosBinariosFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.TrabalharComNumerosBinariosFragment;
 
@@ -108,11 +110,17 @@ public class TarefaActivity extends AppCompatActivity {
     }
 
     private void initFragment7() {
-        Toast.makeText(getApplicationContext(), "Fragment7", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        MaisSobreNumerosBinariosFragment maisSobreNumerosBinariosFragment = new MaisSobreNumerosBinariosFragment();
+        ft.add(R.id.fragment_content, maisSobreNumerosBinariosFragment);
+        ft.commit();
     }
 
     private void initFragment8() {
-        Toast.makeText(getApplicationContext(), "Fragment8", Toast.LENGTH_LONG).show();
+        FragmentTransaction ft = fm.beginTransaction();
+        DeQueSeTrataTudoIssoFragment deQueSeTrataTudoIssoFragment = new DeQueSeTrataTudoIssoFragment();
+        ft.add(R.id.fragment_content, deQueSeTrataTudoIssoFragment);
+        ft.commit();
     }
 
 }

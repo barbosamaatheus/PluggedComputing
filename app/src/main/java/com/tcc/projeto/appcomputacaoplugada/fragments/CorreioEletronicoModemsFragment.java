@@ -23,8 +23,7 @@ import com.tcc.projeto.appcomputacaoplugada.adapter.TabelaAdapter;
 import java.text.Normalizer;
 
 public class CorreioEletronicoModemsFragment extends MyFragments {
-    private TextInputLayout textInputLayout1, textInputLayout2;
-    private TextInputEditText mTextoTraduzido, mTextoNome;
+
     private TextView envinado, nomeBinario;
     private Button mEnviar;
     private String textoNome = "";
@@ -115,7 +114,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         return exibir;
     }
 
-    public void validarClicked1() {
+    private void validarClicked1() {
         if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzido.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
@@ -207,6 +206,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         textInputLayout2 = (TextInputLayout) view.findViewById(R.id.textInputLayout2);
         mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
         mTextoNome = (TextInputEditText) view.findViewById(R.id.textoNome);
+
     }
 
     private void initTextView(View view) {

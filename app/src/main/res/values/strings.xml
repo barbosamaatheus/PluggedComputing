@@ -89,6 +89,12 @@
     <string name="dicas_ca31">1. Não esqueça a sequencia dos cartões 16, 8, 4, 2, 1...
     \n2. senhorita "Flex" é a mulher da imagem;
     \n3. Responda todas as perguntas corretamente para completar a tarefa.</string>
+    <string name="texto_tti_01">Os computadores atualmente utilizam o sistema binário para representar informações. Chama-se binário porque utiliza dois dígitos distintos. Também é conhecido como base dois (as pessoas utilizam no dia-a-dia a base 10). Cada zero ou um é chamado de bit (dígito binário). Um bit é normalmente representado na memória principal do computador por um transistor, que pode estar ligado ou desligado, ou um capacitor, que pode estar carregado ou descarregado.</string>
+    <string name="texto_tti_02">Quando os dados devem ser transmitidos por uma linha telefônica ou enlace de rádio, tons de alta e baixa freqüência são utilizados para os zeros e uns. Em discos magnéticos (disquetes e discos rígidos) e fitas, os bits são representados pela direção de um campo magnético sobre uma superfície revestida, podendo ser norte-sul ou sul-norte.</string>
+    <string name="texto_tti_04">Um único bit não consegue representar muito. Por isso, os bits são utilizados geralmente em grupos de oito, podendo representar números de 0 a 255. Um grupo de oito bits é chamado de byte. A velocidade de um computador depende do número de bits que este pode processar de uma só vez. Por exemplo, um computador de 32 bits pode processar números de 32 bits em uma única operação, ao passo que um computador de 16 bits divide os números de 32 bits em partes menores, o que o torna mais lento.</string>
+    <string name="texto_tti_03">CDs de áudio, CD-ROMs e DVDs armazenam bits de forma ótica — a parte da superfície correspondente a um bit reflete ou não a luz.</string>
+    <string name="texto_tti_05">Em suma, bits e bytes são tudo que um computador utiliza para armazenar e transmitir números, texto e todas as outras informações. Em algumas das atividades seguintes veremos como outros tipos de informações podem ser representados em um computador.</string>
+    <string name="dicas_tti">a</string>
 
 
 </resources>
