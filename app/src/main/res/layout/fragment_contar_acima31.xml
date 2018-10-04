@@ -70,39 +70,26 @@
 
                 <RadioButton
                     android:id="@+id/certo1"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:text="11110"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="11110" />
 
                 <RadioButton
                     android:id="@+id/errado11"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:text="11101"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="11101" />
 
                 <RadioButton
                     android:id="@+id/errado12"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
                     android:text="01001"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary" />
+
+                    />
             </RadioGroup>
         </LinearLayout>
 
@@ -130,40 +117,24 @@
 
                 <RadioButton
                     android:id="@+id/errado21"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="890"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="890" />
 
                 <RadioButton
                     android:id="@+id/certo2"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="691"
-
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="691" />
 
                 <RadioButton
                     android:id="@+id/errado22"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="394"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="394" />
             </RadioGroup>
         </LinearLayout>
 
@@ -213,39 +184,24 @@
 
                 <RadioButton
                     android:id="@+id/errado31"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="32.768"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="32.768" />
 
                 <RadioButton
                     android:id="@+id/certo3"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="1.048.576"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="1.048.576" />
 
                 <RadioButton
                     android:id="@+id/errado32"
+                    style="@style/RadioButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/redioshape"
-                    android:fontFamily="@font/bungee"
-                    android:gravity="center"
-                    android:text="33.554.432"
-                    android:textColor="@color/textColorPrimary" />
+                    android:text="33.554.432" />
             </RadioGroup>
 
         </LinearLayout>

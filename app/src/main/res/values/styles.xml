@@ -41,6 +41,15 @@
 
     </style>
 
+    <style name="RadioButtonStyle" parent="AppTheme">
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/redioshape</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/bungee</item>
+        <item name="android:textAlignment" tools:ignore="NewApi">center</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
     <style name="ButtonStyle" parent="AppTheme">
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/bungee</item>
         <item name="android:textStyle">bold</item>
