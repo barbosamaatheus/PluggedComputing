@@ -145,8 +145,7 @@ public class IntroducaoFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasINTRO);
+        initButtons(view);
         initCartas(view);
         initNum(view);
         createCartas();
@@ -154,28 +153,7 @@ public class IntroducaoFragment extends MyFragments {
         initPerguntas(view);
     }
 
-    private void initPerguntas(View view) {
-        perg1 = (TextView) view.findViewById(R.id.perg1_intro);
-        perg2 = (TextView) view.findViewById(R.id.perg2_intro);
-        perg3 = (TextView) view.findViewById(R.id.perg3_intro);
-    }
 
-
-    private void initNum(View view) {
-        numTxt1 = (TextView) view.findViewById(R.id.num1);
-        numTxt2 = (TextView) view.findViewById(R.id.num2);
-        numTxt4 = (TextView) view.findViewById(R.id.num4);
-        numTxt8 = (TextView) view.findViewById(R.id.num8);
-        numTxt16 = (TextView) view.findViewById(R.id.num16);
-    }
-
-    private void initCartas(View view) {
-        mCarta1 = (ImageButton) view.findViewById(R.id.carta1);
-        mCarta2 = (ImageButton) view.findViewById(R.id.carta2);
-        mCarta4 = (ImageButton) view.findViewById(R.id.carta4);
-        mCarta8 = (ImageButton) view.findViewById(R.id.carta8);
-        mCarta16 = (ImageButton) view.findViewById(R.id.carta16);
-    }
 
 
 }

@@ -107,16 +107,11 @@ public class ContarAcima31Fragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_CA);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasCA);
+        initButtons(view);
         initRadioGroups(view);
         initPerguntas(view);
     }
 
-    private void initPerguntas(View view) {
-        perg1 = (TextView) view.findViewById(R.id.perg1_CA);
-        perg2 = (TextView) view.findViewById(R.id.perg2_CA);
-        perg3 = (TextView) view.findViewById(R.id.perg3_CA);
-    }
+
 
 }

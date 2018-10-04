@@ -34,7 +34,7 @@
                 android:src="@mipmap/pc" />
 
             <ImageButton
-                android:id="@+id/dicasCEM"
+                android:id="@+id/dicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cardshape"
@@ -159,7 +159,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_finalizar_cem"
+            android:id="@+id/finalizar"
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -32,7 +32,7 @@
                 android:src="@mipmap/flor" />
 
             <ImageButton
-                android:id="@+id/dicasTTI"
+                android:id="@+id/dicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cardshape"
@@ -155,7 +155,7 @@ Somente ao finalizar o formulario você recebera o Token que deve copiar e colar
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_finalizarTTI"
+            android:id="@+id/finalizar"
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

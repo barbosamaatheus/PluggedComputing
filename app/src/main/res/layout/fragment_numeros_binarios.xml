@@ -49,7 +49,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/carta16NB"
+                    android:id="@+id/carta16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -57,7 +57,7 @@
                     android:background="@mipmap/carta16" />
 
                 <ImageButton
-                    android:id="@+id/carta8NB"
+                    android:id="@+id/carta8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -65,7 +65,7 @@
                     android:background="@mipmap/carta8" />
 
                 <ImageButton
-                    android:id="@+id/carta4NB"
+                    android:id="@+id/carta4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -73,7 +73,7 @@
                     android:background="@mipmap/carta4" />
 
                 <ImageButton
-                    android:id="@+id/carta2NB"
+                    android:id="@+id/carta2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -81,7 +81,7 @@
                     android:background="@mipmap/carta2" />
 
                 <ImageButton
-                    android:id="@+id/carta1NB"
+                    android:id="@+id/carta1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -97,7 +97,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/num16NB"
+                    android:id="@+id/num16"
                     style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
@@ -107,7 +107,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/num8NB"
+                    android:id="@+id/num8"
                     style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/num4NB"
+                    android:id="@+id/num4"
                     style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/num2NB"
+                    android:id="@+id/num2"
                     style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/num1NB"
+                    android:id="@+id/num1"
                     style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/dicasNB"
+                android:id="@+id/dicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cardshape"
@@ -164,7 +164,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg1_nb"
+                android:id="@+id/perg1"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -215,7 +215,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg2_nb"
+                android:id="@+id/perg2"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -275,7 +275,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg3_nb"
+                android:id="@+id/perg3"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -328,7 +328,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_finalizar_nb"
+            android:id="@+id/finalizar"
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

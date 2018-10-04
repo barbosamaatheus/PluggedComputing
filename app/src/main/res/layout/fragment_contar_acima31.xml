@@ -28,7 +28,7 @@
 
 
             <ImageButton
-                android:id="@+id/dicasCA"
+                android:id="@+id/dicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cardshape"
@@ -115,7 +115,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg2_CA"
+                android:id="@+id/perg2"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/perg3_CA"
+                android:id="@+id/perg3"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -251,7 +251,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_finalizar_CA"
+            android:id="@+id/finalizar"
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

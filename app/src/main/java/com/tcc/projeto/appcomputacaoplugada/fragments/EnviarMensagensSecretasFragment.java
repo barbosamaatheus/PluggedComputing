@@ -17,10 +17,7 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
     private String textoTraduzido = "";
-    private TextInputLayout textInputLayout;
-    private TextInputEditText mTextoTraduzido;
-
-    public EnviarMensagensSecretasFragment() {
+       public EnviarMensagensSecretasFragment() {
         // Required empty public constructor
     }
 
@@ -333,6 +330,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
             checked1 = false;
         } else {
             getTextDoEditText();
+            textoTraduzido = mTextoTraduzido.getText().toString();
             checked1 = true;
         }
 
@@ -352,24 +350,6 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         }
     }
 
-    private void getTextDoEditText() {
-        num1 = mNum1.getText().toString();
-        num2 = mNum2.getText().toString();
-        num3 = mNum3.getText().toString();
-        num4 = mNum4.getText().toString();
-        num5 = mNum5.getText().toString();
-        num6 = mNum6.getText().toString();
-        num7 = mNum7.getText().toString();
-        num8 = mNum8.getText().toString();
-        num9 = mNum9.getText().toString();
-        num10 = mNum10.getText().toString();
-        num11 = mNum11.getText().toString();
-        num12 = mNum12.getText().toString();
-        num13 = mNum13.getText().toString();
-        num14 = mNum14.getText().toString();
-        num15 = mNum15.getText().toString();
-        textoTraduzido = mTextoTraduzido.getText().toString();
-    }
 
     private boolean validarTexto() {
         boolean certo;
@@ -488,36 +468,11 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        initEditText(view);
-
         mNumerosSelecionados = (TextView) view.findViewById(R.id.numerosSelecionados);
-
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_ems);
+        initEditText(view);
+        initButtons(view);
     }
 
-    private void initEditText(View view) {
-        textInputLayout = (TextInputLayout) view.findViewById(R.id.textInputLayout);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzido);
-       // mTextoTraduzido = (EditText) view.findViewById(R.id.textoTraduzido);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasEMS);
 
-        mNum1 = (EditText) view.findViewById(R.id.num1EMS);
-        mNum2 = (EditText) view.findViewById(R.id.num2EMS);
-        mNum3 = (EditText) view.findViewById(R.id.num3EMS);
-        mNum4 = (EditText) view.findViewById(R.id.num4EMS);
-        mNum5 = (EditText) view.findViewById(R.id.num5EMS);
-
-        mNum6 = (EditText) view.findViewById(R.id.num6EMS);
-        mNum7 = (EditText) view.findViewById(R.id.num7EMS);
-        mNum8 = (EditText) view.findViewById(R.id.num8EMS);
-        mNum9 = (EditText) view.findViewById(R.id.num9EMS);
-        mNum10 = (EditText) view.findViewById(R.id.num10EMS);
-
-        mNum11 = (EditText) view.findViewById(R.id.num11EMS);
-        mNum12 = (EditText) view.findViewById(R.id.num12EMS);
-        mNum13 = (EditText) view.findViewById(R.id.num13EMS);
-        mNum14 = (EditText) view.findViewById(R.id.num14EMS);
-        mNum15 = (EditText) view.findViewById(R.id.num15EMS);
-    }
 
 }

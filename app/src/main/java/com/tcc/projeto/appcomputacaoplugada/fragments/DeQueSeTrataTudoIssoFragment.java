@@ -66,9 +66,8 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     protected void initViews(View view) {
         textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayoutTTI);
         mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoTTI);
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizarTTI);
         mFormulario = (Button) view.findViewById(R.id.formulario);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasTTI);
+        initButtons(view);
     }
 
     @Override

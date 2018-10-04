@@ -98,18 +98,12 @@ public class MaisSobreNumerosBinariosFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        mDicas = (ImageButton) view.findViewById(R.id.dicasMNB);
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizarMNB);
+        initButtons(view);
         initRadioGroups(view);
         initPerguntas(view);
 
     }
 
-    private void initPerguntas(View view) {
-        perg1 = (TextView) view.findViewById(R.id.perg1_mnb);
-        perg2 = (TextView) view.findViewById(R.id.perg2_mnb);
-        perg3 = (TextView) view.findViewById(R.id.perg3_mnb);
-    }
 
     @Override
     protected boolean respostasIsEmpty() {

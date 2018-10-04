@@ -197,9 +197,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         initEditTexts(view);
         initTextView(view);
         pb = (ProgressBar) view.findViewById(R.id.pb);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasCEM);
         mEnviar = (Button) view.findViewById(R.id.enviar);
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_cem);
+        initButtons(view);
     }
 
     private void initEditTexts(View view) {

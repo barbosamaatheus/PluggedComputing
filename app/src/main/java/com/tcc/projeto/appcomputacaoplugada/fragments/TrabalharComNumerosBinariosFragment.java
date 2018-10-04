@@ -140,40 +140,11 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         }
     }
 
-    private void getTextDoEditText() {
-        num1 = mNum1.getText().toString();
-        num2 = mNum2.getText().toString();
-        num3 = mNum3.getText().toString();
-        num4 = mNum4.getText().toString();
-        num5 = mNum5.getText().toString();
-        num6 = mNum6.getText().toString();
-        num7 = mNum7.getText().toString();
-        num8 = mNum8.getText().toString();
-        num9 = mNum9.getText().toString();
-        num10 = mNum10.getText().toString();
-    }
-
-
     @Override
     protected void initViews(View view) {
         initEditText(view);
-        mFinalizar = (Button) view.findViewById(R.id.btn_finalizar_tnb);
-        mDicas = (ImageButton) view.findViewById(R.id.dicasTNB);
+        initButtons(view);
 
-    }
-
-    private void initEditText(View view) {
-        mNum1 = (EditText) view.findViewById(R.id.num1TNB);
-        mNum2 = (EditText) view.findViewById(R.id.num2TNB);
-        mNum3 = (EditText) view.findViewById(R.id.num3TNB);
-        mNum4 = (EditText) view.findViewById(R.id.num4TNB);
-        mNum5 = (EditText) view.findViewById(R.id.num5TNB);
-
-        mNum6 = (EditText) view.findViewById(R.id.num6TNB);
-        mNum7 = (EditText) view.findViewById(R.id.num7TNB);
-        mNum8 = (EditText) view.findViewById(R.id.num8TNB);
-        mNum9 = (EditText) view.findViewById(R.id.num9TNB);
-        mNum10 = (EditText) view.findViewById(R.id.num10TNB);
     }
 
     @SuppressLint("NewApi")
