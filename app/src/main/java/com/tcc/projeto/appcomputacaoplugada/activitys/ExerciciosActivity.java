@@ -2,11 +2,13 @@ package com.tcc.projeto.appcomputacaoplugada.activitys;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
@@ -51,29 +53,38 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
+
+        if (positon <= myApplication.getPositionExercicio()) {
+            callNextActivity(positon);
+        } else {
+            vibrar();
+            onCreateDialog("Algo deu errado",
+                    "Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear",
+                    R.drawable.ic_error_outline_black_24dp);
+            callNextActivity(positon);
+        }
+
+    }
+
+    private void callNextActivity(int positon) {
         Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
         Bundle bundle = new Bundle();
         bundle.putInt("positon", positon + 1);
         intent.putExtras(bundle);
         startActivity(intent);
-       /* if (positon >= myApplication.getPositionExercicio()) {
-            Intent intent = new Intent(getApplicationContext(), TarefaActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putInt("positon", positon + 1);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        } else {
-            onCreateDialog();
-        }*/
-
     }
 
-    public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(ExerciciosActivity.this, R.style.DialogStyle);
-        builder.setMessage("Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear")
-                .setTitle("Algo deu errado :(");
+    private void onCreateDialog(String title, String mensagem, int icon) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.DialogStyle);
+        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    private void vibrar(){
+        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        long milliseconds = 1000;
+        vibrator.vibrate(milliseconds);
+    }
+
 }
 

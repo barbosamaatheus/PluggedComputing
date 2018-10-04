@@ -223,7 +223,7 @@
                 android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup2NB"
+                android:id="@+id/myRadioGroup2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -284,7 +284,7 @@
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup3NB"
+                android:id="@+id/myRadioGroup3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">

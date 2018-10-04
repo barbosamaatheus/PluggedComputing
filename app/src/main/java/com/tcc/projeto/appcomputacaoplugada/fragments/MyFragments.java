@@ -3,6 +3,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,8 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
+
+import static android.content.Context.VIBRATOR_SERVICE;
 
 /**
  * Created by matheus.barbosa on 25/09/2018.
@@ -78,7 +81,7 @@ public abstract class MyFragments extends Fragment {
 
     }
 
-    protected void editarPositionExercicio(int position, Context context) {
+    private void editarPositionExercicio(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
         if (myApplication.getPositionExercicio() < position) {
             myApplication.setPositionExercicio(position);
@@ -87,7 +90,7 @@ public abstract class MyFragments extends Fragment {
         //myApplication.updateDataBase();;
     }
 
-    protected void restartFragment() {
+    private void restartFragment() {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(this).attach(this).commit();
     }
@@ -97,6 +100,12 @@ public abstract class MyFragments extends Fragment {
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    protected void vibrar() {
+        Vibrator vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
+        long milliseconds = 500;
+        vibrator.vibrate(milliseconds);
     }
 
     protected void callNextFragment() {
@@ -187,6 +196,7 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void initRadioGroups(View view) {
+
         radioGroup1 = (RadioGroup) view.findViewById(R.id.myRadioGroup1);
         certo1 = (RadioButton) view.findViewById(R.id.certo1);
         errado11 = (RadioButton) view.findViewById(R.id.errado11);
@@ -202,6 +212,7 @@ public abstract class MyFragments extends Fragment {
         errado31 = (RadioButton) view.findViewById(R.id.errado31);
         errado32 = (RadioButton) view.findViewById(R.id.errado32);
     }
+
 
     protected String montarNumerosET() {
         return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "

@@ -19,6 +19,7 @@
 
     <style name="TextViewStyle" parent="AppTheme" tools:ignore="NewApi">
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:justificationMode">inter_word</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:fontFamily">casual</item>

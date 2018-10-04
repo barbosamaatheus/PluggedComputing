@@ -59,6 +59,7 @@ public class MaisSobreNumerosBinariosFragment extends MyFragments {
             @Override
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
+                    vibrar();
                     onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
                 } else {
                     validarCampos();
