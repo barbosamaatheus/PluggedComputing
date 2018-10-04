@@ -76,7 +76,6 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
             public void onClick(View view) {
                 textoBinario = nomeBinario.getText().toString();
                 if (respostasIsEmpty()) {
-                    vibrar();
                     onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
                 } else {
                     validarCampos();
@@ -157,7 +156,6 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
                     // Update the progress status
 
                     progressStatus += 1;
-
                     // Try to sleep the thread for 20 milliseconds
                     try {
                         Thread.sleep(20);
@@ -176,8 +174,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            nomeBinario.setVisibility(View.VISIBLE);
                             nomeBinario.setText(textoConvertido);
+                            nomeBinario.setVisibility(View.VISIBLE);
                         }
                     }, 1900);// Start the operation
                 }
@@ -194,20 +192,14 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
-        initEditTexts(view);
+        initEditText(view);
         initTextView(view);
+        initButtons(view);
         pb = (ProgressBar) view.findViewById(R.id.pb);
         mEnviar = (Button) view.findViewById(R.id.enviar);
-        initButtons(view);
     }
 
-    private void initEditTexts(View view) {
-        textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayout1);
-        textInputLayout2 = (TextInputLayout) view.findViewById(R.id.textInputLayout2);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
-        mTextoNome = (TextInputEditText) view.findViewById(R.id.textoNome);
 
-    }
 
     private void initTextView(View view) {
         envinado = (TextView) view.findViewById(R.id.enviando);

@@ -146,6 +146,40 @@ public abstract class MyFragments extends Fragment {
         }
     }
 
+    protected void getTextDoEditText() {
+        num1 = mNum1.getText().toString();
+        num2 = mNum2.getText().toString();
+        num3 = mNum3.getText().toString();
+        num4 = mNum4.getText().toString();
+        num5 = mNum5.getText().toString();
+        num6 = mNum6.getText().toString();
+        num7 = mNum7.getText().toString();
+        num8 = mNum8.getText().toString();
+        num9 = mNum9.getText().toString();
+        num10 = mNum10.getText().toString();
+        num11 = mNum11.getText().toString();
+        num12 = mNum12.getText().toString();
+        num13 = mNum13.getText().toString();
+        num14 = mNum14.getText().toString();
+        num15 = mNum15.getText().toString();
+
+    }
+    protected void createCartas() {
+        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
+        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
+        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, true);
+        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
+        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, true);
+
+    }
+    protected String montarNumerosET() {
+        return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
+                + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "
+                + mNum7.getText().toString() + " " + mNum8.getText().toString() + " " + mNum9.getText().toString() + " "
+                + mNum10.getText().toString() + " - " + mNum11.getText().toString() + " " + mNum12.getText().toString() + " "
+                + mNum13.getText().toString() + " " + mNum14.getText().toString() + " " + mNum15.getText().toString();
+    }
+
     protected void onRadioButtonClicked1(int checked) {
         checked1 = true;
         passou1 = false;
@@ -179,25 +213,6 @@ public abstract class MyFragments extends Fragment {
         }
     }
 
-    protected void getTextDoEditText() {
-        num1 = mNum1.getText().toString();
-        num2 = mNum2.getText().toString();
-        num3 = mNum3.getText().toString();
-        num4 = mNum4.getText().toString();
-        num5 = mNum5.getText().toString();
-        num6 = mNum6.getText().toString();
-        num7 = mNum7.getText().toString();
-        num8 = mNum8.getText().toString();
-        num9 = mNum9.getText().toString();
-        num10 = mNum10.getText().toString();
-        num11 = mNum11.getText().toString();
-        num12 = mNum12.getText().toString();
-        num13 = mNum13.getText().toString();
-        num14 = mNum14.getText().toString();
-        num15 = mNum15.getText().toString();
-
-    }
-
     protected void onRadioButtonClicked3(int checked) {
         checked3 = true;
         passou3 = false;
@@ -212,23 +227,6 @@ public abstract class MyFragments extends Fragment {
                 passou3 = false;
                 break;
         }
-    }
-
-    protected String montarNumerosET() {
-        return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
-                + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "
-                + mNum7.getText().toString() + " " + mNum8.getText().toString() + " " + mNum9.getText().toString() + " "
-                + mNum10.getText().toString() + " - " + mNum11.getText().toString() + " " + mNum12.getText().toString() + " "
-                + mNum13.getText().toString() + " " + mNum14.getText().toString() + " " + mNum15.getText().toString();
-    }
-
-    protected void createCartas() {
-        carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
-        carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
-        carta04 = new Carta(R.id.carta4, R.mipmap.carta4, 4, true);
-        carta08 = new Carta(R.id.carta8, R.mipmap.carta8, 8, true);
-        carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, true);
-
     }
 
     protected void initRadioGroups(View view) {
@@ -280,6 +278,9 @@ public abstract class MyFragments extends Fragment {
     protected void initEditText(View view) {
         textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayout);
         mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzido);
+        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
+        mTextoNome = (TextInputEditText) view.findViewById(R.id.textoNome);
+
 
         mNum1 = (EditText) view.findViewById(R.id.num1);
         mNum2 = (EditText) view.findViewById(R.id.num2);

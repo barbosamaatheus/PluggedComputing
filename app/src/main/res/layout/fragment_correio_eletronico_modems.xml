@@ -135,7 +135,6 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:fontFamily="@font/bungee"
-                android:text="Primeiro envie seu nome para obter uma resposta"
                 android:textAlignment="center" />
 
 
