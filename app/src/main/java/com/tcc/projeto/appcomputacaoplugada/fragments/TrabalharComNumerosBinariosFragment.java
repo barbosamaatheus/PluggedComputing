@@ -1,5 +1,7 @@
 package com.tcc.projeto.appcomputacaoplugada.fragments;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,11 +9,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.activitys.MainActivity;
 
 
 public class TrabalharComNumerosBinariosFragment extends MyFragments {
-
     public TrabalharComNumerosBinariosFragment() {
         // Required empty public constructor
     }
@@ -22,7 +25,6 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         View view = inflater.inflate(R.layout.fragment_trabalhar_com_numeros_binarios, container, false);
         initViews(view);
         initVerify();
-
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +39,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_tnb), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog();
             }
         });
         return view;
@@ -171,6 +173,14 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         mNum8 = (EditText) view.findViewById(R.id.num8TNB);
         mNum9 = (EditText) view.findViewById(R.id.num9TNB);
         mNum10 = (EditText) view.findViewById(R.id.num10TNB);
+    }
+
+    @SuppressLint("NewApi")
+    public void onCreateDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setView(R.layout.alert_cartas);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 }

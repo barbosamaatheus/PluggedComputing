@@ -62,13 +62,13 @@
                     android:background="@mipmap/x" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num1TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
@@ -88,13 +88,13 @@
                     android:background="@mipmap/mao" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num2TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
@@ -122,13 +122,13 @@
                     android:background="@mipmap/seta" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num3TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
@@ -148,13 +148,13 @@
                     android:background="@mipmap/xx" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num4TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:textAlignment="center"
                     android:theme="@style/EditTextStyle" />
 
@@ -183,15 +183,14 @@
                     android:background="@mipmap/bola" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num5TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
-                    android:theme="@style/EditTextStyle"
-                    />
+                    android:maxLength="2"
+                    android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
             <LinearLayout
@@ -210,14 +209,14 @@
                     android:background="@mipmap/setas_giratorias" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num6TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
-                    android:theme="@style/EditTextStyle"/>
+                    android:maxLength="2"
+                    android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
         </LinearLayout>
@@ -244,13 +243,13 @@
                     android:background="@mipmap/correios" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num7TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
@@ -270,13 +269,13 @@
                     android:background="@mipmap/triangulo" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num8TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
@@ -304,13 +303,13 @@
                     android:background="@mipmap/rosto" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num9TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
@@ -330,13 +329,13 @@
                     android:background="@mipmap/naipe" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/num10TNB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:hint="..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
 
             </LinearLayout>
@@ -345,10 +344,10 @@
 
         <Button
             android:id="@+id/btn_finalizar_tnb"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finalizar"
-            style="@style/ButtonStyle" />
+            android:text="Finalizar" />
     </LinearLayout>
 
 
