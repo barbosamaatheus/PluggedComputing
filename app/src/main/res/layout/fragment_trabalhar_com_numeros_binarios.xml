@@ -24,13 +24,10 @@
 
             <TextView
                 android:id="@+id/txt"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tnb"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tnb" />
 
             <ImageButton
                 android:id="@+id/dicasTNB"

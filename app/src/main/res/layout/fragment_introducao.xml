@@ -21,29 +21,22 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_intro_01"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_intro_01" />
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_intro_02"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_intro_02" />
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="Presione o cartão para vira-lo"
-                android:textColor="@color/textColorPrimary"
                 android:textSize="10dp" />
 
 
@@ -103,62 +96,53 @@
 
                 <TextView
                     android:id="@+id/num16"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="0"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num8"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num4"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="0"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num2"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="0"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num1"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
             </LinearLayout>
 
             <ImageButton
@@ -178,12 +162,11 @@
 
             <TextView
                 android:id="@+id/perg1_intro"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="1. O que você percebeu sobre o número de pontos nos cartões?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup1"
@@ -240,12 +223,11 @@ maior que o próximo"
 
             <TextView
                 android:id="@+id/perg2_intro"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="2. Quantos pontos teria o próximo cartão colocado à esquerda?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup2"
@@ -301,12 +283,11 @@ maior que o próximo"
 
             <TextView
                 android:id="@+id/perg3_intro"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="3. Como seria o número 17 em binário ?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -355,10 +336,10 @@ maior que o próximo"
 
         <Button
             android:id="@+id/btn_finalizar"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finalizar"
-            style="@style/ButtonStyle" />
+            android:text="Finalizar" />
 
     </LinearLayout>
 

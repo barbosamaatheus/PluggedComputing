@@ -13,8 +13,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="36dp"
@@ -85,13 +85,10 @@
         </LinearLayout>
 
         <TextView
+            style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="casual"
-            android:justificationMode="inter_word"
-            android:text="@string/dicas_tnb"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold" />
+            android:text="@string/dicas_tnb" />
     </LinearLayout>
 
 </LinearLayout>

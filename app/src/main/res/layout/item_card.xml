@@ -48,15 +48,13 @@
             <TextView
                 android:id="@+id/descCW"
 
+                style="@style/TextViewStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/subTituloCW"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/descricao_card"
-                android:textColor="@color/textColorPrimary" />
+                android:text="@string/descricao_card" />
 
 
             <LinearLayout
@@ -83,11 +81,10 @@
 
                     <TextView
                         android:id="@+id/materiasCW"
+                        style="@style/TextViewStyle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="casual"
-                        android:text="Matemática"
-                        android:textColor="@color/textColorPrimary" />
+                        android:text="Matemática" />
 
                 </LinearLayout>
 
@@ -107,11 +104,10 @@
 
                     <TextView
                         android:id="@+id/habilidadesCW"
+                        style="@style/TextViewStyle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="casual"
-                        android:text="Contar, Correlacionar, Ordenar"
-                        android:textColor="@color/textColorPrimary" />
+                        android:text="Contar, Correlacionar, Ordenar" />
 
 
                 </LinearLayout>
@@ -132,11 +128,10 @@
 
                     <TextView
                         android:id="@+id/idadeCW"
+                        style="@style/TextViewStyle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="casual"
-                        android:text="A partir de 7 anos"
-                        android:textColor="@color/textColorPrimary" />
+                        android:text="A partir de 7 anos" />
 
                 </LinearLayout>
 

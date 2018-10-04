@@ -21,13 +21,10 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_CA31_01"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_CA31_01" />
 
 
             <ImageButton
@@ -41,16 +38,13 @@
 
 
         <TextView
+            style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/cardshape"
             android:elevation="5dp"
-            android:fontFamily="casual"
-            android:justificationMode="inter_word"
-            android:text="@string/texto_CA31_02"
-            android:textColor="@color/textColorPrimary"
-            android:textStyle="bold" />
+            android:text="@string/texto_CA31_02" />
 
 
         <LinearLayout
@@ -62,12 +56,11 @@
 
             <TextView
                 android:id="@+id/perg1_CA"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="1. Ultilizando apenas uma mão, qual a representação do numero 30 em binario?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup1"
@@ -123,12 +116,11 @@
 
             <TextView
                 android:id="@+id/perg2_CA"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="2. Agora ultilizando as duas mãos converta o numero 1010110011 para decimal"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/myRadioGroup2"
@@ -185,13 +177,10 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_CA31_03"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_CA31_03" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -209,12 +198,11 @@
 
             <TextView
                 android:id="@+id/perg3_CA"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="3. qual o maior número que a senhorita “Flex” acima pode contar?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -264,10 +252,10 @@
 
         <Button
             android:id="@+id/btn_finalizar_CA"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finalizar"
-            style="@style/ButtonStyle" />
+            android:text="Finalizar" />
 
     </LinearLayout>
 

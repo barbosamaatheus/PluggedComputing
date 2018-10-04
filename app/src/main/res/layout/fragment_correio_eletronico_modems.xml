@@ -23,11 +23,10 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:text="@string/texto_CEM01"
-                android:textColor="@color/textColorPrimary" />
+                android:text="@string/texto_CEM01" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -53,12 +52,10 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_CEM02"
-                android:textColor="@color/textColorPrimary" />
+                android:text="@string/texto_CEM02" />
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/textInputLayout1"
@@ -86,11 +83,10 @@
 
             <Button
                 android:id="@+id/enviar"
+                style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ENVIAR"
-                style="@style/ButtonStyle"
-                 />
+                android:text="ENVIAR" />
 
             <ProgressBar
                 android:id="@+id/pb"
@@ -125,22 +121,22 @@
 
             <TextView
                 android:id="@+id/recebido"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:fontFamily="casual"
                 android:text="O Tom te enviou está mensagem, vamos traduzir?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/nomeBinario"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
-                android:fontFamily="casual"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:fontFamily="@font/bungee"
+                android:text="Primeiro envie seu nome para obter uma resposta"
+                android:textAlignment="center" />
 
 
             <android.support.design.widget.TextInputLayout
@@ -164,11 +160,10 @@
 
         <Button
             android:id="@+id/btn_finalizar_cem"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finalizar"
-            style="@style/ButtonStyle"
-            />
+            android:text="Finalizar" />
 
     </LinearLayout>
 

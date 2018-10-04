@@ -21,18 +21,15 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tti_01"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tti_01" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/flor"/>
+                android:src="@mipmap/flor" />
 
             <ImageButton
                 android:id="@+id/dicasTTI"
@@ -53,18 +50,15 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tti_02"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tti_02" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/dinheiro"/>
+                android:src="@mipmap/dinheiro" />
 
         </LinearLayout>
 
@@ -78,27 +72,21 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tti_03"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tti_03" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/setastti"/>
+                android:src="@mipmap/setastti" />
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tti_04"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tti_04" />
 
         </LinearLayout>
 
@@ -112,18 +100,15 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_tti_05"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_tti_05" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/hospital"/>
+                android:src="@mipmap/hospital" />
 
         </LinearLayout>
 
@@ -137,22 +122,19 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
                 android:text="Muito obrigado por testar nosso aplicativo... Para finalizar todas as atividades pedimos apenas que responta o questionario, clicando no botão abaixo.
-Somente ao finalizar o formulario você recebera o Token que deve copiar e colar no campo abaixo."
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+Somente ao finalizar o formulario você recebera o Token que deve copiar e colar no campo abaixo." />
 
             <Button
                 android:id="@+id/formulario"
+                style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Ir para formulario"
-                style="@style/ButtonStyle"
-                />
+                android:text="Ir para formulario" />
+
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/textInputLayoutTTI"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"

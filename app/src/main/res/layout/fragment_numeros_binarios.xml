@@ -23,29 +23,22 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_nb_01"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_nb_01" />
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_nb_02"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_nb_02" />
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="Presione o cartão para vira-lo"
-                android:textColor="@color/textColorPrimary"
                 android:textSize="10dp" />
 
 
@@ -105,63 +98,55 @@
 
                 <TextView
                     android:id="@+id/num16NB"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="31dp"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num8NB"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num4NB"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num2NB"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/num1NB"
+                    style="@style/TextViewStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:text="1"
-                    android:textAlignment="center"
-                    android:textColor="@color/textColorPrimary"
-                    android:textStyle="bold" />
+                    android:textAlignment="center" />
             </LinearLayout>
+
             <ImageButton
                 android:id="@+id/dicasNB"
                 android:layout_width="match_parent"
@@ -180,12 +165,11 @@
 
             <TextView
                 android:id="@+id/perg1_nb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="1. Qual é o maior número que você pode formar com esse cartões? Qual é o menor ?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -193,7 +177,6 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/valorMaiorNB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -203,10 +186,10 @@
                     android:fontFamily="@font/bungee"
                     android:hint="Maior..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
 
                 <EditText
-                    android:maxLength="2"
                     android:id="@+id/valorMenorNB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -216,6 +199,7 @@
                     android:fontFamily="@font/bungee"
                     android:hint="Menor..."
                     android:inputType="number"
+                    android:maxLength="2"
                     android:theme="@style/EditTextStyle" />
             </LinearLayout>
 
@@ -232,15 +216,14 @@
 
             <TextView
                 android:id="@+id/perg2_nb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="2. A sequencia em binário 10011 corresponde a que numero decimal?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup2"
+                android:id="@+id/myRadioGroup2NB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -293,16 +276,15 @@
 
             <TextView
                 android:id="@+id/perg3_nb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="3. Os numeros 3 e 12 correspondem respectivamente à: "
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/myRadioGroup3"
+                android:id="@+id/myRadioGroup3NB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -333,7 +315,6 @@
 
                 <RadioButton
                     android:id="@+id/certo3"
-                    android:text="00011 e 01100"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="2dp"
@@ -341,16 +322,17 @@
                     android:background="@drawable/redioshape"
                     android:fontFamily="@font/bungee"
                     android:gravity="center"
+                    android:text="00011 e 01100"
                     android:textColor="@color/textColorPrimary" />
             </RadioGroup>
         </LinearLayout>
 
         <Button
             android:id="@+id/btn_finalizar_nb"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finalizar"
-            style="@style/ButtonStyle"/>
+            android:text="Finalizar" />
 
     </LinearLayout>
 </ScrollView>

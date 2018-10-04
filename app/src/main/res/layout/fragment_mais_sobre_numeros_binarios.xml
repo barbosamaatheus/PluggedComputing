@@ -21,13 +21,10 @@
 
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_mnb_01"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_mnb_01" />
 
             <ImageButton
                 android:id="@+id/dicasMNB"
@@ -47,12 +44,11 @@
 
             <TextView
                 android:id="@+id/perg1_mnb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="1. Mas o que acontece quando você coloca um 0 à direita de um número binário?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
@@ -110,12 +106,11 @@
 
             <TextView
                 android:id="@+id/perg2_mnb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="2. Qual numero deve está no lugar da (?) interrogação?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -177,13 +172,10 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
-                android:justificationMode="inter_word"
-                android:text="@string/texto_mnb_02"
-                android:textColor="@color/textColorPrimary"
-                android:textStyle="bold" />
+                android:text="@string/texto_mnb_02" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -201,13 +193,12 @@
 
             <TextView
                 android:id="@+id/perg3_mnb"
+                style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
                 android:text="3. Um computador precisa de 7 bits para armazenar todos os caracteres. Isto permite
 representar até quantos caracteres?"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary" />
+                android:textAlignment="center" />
 
 
             <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
