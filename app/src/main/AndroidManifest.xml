@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tcc.projeto.appcomputacaoplugada">
+
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".aplication.MyApplication"
         android:allowBackup="true"
@@ -10,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.MainActivity"/>
+        <activity android:name=".activitys.MainActivity" />
         <activity android:name=".activitys.AtividadesActivity" />
         <activity android:name=".activitys.ExerciciosActivity" />
         <activity android:name=".activitys.TarefaActivity" />
@@ -21,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activitys.ContarAcima31Activity" />
+        <activity android:name=".activitys.CorreioEletronicoModemsActivity" />
+        <activity android:name=".activitys.DoQueSeTrataTudoIssoActivity" />
+        <activity android:name=".activitys.EnviarMensagensSecretasActivity" />
+        <activity android:name=".activitys.IntroducaoActivity" />
+        <activity android:name=".activitys.MaisSobreNumerosBinarios" />
+        <activity android:name=".activitys.NumerosBinariosActivity" />
+        <activity android:name=".activitys.TrabalharComNumerosBinariosActivity"></activity>
     </application>
 
 </manifest>
