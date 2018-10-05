@@ -19,9 +19,10 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-        try{
+        try {
             showAnimation();
-        }catch (Exception e){
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         Handler handler = new Handler();
         handler.postDelayed(this, delay);

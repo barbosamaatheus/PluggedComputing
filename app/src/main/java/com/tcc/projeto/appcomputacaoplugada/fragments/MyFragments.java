@@ -75,6 +75,7 @@ public abstract class MyFragments extends Fragment {
         showAnimation(view, Techniques.Shake);
         return focus;
     }
+
     protected View showError(EditText view) {
         View focus;
         view.setError(getString(R.string.resposta_incorreta));
@@ -94,6 +95,7 @@ public abstract class MyFragments extends Fragment {
         if (!exibir) {
             editarPositionExercicio(position, context);
             callNextFragment();
+            myApplication.showNotification("Parabéns, você finalizou o nivel " + (position - 1));
         } else {
             restartFragment();
             vibrar();

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initViews();
+        myApplication.showNotification("Bem vindo!");
         onCreateDialog("Notas da versão 1.8.+", "1. Correção do bug com textos com acento; \n" +
                 "2. Correção do bug com textos com espaço; \n " +
                 "3. Melhoria na tela de Correio eletronico e modems; \n" +
