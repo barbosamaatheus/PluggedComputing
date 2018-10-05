@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
@@ -50,7 +52,9 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
         }
         if (position == (estado)) {
             holder.mCheck.setVisibility(View.GONE);
+            showAnimation(holder.itemView, Techniques.Pulse,2000, 2);
         }
+        //showAnimation(holder.itemView, Techniques.ZoomIn);
     }
 
     @Override
@@ -81,7 +85,11 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
 
     private void setVisibility(MyViewHolder holder) {
         holder.mCheck.setVisibility(View.VISIBLE);
-
-
+    }
+    private void showAnimation(View view, Techniques techniques, int duration, int repeat) {
+        YoYo.with(techniques)
+                .duration(duration)
+                .repeat(repeat)
+                .playOn(view);
     }
 }

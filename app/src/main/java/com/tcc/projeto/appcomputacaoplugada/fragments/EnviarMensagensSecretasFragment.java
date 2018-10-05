@@ -13,11 +13,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
     private String textoTraduzido = "";
-       public EnviarMensagensSecretasFragment() {
+
+    public EnviarMensagensSecretasFragment() {
         // Required empty public constructor
     }
 
@@ -329,7 +331,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
                 mNum13.getText().toString().isEmpty() || mNum14.getText().toString().isEmpty() || mNum15.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
-            getTextDoEditText();
+            getTextDoEditText(4);
             textoTraduzido = mTextoTraduzido.getText().toString();
             checked1 = true;
         }
@@ -367,88 +369,57 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("1")) {
-            mNum1.setError(getString(R.string.resposta_incorreta));
-            focus = mNum1;
-            exibir = true;
+            focus = showError(mNum1);
         }
         if (!num2.equalsIgnoreCase("10")) {
-            mNum2.setError(getString(R.string.resposta_incorreta));
-            focus = mNum2;
-            exibir = true;
+            focus = showError(mNum2);
         }
         if (!num3.equalsIgnoreCase("21")) {
-            mNum3.setError(getString(R.string.resposta_incorreta));
-            focus = mNum3;
-            exibir = true;
+            focus = showError(mNum3);
         }
         if (!num4.equalsIgnoreCase("4")) {
-            mNum4.setError(getString(R.string.resposta_incorreta));
-            focus = mNum4;
-            exibir = true;
+            focus = showError(mNum4);
         }
         if (!num5.equalsIgnoreCase("5")) {
-            mNum5.setError(getString(R.string.resposta_incorreta));
-            focus = mNum5;
-            exibir = true;
+            focus = showError(mNum5);
         }
 
         if (!num6.equalsIgnoreCase("5")) {
-            mNum6.setError(getString(R.string.resposta_incorreta));
-            focus = mNum6;
-            exibir = true;
+            focus = showError(mNum6);
         }
         if (!num7.equalsIgnoreCase("19")) {
-            mNum7.setError(getString(R.string.resposta_incorreta));
-            focus = mNum7;
-            exibir = true;
+            focus = showError(mNum7);
         }
         if (!num8.equalsIgnoreCase("20")) {
-            mNum8.setError(getString(R.string.resposta_incorreta));
-            focus = mNum8;
-            exibir = true;
+            focus = showError(mNum8);
         }
         if (!num9.equalsIgnoreCase("15")) {
-            mNum9.setError(getString(R.string.resposta_incorreta));
-            focus = mNum9;
-            exibir = true;
+            focus = showError(mNum9);
         }
         if (!num10.equalsIgnoreCase("21")) {
-            mNum10.setError(getString(R.string.resposta_incorreta));
-            focus = mNum10;
-            exibir = true;
+            focus = showError(mNum10);
         }
         if (!num11.equalsIgnoreCase("16")) {
-            mNum11.setError(getString(R.string.resposta_incorreta));
-            focus = mNum11;
-            exibir = true;
+            focus = showError(mNum11);
         }
         if (!num12.equalsIgnoreCase("18")) {
-            mNum12.setError(getString(R.string.resposta_incorreta));
-            focus = mNum12;
-            exibir = true;
+            focus = showError(mNum12);
         }
         if (!num13.equalsIgnoreCase("5")) {
-            mNum13.setError(getString(R.string.resposta_incorreta));
-            focus = mNum13;
-            exibir = true;
+            focus = showError(mNum13);
         }
         if (!num14.equalsIgnoreCase("19")) {
-            mNum14.setError(getString(R.string.resposta_incorreta));
-            focus = mNum14;
-            exibir = true;
+            focus = showError(mNum14);
         }
         if (!num15.equalsIgnoreCase("15")) {
-            mNum15.setError(getString(R.string.resposta_incorreta));
-            focus = mNum15;
-            exibir = true;
+            focus = showError(mNum15);
         }
         if (!validarTexto()) {
-            mTextoTraduzido.setError(getString(R.string.resposta_incorreta));
-            focus = mTextoTraduzido;
-            exibir = true;
+            focus = showError(mTextoTraduzido);
         }
 
         if (exibir) {
+            vibrar();
             focus.requestFocus();
         }
         return exibir;
@@ -472,7 +443,6 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         initEditText(view);
         initButtons(view);
     }
-
 
 
 }

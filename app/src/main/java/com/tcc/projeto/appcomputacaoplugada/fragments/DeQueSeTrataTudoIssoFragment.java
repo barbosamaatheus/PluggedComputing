@@ -15,6 +15,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
 public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     private Button mFormulario;
@@ -99,11 +100,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!validarTexto(textoTraduzido)) {
-            mTextoTraduzido.setError(getString(R.string.resposta_incorreta));
-            focus = mTextoTraduzido;
-            exibir = true;
+            focus = showError(mTextoTraduzido);
         }
         if (exibir) {
+            vibrar();
             focus.requestFocus();
         }
         return exibir;

@@ -16,6 +16,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -65,6 +67,23 @@ public abstract class MyFragments extends Fragment {
 
     protected MyApplication myApplication;
 
+    protected View showError(TextView view) {
+        View focus;
+        view.setError(getString(R.string.resposta_incorreta));
+        focus = view;
+        exibir = true;
+        showAnimation(view, Techniques.Shake);
+        return focus;
+    }
+    protected View showError(EditText view) {
+        View focus;
+        view.setError(getString(R.string.resposta_incorreta));
+        focus = view;
+        exibir = true;
+        showAnimation(view, Techniques.Shake);
+        return focus;
+    }
+
     protected void initVerify() {
         if (!respostasIsEmpty()) {
             validarCampos();
@@ -77,6 +96,7 @@ public abstract class MyFragments extends Fragment {
             callNextFragment();
         } else {
             restartFragment();
+            vibrar();
         }
 
     }
@@ -104,7 +124,7 @@ public abstract class MyFragments extends Fragment {
 
     protected void vibrar() {
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
-        long milliseconds = 500;
+        long milliseconds = 700;
         vibrator.vibrate(milliseconds);
     }
 
@@ -146,24 +166,42 @@ public abstract class MyFragments extends Fragment {
         }
     }
 
-    protected void getTextDoEditText() {
-        num1 = mNum1.getText().toString();
-        num2 = mNum2.getText().toString();
-        num3 = mNum3.getText().toString();
-        num4 = mNum4.getText().toString();
-        num5 = mNum5.getText().toString();
-        num6 = mNum6.getText().toString();
-        num7 = mNum7.getText().toString();
-        num8 = mNum8.getText().toString();
-        num9 = mNum9.getText().toString();
-        num10 = mNum10.getText().toString();
-        num11 = mNum11.getText().toString();
-        num12 = mNum12.getText().toString();
-        num13 = mNum13.getText().toString();
-        num14 = mNum14.getText().toString();
-        num15 = mNum15.getText().toString();
+    protected void getTextDoEditText(int nivel) {
+        switch (nivel) {
+            case 3:
+                num1 = mNum1.getText().toString();
+                num2 = mNum2.getText().toString();
+                num3 = mNum3.getText().toString();
+                num4 = mNum4.getText().toString();
+                num5 = mNum5.getText().toString();
+                num6 = mNum6.getText().toString();
+                num7 = mNum7.getText().toString();
+                num8 = mNum8.getText().toString();
+                num9 = mNum9.getText().toString();
+                num10 = mNum10.getText().toString();
+                break;
+            case 4:
+                num1 = mNum1.getText().toString();
+                num2 = mNum2.getText().toString();
+                num3 = mNum3.getText().toString();
+                num4 = mNum4.getText().toString();
+                num5 = mNum5.getText().toString();
+                num6 = mNum6.getText().toString();
+                num7 = mNum7.getText().toString();
+                num8 = mNum8.getText().toString();
+                num9 = mNum9.getText().toString();
+                num10 = mNum10.getText().toString();
+                num11 = mNum11.getText().toString();
+                num12 = mNum12.getText().toString();
+                num13 = mNum13.getText().toString();
+                num14 = mNum14.getText().toString();
+                num15 = mNum15.getText().toString();
+                break;
+        }
+
 
     }
+
     protected void createCartas() {
         carta01 = new Carta(R.id.carta1, R.mipmap.carta1, 1, true);
         carta02 = new Carta(R.id.carta2, R.mipmap.carta2, 2, true);
@@ -172,6 +210,7 @@ public abstract class MyFragments extends Fragment {
         carta16 = new Carta(R.id.carta16, R.mipmap.carta16, 16, true);
 
     }
+
     protected String montarNumerosET() {
         return mNum1.getText().toString() + " " + mNum2.getText().toString() + " " + mNum3.getText().toString() + " "
                 + mNum4.getText().toString() + " " + mNum5.getText().toString() + " - " + mNum6.getText().toString() + " "
@@ -299,6 +338,14 @@ public abstract class MyFragments extends Fragment {
         mNum13 = (EditText) view.findViewById(R.id.num13);
         mNum14 = (EditText) view.findViewById(R.id.num14);
         mNum15 = (EditText) view.findViewById(R.id.num15);
+    }
+
+
+    protected void showAnimation(View view, Techniques techniques) {
+        YoYo.with(techniques)
+                .duration(3000)
+                .repeat(0)
+                .playOn(view);
     }
 
     protected abstract void initViews(View view);

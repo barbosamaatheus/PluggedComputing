@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.activitys.AtividadesActivity;
@@ -45,6 +47,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         holder.mMateria.setText(mList.get(position).getMaterias());
         holder.mHabilidades.setText(mList.get(position).getHabilidades());
         holder.mIdade.setText(mList.get(position).getIdade());
+        showAnimation(holder.itemView);
     }
 
     @Override
@@ -74,5 +77,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             }
 
         }
+    }
+    private void showAnimation(View view) {
+        YoYo.with(Techniques.Pulse)
+                .duration(2000)
+                .repeat(0)
+                .playOn(view);
     }
 }

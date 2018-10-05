@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.MainActivity;
 
@@ -52,57 +53,37 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!num1.equalsIgnoreCase("9")) {
-            mNum1.setError(getString(R.string.resposta_incorreta));
-            focus = mNum1;
-            exibir = true;
+            focus = showError(mNum1);
         }
         if (!num2.equalsIgnoreCase("10")) {
-            mNum2.setError(getString(R.string.resposta_incorreta));
-            focus = mNum2;
-            exibir = true;
+            focus = showError(mNum2);
         }
         if (!num3.equalsIgnoreCase("5")) {
-            mNum3.setError(getString(R.string.resposta_incorreta));
-            focus = mNum3;
-            exibir = true;
+            focus = showError(mNum3);
         }
         if (!num4.equalsIgnoreCase("11")) {
-            mNum4.setError(getString(R.string.resposta_incorreta));
-            focus = mNum4;
-            exibir = true;
+            focus = showError(mNum4);
         }
         if (!num5.equalsIgnoreCase("0")) {
-            mNum5.setError(getString(R.string.resposta_incorreta));
-            focus = mNum5;
-            exibir = true;
+            focus = showError(mNum5);
         }
-
         if (!num6.equalsIgnoreCase("17")) {
-            mNum6.setError(getString(R.string.resposta_incorreta));
-            focus = mNum6;
-            exibir = true;
+            focus = showError(mNum6);
         }
         if (!num7.equalsIgnoreCase("2")) {
-            mNum7.setError(getString(R.string.resposta_incorreta));
-            focus = mNum7;
-            exibir = true;
+            focus = showError(mNum7);
         }
         if (!num8.equalsIgnoreCase("20")) {
-            mNum8.setError(getString(R.string.resposta_incorreta));
-            focus = mNum8;
-            exibir = true;
+            focus = showError(mNum8);
         }
         if (!num9.equalsIgnoreCase("0")) {
-            mNum9.setError(getString(R.string.resposta_incorreta));
-            focus = mNum9;
-            exibir = true;
+            focus = showError(mNum9);
         }
         if (!num10.equalsIgnoreCase("31")) {
-            mNum10.setError(getString(R.string.resposta_incorreta));
-            focus = mNum10;
-            exibir = true;
+            focus = showError(mNum10);
         }
         if (exibir) {
+            vibrar();
             focus.requestFocus();
         }
         return exibir;
@@ -127,7 +108,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
                 mNum10.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
-            getTextDoEditText();
+            getTextDoEditText(3);
             checked1 = true;
         }
         if (num1.isEmpty() || num2.isEmpty() || num3.isEmpty() ||

@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
 
 /**
@@ -76,21 +77,16 @@ public class MaisSobreNumerosBinariosFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!passou1) {
-            perg1.setError(getString(R.string.resposta_incorreta));
-            focus = perg1;
-            exibir = true;
+            focus = showError(perg1);
         }
         if (!passou2) {
-            perg2.setError(getString(R.string.resposta_incorreta));
-            focus = perg2;
-            exibir = true;
+            focus = showError(perg2);
         }
         if (!passou3) {
-            perg3.setError(getString(R.string.resposta_incorreta));
-            focus = perg3;
-            exibir = true;
+            focus = showError(perg3);
         }
         if (exibir) {
+            vibrar();
             focus.requestFocus();
         }
         return exibir;
