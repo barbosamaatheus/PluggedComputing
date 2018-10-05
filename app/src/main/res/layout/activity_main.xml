@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@mipmap/fundoinicio"
     android:gravity="bottom"
+    android:id="@+id/linearLayout"
     android:orientation="vertical"
     tools:context=".activitys.MainActivity">
 

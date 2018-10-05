@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
@@ -17,9 +19,19 @@ public class SplashActivity extends AppCompatActivity implements Runnable {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
-
+        try{
+            showAnimation();
+        }catch (Exception e){
+        }
         Handler handler = new Handler();
         handler.postDelayed(this, delay);
+    }
+
+    private void showAnimation() {
+        YoYo.with(Techniques.Tada)
+                .duration(3000)
+                .repeat(0)
+                .playOn(findViewById(R.id.img_splash));
     }
 
     @Override

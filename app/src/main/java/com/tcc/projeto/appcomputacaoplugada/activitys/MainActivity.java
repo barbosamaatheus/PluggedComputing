@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
@@ -33,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 "8. Notas da versão atualizadas; \n" +
                 "9. Tarefas: Mais sobre numeros binarios e De que se trata tudo isso\n" +
                 "10. Vibrações implementadas\n" +
-                "11. Mudança na tela de escolha de exercicios" +
+                "11. Mudança na tela de escolha de exercicios\n" +
+                "12. App agora conta com algumas Animações\n" +
                 "*Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override

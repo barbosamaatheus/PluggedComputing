@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
@@ -55,15 +57,15 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     @Override
     public void onClickListener(View view, int positon) {
-
         if (positon <= myApplication.getPositionExercicio()) {
             callNextActivity(positon);
         } else {
             vibrar();
-            onCreateDialog("Algo deu errado",
-                    "Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear",
-                    R.drawable.ic_error_outline_black_24dp);
-            callNextActivity(positon);
+            showAnimation(view);
+            //onCreateDialog("Algo deu errado",
+              //      "Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear",
+                //    R.drawable.ic_error_outline_black_24dp);
+            //callNextActivity(positon);
         }
 
     }
@@ -84,9 +86,17 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     }
     private void vibrar(){
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-        long milliseconds = 1000;
+        long milliseconds = 700;
         vibrator.vibrate(milliseconds);
     }
+    private void showAnimation(View view){
+        YoYo.with(Techniques.Shake)
+                .duration(700)
+                .repeat(0)
+                .playOn(view);
+    }
+
+
 
 }
 
