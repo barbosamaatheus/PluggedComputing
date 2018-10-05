@@ -23,7 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".activitys.SobreActivity"></activity>
+=======
+        <activity android:name=".activitys.ContarAcima31Activity" />
+        <activity android:name=".activitys.CorreioEletronicoModemsActivity" />
+        <activity android:name=".activitys.DoQueSeTrataTudoIssoActivity" />
+        <activity android:name=".activitys.EnviarMensagensSecretasActivity" />
+        <activity android:name=".activitys.IntroducaoActivity" />
+        <activity android:name=".activitys.MaisSobreNumerosBinarios" />
+        <activity android:name=".activitys.NumerosBinariosActivity" />
+        <activity android:name=".activitys.TrabalharComNumerosBinariosActivity"></activity>
+>>>>>>> Iniciada mudança de Fragments para Activitys
     </application>
 
 </manifest>
