@@ -41,6 +41,7 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
+        holder.mNivel.setText("Nivel "+position);
         if (position != 0) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }
@@ -59,12 +60,13 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        public TextView mTitulo;
+        public TextView mTitulo, mNivel;
         public ImageView mCheck;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             mTitulo = (TextView) itemView.findViewById(R.id.tituloEX);
+            mNivel = (TextView) itemView.findViewById(R.id.nivelEX);
             mCheck = (ImageView) itemView.findViewById(R.id.check);
             itemView.setOnClickListener(this);
         }

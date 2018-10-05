@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -34,7 +35,8 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     private void initviews() {
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_exercicios);
         mRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        StaggeredGridLayoutManager mLayoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        mLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS);
         mRecyclerView.setLayoutManager(mLayoutManager);
         myApplication = (MyApplication) getApplicationContext();
         mAdapter = new ExercicioAdapter(this, getExerciciosList(), myApplication.getPositionExercicio());
@@ -44,8 +46,8 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
 
     public String[] getExerciciosList() {
         String[] exerciciosList = new String[]{
-                "Introdução", "Números Binários", "Trabalhar com Números Binários", "Enviar Mensagens Secretas", "Correio Eletrônico e Modems", "Contar acima de 31", "Mais Sobre Números Binários",
-                "De que se trata tudo isso?"
+                "Introdução", "Números Binários", "Trabalhar com Números Binários", "Enviar Mensagens Secretas",
+                "Correio Eletrônico", "Contar acima de 31", "Mais Sobre Números Binários","De que se trata tudo isso?"
         };
         return exerciciosList;
     }

@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 "7. Melhorias no codigo; \n" +
                 "8. Notas da versão atualizadas; \n" +
                 "9. Tarefas: Mais sobre numeros binarios e De que se trata tudo isso\n" +
-                "10. Vibrações implementadas" +
+                "10. Vibrações implementadas\n" +
+                "11. Mudança na tela de escolha de exercicios" +
                 "*Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
