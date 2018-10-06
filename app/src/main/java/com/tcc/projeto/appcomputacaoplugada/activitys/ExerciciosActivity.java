@@ -65,7 +65,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
             //onCreateDialog("Algo deu errado",
               //      "Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear",
                 //    R.drawable.ic_error_outline_black_24dp);
-            callNextActivity(positon);
+            //callNextActivity(positon);
         }
 
     }

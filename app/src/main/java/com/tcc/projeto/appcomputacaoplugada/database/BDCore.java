@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class BDCore extends SQLiteOpenHelper {
     private static final String NOME_BD = "tabela";
-    private static final int VERSAO_BD = 1;
+    private static final int VERSAO_BD = 3;
 
 
     public BDCore(Context context) {

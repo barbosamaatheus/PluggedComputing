@@ -14,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -42,9 +43,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         mFormulario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uri = "https://goo.gl/forms/J1mmJ4A0MRFQihvC3";
+                /*String uri = "https://goo.gl/forms/J1mmJ4A0MRFQihvC3";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(intent);
+                startActivity(intent);*/
+                Toast.makeText(getActivity(), "Digite o codigo 00000", Toast.LENGTH_LONG).show();
             }
         });
         mFinalizar.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +112,8 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     }
 
     private boolean validarTexto(String textoTraduzido) {
-        if (textoTraduzido.equalsIgnoreCase("77096")){
+        //77096
+        if (textoTraduzido.equalsIgnoreCase("00000")){
             return true;
         }
         return false;

@@ -109,7 +109,7 @@ public abstract class MyFragments extends Fragment {
             myApplication.setPositionExercicio(position);
         }
 
-        //myApplication.updateDataBase();;
+        myApplication.updateDataBase();;
     }
 
     private void restartFragment() {
