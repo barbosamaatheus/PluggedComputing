@@ -7,6 +7,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
@@ -20,12 +21,42 @@ public class MyApplication extends Application {
     private static final String CHANNEL_ID = "channel_id";
     private int positionExercicio;
     private BD database;
+    private MediaPlayer music;
+    private boolean onSound;
 
     @Override
     public void onCreate() {
         super.onCreate();
         createNotificationChannel();
         database = new BD(this);
+    }
+
+    public void onStartMusic() {
+        if (music == null) {
+            music = MediaPlayer.create(getApplicationContext(), R.raw.music);
+            music.setLooping(true);
+            music.start();
+        } else {
+            music.start();
+        }
+        onSound = true;
+    }
+
+    public void onPauseMusic() {
+        if (music != null) {
+            music.pause();
+        }
+        onSound = false;
+
+    }
+
+    public void onStopMusic() {
+        if (music != null) {
+            music.stop();
+            music.release();
+            music = null;
+        }
+
     }
 
     public void addDataBase() {
@@ -51,6 +82,7 @@ public class MyApplication extends Application {
     public void setPositionExercicio(int positionExercicio) {
         this.positionExercicio = positionExercicio;
     }
+
     private void createNotificationChannel() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -62,7 +94,7 @@ public class MyApplication extends Application {
         }
     }
 
-    public void showNotification(String msg){
+    public void showNotification(String msg) {
         Intent intent = new Intent(this, ExerciciosActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -78,4 +110,11 @@ public class MyApplication extends Application {
         notificationManager.notify(1, mBuilder.build());
     }
 
+    public boolean isOnSound() {
+        return onSound;
+    }
+
+    public void setOnSound(boolean onSound) {
+        this.onSound = onSound;
+    }
 }
