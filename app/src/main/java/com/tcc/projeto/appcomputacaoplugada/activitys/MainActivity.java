@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         myApplication.onStartMusic();
         myApplication.showNotification("Bem vindo!");
 
-        onCreateDialog("Notas da versão 1.8.+", "1. Correção do bug com textos com acento ou com espaço; \n" +
+        onCreateDialog("Notas da versão 1.8.40", "1. Correção do bug com textos com acento ou com espaço; \n" +
                 "2. Notificações ao acessar o app e ou concluir niveis \n " +
                 "3. Melhoria na tela de Correio eletronico e modems; \n" +
                 "4. Mudança na cor de destaque dos campos de captura de texto de preto para branco \n" +
