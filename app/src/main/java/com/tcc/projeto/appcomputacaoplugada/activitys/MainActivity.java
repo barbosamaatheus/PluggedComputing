@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initViews();
-
         myApplication.onStartMusic();
         myApplication.showNotification("Bem vindo!");
 
@@ -50,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 myApplication.setPositionExercicio(0);
                 myApplication.readDataBase();
+                //myApplication.deleteDataBase();
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
                 startActivity(intent);
             }

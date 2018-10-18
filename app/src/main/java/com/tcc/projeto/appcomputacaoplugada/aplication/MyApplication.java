@@ -11,6 +11,7 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.util.Log;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
@@ -72,6 +73,11 @@ public class MyApplication extends Application {
     }
 
     public void readDataBase() {
+        if (database.read().isEmpty()){
+            Log.d("TAG", "readDataBase: Vazio");
+            setPositionExercicio(0);
+            addDataBase();
+        }
         setPositionExercicio(database.read().get(0));
     }
 
@@ -95,7 +101,7 @@ public class MyApplication extends Application {
     }
 
     public void showNotification(String msg) {
-        Intent intent = new Intent(this, ExerciciosActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
