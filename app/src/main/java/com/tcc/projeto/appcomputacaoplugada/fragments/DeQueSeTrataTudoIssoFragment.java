@@ -68,7 +68,7 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     @Override
     protected void initViews(View view) {
         textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayoutTTI);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoTTI);
+        mTextoTraduzidoDTI = (TextInputEditText) view.findViewById(R.id.textoTraduzidoTTI);
         mFormulario = (Button) view.findViewById(R.id.formulario);
         initButtons(view);
     }
@@ -85,10 +85,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         return isEmpty;
     }
     private void validarClicked1() {
-        if (mTextoTraduzido.getText().toString().isEmpty()) {
+        if (mTextoTraduzidoDTI.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
-            textoTraduzido = mTextoTraduzido.getText().toString();
+            textoTraduzido = mTextoTraduzidoDTI.getText().toString();
             checked1 = true;
         }
         if (textoTraduzido.isEmpty()) {
@@ -102,7 +102,7 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!validarTexto(textoTraduzido)) {
-            focus = showError(mTextoTraduzido);
+            focus = showError(mTextoTraduzidoDTI);
         }
         if (exibir) {
             vibrar();

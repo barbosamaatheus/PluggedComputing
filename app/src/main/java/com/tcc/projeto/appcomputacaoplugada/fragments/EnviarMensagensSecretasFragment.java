@@ -17,7 +17,7 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
 
 public class EnviarMensagensSecretasFragment extends MyFragments {
-    private String textoTraduzido = "";
+
 
     public EnviarMensagensSecretasFragment() {
         // Required empty public constructor
@@ -304,6 +304,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
         mFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (respostasIsEmpty()) {
                     vibrar();
                     onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
@@ -328,11 +329,12 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
                 mNum4.getText().toString().isEmpty() || mNum5.getText().toString().isEmpty() || mNum6.getText().toString().isEmpty() ||
                 mNum7.getText().toString().isEmpty() || mNum8.getText().toString().isEmpty() || mNum9.getText().toString().isEmpty() ||
                 mNum10.getText().toString().isEmpty() || mNum11.getText().toString().isEmpty() || mNum12.getText().toString().isEmpty() ||
-                mNum13.getText().toString().isEmpty() || mNum14.getText().toString().isEmpty() || mNum15.getText().toString().isEmpty()) {
+                mNum13.getText().toString().isEmpty() || mNum14.getText().toString().isEmpty() || mNum15.getText().toString().isEmpty()
+            || mTextoTraduzidoEMS.getText().toString().isEmpty()){
             checked1 = false;
         } else {
             getTextDoEditText(4);
-            textoTraduzido = mTextoTraduzido.getText().toString();
+            textoTraduzido = mTextoTraduzidoEMS.getText().toString();
             checked1 = true;
         }
 
@@ -415,7 +417,7 @@ public class EnviarMensagensSecretasFragment extends MyFragments {
             focus = showError(mNum15);
         }
         if (!validarTexto()) {
-            focus = showError(mTextoTraduzido);
+            focus = showError(mTextoTraduzidoEMS);
         }
 
         if (exibir) {

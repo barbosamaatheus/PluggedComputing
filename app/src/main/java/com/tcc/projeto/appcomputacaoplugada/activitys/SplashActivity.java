@@ -8,17 +8,21 @@ import android.os.Bundle;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
 public class SplashActivity extends AppCompatActivity implements Runnable {
     private static final long delay = 3000;
+    private MyApplication myApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
+        myApplication = (MyApplication) getApplicationContext();
+        myApplication.onStartMusic(R.raw.music);
         try {
             showAnimation();
         } catch (Exception e) {

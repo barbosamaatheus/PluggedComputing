@@ -9,9 +9,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
+import android.view.View;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
@@ -32,10 +34,10 @@ public class MyApplication extends Application {
         database = new BD(this);
     }
 
-    public void onStartMusic() {
+    public void onStartMusic(int idMusica) {
         if (music == null) {
-            music = MediaPlayer.create(getApplicationContext(), R.raw.music);
-            music.setLooping(true);
+            music = MediaPlayer.create(getApplicationContext(), idMusica);
+            music.setLooping(false);
             music.start();
         } else {
             music.start();
@@ -48,15 +50,15 @@ public class MyApplication extends Application {
             music.pause();
         }
         onSound = false;
-
     }
 
     public void onStopMusic() {
-        if (music != null) {
+        if (music != null){
             music.stop();
             music.release();
             music = null;
         }
+        onSound = false;
 
     }
 

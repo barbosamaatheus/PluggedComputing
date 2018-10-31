@@ -105,7 +105,7 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!validarTexto(textoTraduzido)) {
-            focus = showError(mTextoTraduzido);
+            focus = showError(mTextoTraduzidoCEM);
         }
         if (exibir) {
             vibrar();
@@ -115,11 +115,11 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
     }
 
     private void validarClicked1() {
-        if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzido.getText().toString().isEmpty()) {
+        if (mTextoNome.getText().toString().isEmpty() || mTextoTraduzidoCEM.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
             textoNome = mTextoNome.getText().toString();
-            textoTraduzido = mTextoTraduzido.getText().toString();
+            textoTraduzido = mTextoTraduzidoCEM.getText().toString();
             checked1 = true;
         }
         if (textoNome.isEmpty() || textoTraduzido.isEmpty()) {

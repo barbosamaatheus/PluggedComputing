@@ -27,24 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initViews();
-        myApplication.onStartMusic();
         myApplication.showNotification("Bem vindo!");
-
-        onCreateDialog("Notas da versão 1.8.40", "1. Correção do bug com textos com acento ou com espaço; \n" +
-                "2. Notificações ao acessar o app e ou concluir niveis \n " +
-                "3. Melhoria na tela de Correio eletronico e modems; \n" +
-                "4. Mudança na cor de destaque dos campos de captura de texto de preto para branco \n" +
-                "5. Correção de alguns textos no app; \n" +
-                "6. Implementado Floating nos campos de captura de texto; \n" +
-                "7. Tarefas: Mais sobre numeros binarios e De que se trata tudo isso\n" +
-                "8. Vibrações implementadas\n" +
-                "9. Mudança na tela de escolha de exercicios\n" +
-                "10. App agora conta com algumas Animações\n" +
-                "11. Banco de dados implementado (app salva estado dos exercicios)" +
-                "12. Melhorias no codigo; \n" +
-                "13. Notas da versão atualizadas; \n" +
-                "14. Implementada musica de fundo e botão para desativar musica\n" +
-                "*Cadeados desativados para versão de testes", R.drawable.ic_error_outline_black_24dp);
 
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     myApplication.setOnSound(false);
                 } else {
                     mSound.setImageResource(R.drawable.ic_volume_up_black_24dp);
-                    myApplication.onStartMusic();
+                    myApplication.onStartMusic(R.raw.music);
                     myApplication.setOnSound(true);
                 }
 
