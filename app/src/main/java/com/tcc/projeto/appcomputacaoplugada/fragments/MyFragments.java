@@ -3,6 +3,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Vibrator;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -120,7 +121,10 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
+        AlertDialog.Builder builder = builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
+        }
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();

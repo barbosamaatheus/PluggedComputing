@@ -74,8 +74,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogThemeOld);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
             builder.setView(R.layout.alert_sobre);
         }else{
             builder.setMessage(R.string.sobre_total).setTitle("Sobre").setIcon(R.drawable.ic_help_outline_black_24dp);
