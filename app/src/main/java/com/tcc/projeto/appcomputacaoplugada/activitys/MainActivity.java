@@ -3,6 +3,7 @@ package com.tcc.projeto.appcomputacaoplugada.activitys;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -72,18 +73,15 @@ public class MainActivity extends AppCompatActivity {
         mSound = (ImageButton) findViewById(R.id.sound);
     }
 
-    @SuppressLint("NewApi")
     public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setView(R.layout.alert_sobre);
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.MyDialogTheme);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder.setView(R.layout.alert_sobre);
+        }else{
+            builder.setMessage(R.string.sobre_total).setTitle("Sobre").setIcon(R.drawable.ic_help_outline_black_24dp);
+        }
         AlertDialog dialog = builder.create();
         dialog.show();
-    }
 
-    private void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DialogStyle);
-        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
 }

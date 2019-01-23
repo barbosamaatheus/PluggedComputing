@@ -2,6 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -128,10 +129,14 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
 
     }
 
-    @SuppressLint("NewApi")
+
     public void onCreateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setView(R.layout.alert_cartas);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder.setView(R.layout.alert_cartas);
+        }else{
+            builder.setMessage(R.string.dicas_tnb).setTitle("Dicas").setIcon(R.drawable.ic_help_outline_black_24dp);
+        }
         AlertDialog dialog = builder.create();
         dialog.show();
     }

@@ -120,7 +120,7 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();

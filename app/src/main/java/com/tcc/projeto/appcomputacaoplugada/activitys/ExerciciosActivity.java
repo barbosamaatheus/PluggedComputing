@@ -79,7 +79,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     }
 
     private void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.DialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
