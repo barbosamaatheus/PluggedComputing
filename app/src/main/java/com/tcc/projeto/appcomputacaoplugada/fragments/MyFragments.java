@@ -3,6 +3,7 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Vibrator;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
@@ -31,7 +32,7 @@ import static android.content.Context.VIBRATOR_SERVICE;
 
 public abstract class MyFragments extends Fragment {
     protected TextInputLayout textInputLayout1, textInputLayout2;
-    protected TextInputEditText mTextoTraduzido, mTextoNome;
+    protected TextInputEditText mTextoTraduzidoEMS, mTextoTraduzidoDTI, mTextoTraduzidoCEM, mTextoNome;
     protected EditText mNum1, mNum2, mNum3, mNum4, mNum5, mNum6, mNum7, mNum8, mNum9, mNum10, mNum11,
             mNum12, mNum13, mNum14, mNum15;
     protected ImageButton mCarta1, mCarta2, mCarta4, mCarta8, mCarta16, mDicas;
@@ -64,6 +65,7 @@ public abstract class MyFragments extends Fragment {
     protected String num13 = "";
     protected String num14 = "";
     protected String num15 = "";
+    protected String textoTraduzido = "";
 
     protected MyApplication myApplication;
 
@@ -92,6 +94,7 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void gerenciarResultados(int position, Context context) {
+        myApplication = (MyApplication) context.getApplicationContext();
         if (!exibir) {
             editarPositionExercicio(position, context);
             callNextFragment();
@@ -109,7 +112,7 @@ public abstract class MyFragments extends Fragment {
             myApplication.setPositionExercicio(position);
         }
 
-        //myApplication.updateDataBase();;
+        myApplication.updateDataBase();;
     }
 
     private void restartFragment() {
@@ -118,7 +121,10 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.DialogStyle);
+        AlertDialog.Builder builder = builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
+        }
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
@@ -198,6 +204,7 @@ public abstract class MyFragments extends Fragment {
                 num13 = mNum13.getText().toString();
                 num14 = mNum14.getText().toString();
                 num15 = mNum15.getText().toString();
+
                 break;
         }
 
@@ -318,8 +325,8 @@ public abstract class MyFragments extends Fragment {
 
     protected void initEditText(View view) {
         textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayout);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzido);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
+        mTextoTraduzidoEMS = (TextInputEditText) view.findViewById(R.id.textoTraduzido);
+        mTextoTraduzidoCEM = (TextInputEditText) view.findViewById(R.id.textoTraduzidoCem);
         mTextoNome = (TextInputEditText) view.findViewById(R.id.textoNome);
 
 

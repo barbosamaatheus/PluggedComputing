@@ -85,17 +85,17 @@
 
     <string name="dicas_intro">1. Presione o cartão para vira-lo;
         \n2. A soma dos pontos dos cartões representam o numero decimal;
-        \n3. Os numero decimal é representado pela sequencia de zeros e uns;
+        \n3. Os numero binario é representado pela sequencia de zeros e uns;
         \n4. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
     <string name="dicas_nb">1. Presione o cartão para vira-lo;
         \n2. A soma dos pontos dos cartões representam o numero decimal;
-        \n3. Os numero decimal é representado pela sequencia de zeros e uns;
+        \n3. Os numero binario é representado pela sequencia de zeros e uns;
         \n4. Decore a posição das cartas, você vai precisar…
         \n5. Responda todas as perguntas corretamente para completar a tarefa.</string>
 
     <string name="dicas_tnb">1. Os campos devems ser preenchidos com valores decimais;
-        \n2. Talvez lembrar a sequencia das cartas te ajude nesse exercicio;
+        \n2. Talvez lembrar a sequencia das cartas te ajude nesse exercicio (16,8,4,2,1);
         \n3. Responda todas as perguntas corretamente para completar a tarefa</string>
 
     <string name="dicas_ems">1. Os campos devems ser preenchidos com valores decimais;
@@ -113,6 +113,19 @@
     <string name="dicas_mnb">1. Responda todas as perguntas corretamente para completar a tarefa.</string>
     <string name="dicas_tti">1. Responda o questionario até o final para obter o Token;
     \n2. Copie e cole o Token correto na caixa de texto para completar a tarefa;</string>
+
+
+    <string name="sobre_total"><![CDATA[O aplicativo computação plugada, inspirado no livro de Bell, T.; Witten, I. e Fellows,
+     M. (2011). “Computer Science Unplugged – Ensinando Ciência da Computação sem o uso do Computador”.
+     Tradução de Luciano Porto Barreto, 2011. Disponível em: <http://csunplugged.org/>. Apresenta atividades práticas,
+     lúdicas e acessíveis sobre diversos temas da ciência da computação. O mesmo engloba técnicas fáceis para seu uso,
+     tornando-se disponível para todos. Sua prática é fácil não só em salas de aula mas também fora, pela sua abordagem
+     simples e inteligente, podendo ser fácil administrado por professores e compreendido por crianças.
+     O aplicativo é uma grande inovação para as técnicas de aprendizagem, apresentando temas complexos de uma forma
+     elementar para o conhecimento.
+     \n\nDesenvolvido por: \nMatheus Barbosa de Oliveira\nIvonildo Pereira Gomes Neto
+        \nTodos os Direitos Reservados \n© 2018
+     ]]></string>
 
 
 </resources>

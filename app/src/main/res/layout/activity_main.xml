@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/fundoinicio"
-    android:gravity="bottom"
     android:id="@+id/linearLayout"
     android:orientation="vertical"
     tools:context=".activitys.MainActivity">
@@ -13,7 +12,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:gravity="right"
+        android:layout_margin="10dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/sound"
+            android:background="@drawable/buttonshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_volume_up_black_24dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom"
         android:gravity="center|bottom"
         android:orientation="vertical">
 

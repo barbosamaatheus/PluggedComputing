@@ -72,6 +72,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:padding="1dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
@@ -80,6 +81,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:padding="1dp"
                         android:id="@+id/materiasCW"
                         style="@style/TextViewStyle"
                         android:layout_width="match_parent"
@@ -95,6 +97,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:padding="1dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
@@ -103,6 +106,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:padding="1dp"
                         android:id="@+id/habilidadesCW"
                         style="@style/TextViewStyle"
                         android:layout_width="match_parent"
@@ -119,6 +123,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:padding="1dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
@@ -127,6 +132,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:padding="1dp"
                         android:id="@+id/idadeCW"
                         style="@style/TextViewStyle"
                         android:layout_width="match_parent"

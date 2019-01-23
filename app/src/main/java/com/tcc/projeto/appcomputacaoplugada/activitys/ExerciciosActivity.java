@@ -2,6 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.activitys;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -79,7 +80,10 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     }
 
     private void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.DialogStyle);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.MyDialogThemeOld);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
+        }
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();

@@ -14,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -42,9 +43,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         mFormulario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String uri = "https://goo.gl/forms/J1mmJ4A0MRFQihvC3";
+                /*String uri = "https://goo.gl/forms/J1mmJ4A0MRFQihvC3";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(intent);
+                startActivity(intent);*/
+                Toast.makeText(getActivity(), "Digite o codigo 00000", Toast.LENGTH_LONG).show();
             }
         });
         mFinalizar.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +68,7 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     @Override
     protected void initViews(View view) {
         textInputLayout1 = (TextInputLayout) view.findViewById(R.id.textInputLayoutTTI);
-        mTextoTraduzido = (TextInputEditText) view.findViewById(R.id.textoTraduzidoTTI);
+        mTextoTraduzidoDTI = (TextInputEditText) view.findViewById(R.id.textoTraduzidoTTI);
         mFormulario = (Button) view.findViewById(R.id.formulario);
         initButtons(view);
     }
@@ -83,10 +85,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         return isEmpty;
     }
     private void validarClicked1() {
-        if (mTextoTraduzido.getText().toString().isEmpty()) {
+        if (mTextoTraduzidoDTI.getText().toString().isEmpty()) {
             checked1 = false;
         } else {
-            textoTraduzido = mTextoTraduzido.getText().toString();
+            textoTraduzido = mTextoTraduzidoDTI.getText().toString();
             checked1 = true;
         }
         if (textoTraduzido.isEmpty()) {
@@ -100,7 +102,7 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         View focus = null;
         exibir = false;
         if (!validarTexto(textoTraduzido)) {
-            focus = showError(mTextoTraduzido);
+            focus = showError(mTextoTraduzidoDTI);
         }
         if (exibir) {
             vibrar();
@@ -110,7 +112,8 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
     }
 
     private boolean validarTexto(String textoTraduzido) {
-        if (textoTraduzido.equalsIgnoreCase("77096")){
+        //77096
+        if (textoTraduzido.equalsIgnoreCase("00000")){
             return true;
         }
         return false;
