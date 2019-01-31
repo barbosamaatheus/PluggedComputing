@@ -121,7 +121,7 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);;
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
         }

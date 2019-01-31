@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,10 +45,11 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
         holder.mNivel.setText("Nivel "+position);
-        if (position != 0) {
+        Log.d("positions", "onBindViewHolder: "+position + "--"+ estado);
+        if (position > estado) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }
-        if (position <= (estado - 1)) {
+        if (position < estado) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_check_black_24dp);
         }
         if (position == (estado)) {

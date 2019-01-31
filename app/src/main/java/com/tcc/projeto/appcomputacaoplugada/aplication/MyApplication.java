@@ -37,7 +37,7 @@ public class MyApplication extends Application {
     public void onStartMusic(int idMusica) {
         if (music == null) {
             music = MediaPlayer.create(getApplicationContext(), idMusica);
-            music.setLooping(false);
+            music.setLooping(true);
             music.start();
         } else {
             music.start();
