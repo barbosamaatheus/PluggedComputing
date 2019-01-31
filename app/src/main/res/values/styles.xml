@@ -17,6 +17,14 @@
         <item name="android:fontFamily">casual</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
+    <style name="TextViewStyleLarge" parent="AppTheme" tools:ignore="NewApi">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:justificationMode">inter_word</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
 
     <style name="EditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="colorPrimary">@color/colorPrimary</item>

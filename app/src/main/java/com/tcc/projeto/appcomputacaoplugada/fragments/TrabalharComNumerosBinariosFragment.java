@@ -126,9 +126,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
     protected void initViews(View view) {
         initEditText(view);
         initButtons(view);
-
     }
-
 
     public void onCreateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

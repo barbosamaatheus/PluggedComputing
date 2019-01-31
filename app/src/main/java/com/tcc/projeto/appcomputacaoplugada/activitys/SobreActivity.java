@@ -17,7 +17,7 @@ public class SobreActivity extends AppCompatActivity {
         textoSobre = (TextView) findViewById(R.id.textoSobre);
         textCreditos = (TextView) findViewById(R.id.creditos);
 
-        setConfigurations();
+        //setConfigurations();
     }
     private void setConfigurations(){
         Configuration config = getResources().getConfiguration();
