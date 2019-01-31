@@ -2,17 +2,21 @@ package com.tcc.projeto.appcomputacaoplugada.fragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,6 +25,7 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
+import com.tcc.projeto.appcomputacaoplugada.activitys.TarefaActivity;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Carta;
 
@@ -96,14 +101,14 @@ public abstract class MyFragments extends Fragment {
     protected void gerenciarResultados(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
         if (!exibir) {
-            editarPositionExercicio(position, context);
-            callNextFragment();
+            dialogCompleteLevel("Nivel: " + (position - 1), "Parabéns, você conseguiu completar o nivel " + (position - 1) +
+                            ". Agora você deve escolher uma das opções para continuar.",
+                    R.drawable.ic_check_black_24dp, position, context);
             myApplication.showNotification("Parabéns, você finalizou o nivel " + (position - 1));
         } else {
             restartFragment();
             vibrar();
         }
-
     }
 
     private void editarPositionExercicio(int position, Context context) {
@@ -111,8 +116,8 @@ public abstract class MyFragments extends Fragment {
         if (myApplication.getPositionExercicio() < position) {
             myApplication.setPositionExercicio(position);
         }
-
-        myApplication.updateDataBase();;
+        myApplication.updateDataBase();
+        ;
     }
 
     private void restartFragment() {
@@ -121,13 +126,58 @@ public abstract class MyFragments extends Fragment {
     }
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);;
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
+        ;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
         }
         builder.setMessage(mensagem).setTitle(title).setIcon(icon);
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context) {
+        final int position1 = position;
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
+        }
+        builder.setMessage(mensagem).setTitle(title).setIcon(icon)
+                .setPositiveButton(" ", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        editarPositionExercicio(position, context);
+                        Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putInt("next", position1 + 1);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                    }
+                }).setNeutralButton(" ", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                    restartFragment();
+            }
+        }).setNegativeButton(" ", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                editarPositionExercicio(position, context);
+                callNextFragment();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        gerarBotoes(dialog);
+    }
+
+    private void gerarBotoes(AlertDialog dialog) {
+        Button replay = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
+        replay.setBackgroundResource(R.drawable.ic_replay_black_24dp);
+
+        Button home = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
+        home.setBackgroundResource(R.drawable.ic_home_black_24dp);
+
+        Button next = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        next.setBackgroundResource(R.drawable.ic_arrow_forward_black_24dp);
     }
 
     protected void vibrar() {

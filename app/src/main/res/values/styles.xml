@@ -63,7 +63,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1.5dp</item>
         <item name="android:justificationMode" tools:targetApi="o">inter_word</item>
     </style>
     <style name="MyDialogThemeOld" parent="Theme.AppCompat.Dialog.Alert">

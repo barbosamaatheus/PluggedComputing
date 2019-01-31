@@ -34,6 +34,11 @@ public class TarefaActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         int position = bundle.getInt("positon");
+        int next = -1;
+        next = bundle.getInt("next");
+        if(next != -1){
+            initFragment(next);
+        }
         initFragment(position);
     }
 
