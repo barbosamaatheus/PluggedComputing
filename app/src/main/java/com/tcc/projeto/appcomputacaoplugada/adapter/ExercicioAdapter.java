@@ -45,11 +45,10 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
         holder.mNivel.setText("Nivel "+position);
-        Log.d("positions", "onBindViewHolder: "+position + "--"+ estado);
-        if (position > estado) {
+        if (position != 0) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }
-        if (position < estado) {
+        if (position <= (estado - 1)) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_check_black_24dp);
         }
         if (position == (estado)) {
