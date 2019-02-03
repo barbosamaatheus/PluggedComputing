@@ -11,11 +11,14 @@ import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -127,7 +130,6 @@ public abstract class MyFragments extends Fragment {
 
     protected void onCreateDialog(String title, String mensagem, int icon) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
-        ;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
         }
@@ -135,51 +137,56 @@ public abstract class MyFragments extends Fragment {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
     protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context) {
-        final int position1 = position;
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
-        }
-        builder.setMessage(mensagem).setTitle(title).setIcon(icon)
-                .setPositiveButton("Proximo", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        editarPositionExercicio(position, context);
-                        Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("next", position1 + 1);
-                        intent.putExtras(bundle);
-                        startActivity(intent);
-                    }
-                }).setNeutralButton("Refazer", new DialogInterface.OnClickListener() {
+        LayoutInflater li = LayoutInflater.from(context);
+        View view = li.inflate(R.layout.dialog_exemple, null);
+
+        ImageView icone = view.findViewById(R.id.icone_dialog);
+        TextView titulo = view.findViewById(R.id.titulo_dialog);
+        TextView msg = view.findViewById(R.id.mensagem_dialog);
+        ImageButton home = view.findViewById(R.id.home_dialog);
+        ImageButton replay = view.findViewById(R.id.replay_dialog);
+        ImageButton next = view.findViewById(R.id.next_dialog);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+
+        titulo.setText(title);
+        msg.setText(mensagem);
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
-                    restartFragment();
-            }
-        }).setNegativeButton("Listar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(View v) {
                 editarPositionExercicio(position, context);
                 callNextFragment();
+                dialog.hide();
+
             }
         });
-        AlertDialog dialog = builder.create();
+        replay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restartFragment();
+                dialog.hide();
+
+            }
+        });
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editarPositionExercicio(position, context);
+                Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("next", (position + 1));
+                intent.putExtras(bundle);
+                startActivity(intent);
+                dialog.hide();
+
+            }
+        });
         dialog.show();
-        //gerarBotoes(dialog);
+
     }
-
-    private void gerarBotoes(AlertDialog dialog) {
-        Button replay = dialog.getButton(AlertDialog.BUTTON_NEUTRAL);
-        replay.setBackgroundResource(R.drawable.ic_replay_black_24dp);
-
-        Button home = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
-        home.setBackgroundResource(R.drawable.ic_home_black_24dp);
-
-        Button next = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
-        next.setBackgroundResource(R.drawable.ic_arrow_forward_black_24dp);
-    }
-
     protected void vibrar() {
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
         long milliseconds = 700;

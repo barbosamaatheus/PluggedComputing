@@ -61,13 +61,6 @@ public class MyApplication extends Application {
         onSound = false;
     }
 
-    public void onFinal() {
-        if (music != null) {
-            music.release();
-        }
-
-    }
-
     public void addDataBase() {
         database.add(getPositionExercicio());
     }
