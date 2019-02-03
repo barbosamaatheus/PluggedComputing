@@ -116,6 +116,9 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         if (textoTraduzido.equalsIgnoreCase("00000")){
             return true;
         }
+        if(textoTraduzido.equalsIgnoreCase("delete")){
+            myApplication.setPositionExercicio(0);
+        }
         return false;
     }
 }
