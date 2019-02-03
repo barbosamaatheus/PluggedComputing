@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,9 +28,10 @@ public class BD {
         values.put("position", position);
         database.update("registros", values, "_id = ?", new String[]{"1"});
     }
-
     public void delete(int position) {
+
         database.delete("registros", "_id = ?" + "1", null);
+        Log.d("delete", "delete: " + position + read().toString());
     }
 
     public List<Integer> read() {

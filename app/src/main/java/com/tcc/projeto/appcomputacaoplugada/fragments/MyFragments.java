@@ -143,7 +143,7 @@ public abstract class MyFragments extends Fragment {
             builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
         }
         builder.setMessage(mensagem).setTitle(title).setIcon(icon)
-                .setPositiveButton(" ", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Proximo", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         editarPositionExercicio(position, context);
                         Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
@@ -152,12 +152,12 @@ public abstract class MyFragments extends Fragment {
                         intent.putExtras(bundle);
                         startActivity(intent);
                     }
-                }).setNeutralButton(" ", new DialogInterface.OnClickListener() {
+                }).setNeutralButton("Refazer", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                     restartFragment();
             }
-        }).setNegativeButton(" ", new DialogInterface.OnClickListener() {
+        }).setNegativeButton("Listar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 editarPositionExercicio(position, context);
@@ -166,7 +166,7 @@ public abstract class MyFragments extends Fragment {
         });
         AlertDialog dialog = builder.create();
         dialog.show();
-        gerarBotoes(dialog);
+        //gerarBotoes(dialog);
     }
 
     private void gerarBotoes(AlertDialog dialog) {

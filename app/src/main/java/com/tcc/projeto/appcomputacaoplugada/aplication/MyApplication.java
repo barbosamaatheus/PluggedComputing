@@ -59,6 +59,12 @@ public class MyApplication extends Application {
             music = null;
         }
         onSound = false;
+    }
+
+    public void onFinal() {
+        if (music != null) {
+            music.release();
+        }
 
     }
 
@@ -84,11 +90,13 @@ public class MyApplication extends Application {
     }
 
     public int getPositionExercicio() {
+        //readDataBase();
         return positionExercicio;
     }
 
     public void setPositionExercicio(int positionExercicio) {
         this.positionExercicio = positionExercicio;
+        updateDataBase();
     }
 
     private void createNotificationChannel() {

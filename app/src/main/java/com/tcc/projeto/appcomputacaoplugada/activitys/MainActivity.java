@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mInicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myApplication.setPositionExercicio(0);
+                //myApplication.setPositionExercicio(0);
                 myApplication.readDataBase();
                 //myApplication.deleteDataBase();
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
     private void initViews() {
         myApplication = (MyApplication) getApplicationContext();
         mInicar = (Button) findViewById(R.id.btn_iniciar);
