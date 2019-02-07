@@ -19,7 +19,7 @@
     </style>
     <style name="TextViewStyleLarge" parent="AppTheme" tools:ignore="NewApi">
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:justificationMode">inter_word</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:fontFamily">casual</item>
@@ -36,6 +36,21 @@
         <item name="colorControlNormal">@color/colorHint</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">casual</item>
+    </style>
+    <style name="EditTextStyleLarge" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="colorControlActivated">@color/textColorPrimary</item>
+        <item name="colorControlNormal">@color/colorHint</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center</item>
         <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">center</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">casual</item>
 
@@ -49,6 +64,15 @@
         <item name="android:textAlignment" tools:ignore="NewApi">center</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
+    <style name="RadioButtonStyleLarge" parent="AppTheme">
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/redioshape</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/bungee</item>
+        <item name="android:textAlignment" tools:ignore="NewApi">center</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textSize">25sp</item>
+    </style>
 
     <style name="ButtonStyle" parent="AppTheme">
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/bungee</item>
@@ -57,18 +81,13 @@
         <item name="android:background">@drawable/buttonshape</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
-
-    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:background">@color/colorAccent</item>
+    <style name="ButtonStyleLarge" parent="AppTheme">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/bungee</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/buttonshape</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:layout_margin">1.5dp</item>
-        <item name="android:justificationMode" tools:targetApi="o">inter_word</item>
-    </style>
-    <style name="MyDialogThemeOld" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:gravity">center</item>
-        <item name="android:windowBackground">@color/colorAccent</item>
+        <item name="android:textSize">25sp</item>
     </style>
 
     <style name="ProgressBarStyle" parent="AppTheme">

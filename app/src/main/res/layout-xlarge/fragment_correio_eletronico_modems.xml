@@ -63,14 +63,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:theme="@style/EditTextStyle">
+                android:theme="@style/EditTextStyleLarge">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/textoNome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite o seu nome..."
-                    android:theme="@style/EditTextStyle" />
+                    android:theme="@style/EditTextStyleLarge" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -83,7 +83,7 @@
 
             <Button
                 android:id="@+id/enviar"
-                style="@style/ButtonStyle"
+                style="@style/ButtonStyleLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="ENVIAR" />
@@ -115,7 +115,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/alfabeto" />
 
@@ -144,14 +144,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:theme="@style/EditTextStyle">
+                android:theme="@style/EditTextStyleLarge">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/textoTraduzidoCem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Traduza a mensagem aqui..."
-                    android:theme="@style/EditTextStyle" />
+                    android:theme="@style/EditTextStyleLarge" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -159,7 +159,7 @@
 
         <Button
             android:id="@+id/finalizar"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyleLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Finalizar" />

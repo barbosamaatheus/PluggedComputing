@@ -130,7 +130,7 @@ Somente ao finalizar o formulario você recebera o Token que deve copiar e colar
 
             <Button
                 android:id="@+id/formulario"
-                style="@style/ButtonStyle"
+                style="@style/ButtonStyleLarge"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Ir para formulario" />
@@ -141,14 +141,14 @@ Somente ao finalizar o formulario você recebera o Token que deve copiar e colar
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:theme="@style/EditTextStyle">
+                android:theme="@style/EditTextStyleLarge">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/textoTraduzidoTTI"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Digite o Token do formulario"
-                    android:theme="@style/EditTextStyle" />
+                    android:theme="@style/EditTextStyleLarge" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -156,7 +156,7 @@ Somente ao finalizar o formulario você recebera o Token que deve copiar e colar
 
         <Button
             android:id="@+id/finalizar"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyleLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Finalizar" />

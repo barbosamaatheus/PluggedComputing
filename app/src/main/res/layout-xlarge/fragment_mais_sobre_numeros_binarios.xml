@@ -59,21 +59,21 @@
 
                 <RadioButton
                     android:id="@+id/errado12"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Nada acontece" />
 
                 <RadioButton
                     android:id="@+id/errado11"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="é multiplicado por 10" />
 
                 <RadioButton
                     android:id="@+id/certo1"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="O número é dobrado." />
@@ -112,21 +112,21 @@
 
                 <RadioButton
                     android:id="@+id/errado21"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="90" />
 
                 <RadioButton
                     android:id="@+id/certo2"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="18" />
 
                 <RadioButton
                     android:id="@+id/errado22"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="9" />
@@ -178,21 +178,21 @@
 
                 <RadioButton
                     android:id="@+id/errado31"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="64" />
 
                 <RadioButton
                     android:id="@+id/certo3"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="128" />
 
                 <RadioButton
                     android:id="@+id/errado32"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="256" />
@@ -202,7 +202,7 @@
 
         <Button
             android:id="@+id/finalizar"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyleLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Finalizar" />

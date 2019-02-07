@@ -188,7 +188,7 @@
                     android:hint="Maior..."
                     android:inputType="number"
                     android:maxLength="2"
-                    android:theme="@style/EditTextStyle" />
+                    android:theme="@style/EditTextStyleLarge" />
 
                 <EditText
                     android:textSize="20sp"
@@ -202,7 +202,7 @@
                     android:hint="Menor..."
                     android:inputType="number"
                     android:maxLength="2"
-                    android:theme="@style/EditTextStyle" />
+                    android:theme="@style/EditTextStyleLarge" />
             </LinearLayout>
 
 
@@ -232,21 +232,21 @@
 
                 <RadioButton
                     android:id="@+id/certo2"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="19" />
 
                 <RadioButton
                     android:id="@+id/errado22"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="13" />
 
                 <RadioButton
                     android:id="@+id/errado21"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="5" />
@@ -278,21 +278,21 @@
 
                 <RadioButton
                     android:id="@+id/errado31"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="01101 e 00011" />
 
                 <RadioButton
                     android:id="@+id/errado32"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="10011 e 01101" />
 
                 <RadioButton
                     android:id="@+id/certo3"
-                    style="@style/RadioButtonStyle"
+                    style="@style/RadioButtonStyleLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="00011 e 01100" />
@@ -301,7 +301,7 @@
 
         <Button
             android:id="@+id/finalizar"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyleLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Finalizar" />

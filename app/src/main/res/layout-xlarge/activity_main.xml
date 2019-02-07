@@ -18,9 +18,10 @@
 
         <ImageButton
             android:id="@+id/sound"
+            style="@style/ButtonStyleLarge"
             android:background="@drawable/buttonshape"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:src="@drawable/ic_volume_up_black_24dp"/>
     </LinearLayout>
 
@@ -34,24 +35,20 @@
 
         <Button
             android:id="@+id/btn_iniciar"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
             android:layout_margin="10dp"
+            style="@style/ButtonStyleLarge"
             android:background="@drawable/buttonshape"
-            android:fontFamily="@font/bungee"
-            android:text="Iniciar"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:text="Iniciar" />
 
         <Button
             android:id="@+id/btn_sobre"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            style="@style/ButtonStyleLarge"
             android:background="@drawable/buttonshape"
-            android:fontFamily="@font/bungee"
-            android:text="Sobre"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:text="Sobre" />
 
     </LinearLayout>
 
