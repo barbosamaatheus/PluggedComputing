@@ -53,7 +53,8 @@ public class ContarAcima31Fragment extends MyFragments {
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     vibrar();
-                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta),
+                            6,getActivity());
                 } else {
                     validarCampos();
                     gerenciarResultados(6, getActivity());
@@ -63,7 +64,7 @@ public class ContarAcima31Fragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_ca31), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_ca31), 6,getActivity());
             }
         });
         return view;

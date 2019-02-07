@@ -22,6 +22,7 @@
                 android:src="@drawable/ic_help_outline_black_24dp" />
 
             <TextView
+                android:id="@+id/tituloDialog"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -31,14 +32,12 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="30dp"
                 android:textStyle="bold" />
-
-
         </LinearLayout>
-
-
         <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layotCartas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -53,7 +52,7 @@
             <ImageButton
                 android:id="@+id/carta8NB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@mipmap/carta8" />
@@ -61,7 +60,7 @@
             <ImageButton
                 android:id="@+id/carta4NB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@mipmap/carta4" />
@@ -69,7 +68,7 @@
             <ImageButton
                 android:id="@+id/carta2NB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@mipmap/carta2" />
@@ -77,7 +76,7 @@
             <ImageButton
                 android:id="@+id/carta1NB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="@mipmap/carta1" />
@@ -85,6 +84,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/textDialog"
             android:textSize="20sp"
             style="@style/TextViewStyle"
             android:layout_width="match_parent"

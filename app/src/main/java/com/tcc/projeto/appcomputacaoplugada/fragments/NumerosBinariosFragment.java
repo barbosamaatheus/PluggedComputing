@@ -83,7 +83,8 @@ public class NumerosBinariosFragment extends MyFragments {
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     vibrar();
-                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta),
+                            2, getActivity());
                 } else {
                     validarCampos();
                     gerenciarResultados(2, getActivity());
@@ -94,7 +95,8 @@ public class NumerosBinariosFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog("Dicas", getString(R.string.dicas_nb), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_nb),
+                        2, getActivity());
             }
         });
 

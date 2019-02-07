@@ -22,6 +22,7 @@
                 android:src="@drawable/ic_help_outline_black_24dp" />
 
             <TextView
+                android:id="@+id/tituloDialog"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
@@ -37,6 +38,8 @@
 
 
         <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/layotCartas"
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:gravity="center"
@@ -85,6 +88,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/textDialog"
             style="@style/TextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

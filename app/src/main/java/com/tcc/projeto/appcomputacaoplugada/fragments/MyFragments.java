@@ -127,15 +127,26 @@ public abstract class MyFragments extends Fragment {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(this).attach(this).commit();
     }
-    protected void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogTheme);
-        }
-        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
+    protected void onCreateDialog(String titulo, String mensagem, int positin, Context context) {
+        LayoutInflater li = LayoutInflater.from(context);
+        View view = li.inflate(R.layout.alert_cartas, null);
+
+        LinearLayout linearLayout = view.findViewById(R.id.layotCartas);
+        TextView textoDialog = view.findViewById(R.id.textDialog);
+        TextView tituloDialog = view.findViewById(R.id.tituloDialog);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setView(view);
         AlertDialog dialog = builder.create();
+
+        tituloDialog.setText(titulo);
+        textoDialog.setText(mensagem);
+        if ((positin == 3 || positin == 6)&& titulo.equalsIgnoreCase("dicas")){
+            linearLayout.setVisibility(View.VISIBLE);
+        }
         dialog.show();
     }
+
     protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context) {
         LayoutInflater li = LayoutInflater.from(context);
         View view = li.inflate(R.layout.dialog_exemple, null);

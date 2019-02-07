@@ -36,7 +36,8 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onCreateDialog("Dicas", getString(R.string.dicas_tti), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_tti),
+                        8, getActivity());
             }
         });
 
@@ -54,7 +55,8 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     vibrar();
-                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta),
+                            8, getActivity());
                 } else {
                     validarCampos();
                     gerenciarResultados(8, getActivity());

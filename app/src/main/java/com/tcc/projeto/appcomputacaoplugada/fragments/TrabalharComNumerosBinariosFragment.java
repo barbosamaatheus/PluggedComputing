@@ -32,7 +32,8 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
             public void onClick(View view) {
                 if (respostasIsEmpty()) {
                     vibrar();
-                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta),
+                            3, getActivity());
                 } else {
                     validarCampos();
                     gerenciarResultados(3, getActivity());
@@ -42,7 +43,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onCreateDialog();
+                onCreateDialog("Dicas", getString(R.string.dicas_tnb), 3, getActivity());
             }
         });
         return view;
@@ -128,7 +129,7 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         initButtons(view);
     }
 
-    public void onCreateDialog() {
+    /*public void onCreateDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             builder.setView(R.layout.alert_cartas);
@@ -137,6 +138,6 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         }
         AlertDialog dialog = builder.create();
         dialog.show();
-    }
+    }*/
 
 }

@@ -52,7 +52,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
         mDicas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onCreateDialog("Dicas", getString(R.string.dicas_cem), R.drawable.ic_help_outline_black_24dp);
+                onCreateDialog("Dicas", getString(R.string.dicas_cem),
+                        5, getActivity());
             }
         });
 
@@ -60,7 +61,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
             @Override
             public void onClick(View view) {
                 if (mTextoNome.getText().toString().isEmpty()){
-                    onCreateDialog("Algo deu errado", "Parece que você esqueceu de digitar o seu nome", R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", "Parece que você esqueceu de digitar o seu nome",
+                            5, getActivity());
                 }else {
                     textoNome = mTextoNome.getText().toString();
                     nomeBinario.setVisibility(View.GONE);
@@ -77,7 +79,8 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
             public void onClick(View view) {
                 textoBinario = nomeBinario.getText().toString();
                 if (respostasIsEmpty()) {
-                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta), R.drawable.ic_error_outline_black_24dp);
+                    onCreateDialog("Algo deu errado", getString(R.string.texto_alert_sem_resposta),
+                            5, getActivity());
                 } else {
                     validarCampos();
                     gerenciarResultados(5, getActivity());
