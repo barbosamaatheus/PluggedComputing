@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mInicar, mSobre;
     private ImageButton mSound;
     private MyApplication myApplication;
+    private boolean sair = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        if(sair){
+            myApplication.updateDataBase();
+            myApplication.onStopMusic();
+            finish();
+        }else{
+            Toast.makeText(getApplicationContext(), "Prescione novamente para sair", Toast.LENGTH_SHORT).show();
+            sair = true;
+        }
+    }
+
     private void initViews() {
         myApplication = (MyApplication) getApplicationContext();
         mInicar = (Button) findViewById(R.id.btn_iniciar);

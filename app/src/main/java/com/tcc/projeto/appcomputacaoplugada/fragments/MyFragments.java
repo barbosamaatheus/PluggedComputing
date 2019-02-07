@@ -10,6 +10,7 @@ import android.os.Vibrator;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.Gravity;
@@ -120,14 +121,12 @@ public abstract class MyFragments extends Fragment {
             myApplication.setPositionExercicio(position);
         }
         myApplication.updateDataBase();
-        ;
     }
 
     private void restartFragment() {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.detach(this).attach(this).commit();
     }
-
     protected void onCreateDialog(String title, String mensagem, int icon) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyDialogThemeOld);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
