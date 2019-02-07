@@ -1,6 +1,7 @@
 package com.tcc.projeto.appcomputacaoplugada.aplication;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,7 +14,11 @@ import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.activitys.ExerciciosActivity;
@@ -125,5 +130,28 @@ public class MyApplication extends Application {
 
     public void setOnSound(boolean onSound) {
         this.onSound = onSound;
+    }
+    public void onCreateDialog(String titulo, String mensagem, int positin, Context context) {
+        LayoutInflater li = LayoutInflater.from(context);
+        View view = li.inflate(R.layout.alert_cartas, null);
+
+        ImageView iconeDialog = view.findViewById(R.id.iconeDialog);
+        LinearLayout linearLayout = view.findViewById(R.id.layotCartas);
+        TextView textoDialog = view.findViewById(R.id.textDialog);
+        TextView tituloDialog = view.findViewById(R.id.tituloDialog);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+
+        tituloDialog.setText(titulo);
+        textoDialog.setText(mensagem);
+        if ((positin == 3 || positin == 6)&& titulo.equalsIgnoreCase("dicas")){
+            linearLayout.setVisibility(View.VISIBLE);
+        }
+        if (titulo.equalsIgnoreCase("Algo deu errado")){
+            iconeDialog.setImageResource(R.drawable.ic_error_outline_black_24dp);
+        }
+        dialog.show();
     }
 }

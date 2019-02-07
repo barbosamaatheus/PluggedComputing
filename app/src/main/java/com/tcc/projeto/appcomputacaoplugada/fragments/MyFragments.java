@@ -128,23 +128,8 @@ public abstract class MyFragments extends Fragment {
         ft.detach(this).attach(this).commit();
     }
     protected void onCreateDialog(String titulo, String mensagem, int positin, Context context) {
-        LayoutInflater li = LayoutInflater.from(context);
-        View view = li.inflate(R.layout.alert_cartas, null);
-
-        LinearLayout linearLayout = view.findViewById(R.id.layotCartas);
-        TextView textoDialog = view.findViewById(R.id.textDialog);
-        TextView tituloDialog = view.findViewById(R.id.tituloDialog);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setView(view);
-        AlertDialog dialog = builder.create();
-
-        tituloDialog.setText(titulo);
-        textoDialog.setText(mensagem);
-        if ((positin == 3 || positin == 6)&& titulo.equalsIgnoreCase("dicas")){
-            linearLayout.setVisibility(View.VISIBLE);
-        }
-        dialog.show();
+        myApplication = (MyApplication) context.getApplicationContext();
+        myApplication.onCreateDialog(titulo, mensagem, positin, context);
     }
 
     protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context) {

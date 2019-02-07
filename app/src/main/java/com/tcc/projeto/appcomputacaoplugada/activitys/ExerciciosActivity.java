@@ -64,9 +64,8 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         } else {
             vibrar();
             showAnimation(view);
-            //onCreateDialog("Algo deu errado",
-              //      "Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear",
-                //    R.drawable.ic_error_outline_black_24dp);
+            myApplication.onCreateDialog("Algo deu errado","Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear"
+            ,1, this);
             callNextActivity(positon);
         }
 
@@ -78,16 +77,6 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         bundle.putInt("positon", positon + 1);
         intent.putExtras(bundle);
         startActivity(intent);
-    }
-
-    private void onCreateDialog(String title, String mensagem, int icon) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this,R.style.MyDialogThemeOld);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
-        }
-        builder.setMessage(mensagem).setTitle(title).setIcon(icon);
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
     private void vibrar(){
         Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);

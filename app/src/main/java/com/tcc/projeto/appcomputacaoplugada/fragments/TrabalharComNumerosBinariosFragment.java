@@ -129,15 +129,4 @@ public class TrabalharComNumerosBinariosFragment extends MyFragments {
         initButtons(view);
     }
 
-    /*public void onCreateDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder.setView(R.layout.alert_cartas);
-        }else{
-            builder.setMessage(R.string.dicas_tnb).setTitle("Dicas").setIcon(R.drawable.ic_help_outline_black_24dp);
-        }
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }*/
-
 }
