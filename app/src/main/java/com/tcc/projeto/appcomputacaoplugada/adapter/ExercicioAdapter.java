@@ -44,7 +44,7 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTitulo.setText(mList[position]);
-        holder.mNivel.setText("Nivel "+position);
+        holder.mNivel.setText("Nivel "+(position+1));
         if (position != 0) {
             holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
         }

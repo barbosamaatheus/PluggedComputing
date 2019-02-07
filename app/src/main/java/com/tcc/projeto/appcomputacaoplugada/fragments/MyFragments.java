@@ -105,10 +105,10 @@ public abstract class MyFragments extends Fragment {
     protected void gerenciarResultados(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
         if (!exibir) {
-            dialogCompleteLevel("Nivel: " + (position - 1), "Parabéns, você conseguiu completar o nivel " + (position - 1) +
+            dialogCompleteLevel("Nivel: " + (position), "Parabéns, você conseguiu completar o nivel " + (position) +
                             ". Agora você deve escolher uma das opções para continuar.",
                     R.drawable.ic_check_black_24dp, position, context);
-            myApplication.showNotification("Parabéns, você finalizou o nivel " + (position - 1));
+            myApplication.showNotification("Parabéns, você finalizou o nivel " + (position));
         } else {
             restartFragment();
             vibrar();
