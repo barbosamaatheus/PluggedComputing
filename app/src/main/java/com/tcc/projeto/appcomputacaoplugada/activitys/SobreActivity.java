@@ -1,7 +1,9 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;

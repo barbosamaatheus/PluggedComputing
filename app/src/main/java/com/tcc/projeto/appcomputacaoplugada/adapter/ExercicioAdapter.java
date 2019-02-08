@@ -2,6 +2,7 @@ package com.tcc.projeto.appcomputacaoplugada.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 
 import android.util.Log;
@@ -46,13 +47,14 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
         holder.mTitulo.setText(mList[position]);
         holder.mNivel.setText("Nivel "+(position+1));
         if (position != 0) {
-            holder.mCheck.setBackgroundResource(R.drawable.ic_lock_black_24dp);
+            holder.mCheck.setBackgroundResource(R.drawable.ic_lock_outline_black_24dp);
         }
         if (position <= (estado - 1)) {
-            holder.mCheck.setBackgroundResource(R.drawable.ic_check_black_24dp);
+            holder.mCheck.setBackgroundResource(R.drawable.ic_lock_open_black_24dp);
         }
         if (position == (estado)) {
-            holder.mCheck.setVisibility(View.GONE);
+            //holder.mCheck.setVisibility(View.GONE);
+            holder.mCheck.setBackgroundResource(R.drawable.ic_lock_open_black_24dp);
             showAnimation(holder.itemView, Techniques.Pulse,2000, 2);
         }
         //showAnimation(holder.itemView, Techniques.ZoomIn);
@@ -67,9 +69,11 @@ public class ExercicioAdapter extends RecyclerView.Adapter<ExercicioAdapter.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mTitulo, mNivel;
         public ImageView mCheck;
+        public CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
+            cardView = (CardView) itemView.findViewById(R.id.card_view_list);
             mTitulo = (TextView) itemView.findViewById(R.id.tituloEX);
             mNivel = (TextView) itemView.findViewById(R.id.nivelEX);
             mCheck = (ImageView) itemView.findViewById(R.id.check);
