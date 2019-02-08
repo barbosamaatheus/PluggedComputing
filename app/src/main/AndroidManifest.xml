@@ -24,8 +24,11 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".activitys.SobreActivity"></activity>
 =======
+=======
+>>>>>>> 4e32e35387c01112377c41580031b35d19e76f5f
         <activity android:name=".activitys.ContarAcima31Activity" />
         <activity android:name=".activitys.CorreioEletronicoModemsActivity" />
         <activity android:name=".activitys.DoQueSeTrataTudoIssoActivity" />
@@ -34,7 +37,10 @@
         <activity android:name=".activitys.MaisSobreNumerosBinarios" />
         <activity android:name=".activitys.NumerosBinariosActivity" />
         <activity android:name=".activitys.TrabalharComNumerosBinariosActivity"></activity>
+<<<<<<< HEAD
 >>>>>>> Iniciada mudança de Fragments para Activitys
+=======
+>>>>>>> 4e32e35387c01112377c41580031b35d19e76f5f
     </application>
 
 </manifest>
