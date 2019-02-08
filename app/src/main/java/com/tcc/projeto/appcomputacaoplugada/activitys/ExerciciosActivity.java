@@ -1,15 +1,11 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.daimajia.androidanimations.library.Techniques;
@@ -18,7 +14,6 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
-import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
@@ -27,6 +22,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     private RecyclerView mRecyclerView;
     private ExercicioAdapter mAdapter;
     private MyApplication myApplication;
+    private boolean inAplication = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +34,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     }
     @Override
     public void onBackPressed() {
+        inAplication = true;
         Intent intent = new Intent(this, AtividadesActivity.class);
         finish();
         startActivity(intent);
@@ -67,6 +64,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     @Override
     public void onClickListener(View view, int positon) {
         if (positon <= myApplication.getPositionExercicio()) {
+            inAplication = true;
             callNextActivity(positon);
         } else {
             vibrar();
@@ -99,7 +97,9 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
     @Override
     protected void onPause() {
         super.onPause();
-        myApplication.onMusicInAplication();
+        if(!inAplication){
+            myApplication.onPauseMusicInAplication();
+        }
     }
 
     @Override

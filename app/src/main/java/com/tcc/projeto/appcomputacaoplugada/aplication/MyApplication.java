@@ -66,7 +66,7 @@ public class MyApplication extends Application {
         }
         onSound = false;
     }
-    public void onMusicInAplication() {
+    public void onPauseMusicInAplication() {
         if (music != null) {
             music.pause();
         }

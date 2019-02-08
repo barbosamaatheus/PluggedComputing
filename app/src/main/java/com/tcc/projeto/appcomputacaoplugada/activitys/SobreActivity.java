@@ -1,9 +1,8 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
-import android.content.res.Configuration;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -12,6 +11,8 @@ import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 public class SobreActivity extends AppCompatActivity {
     private TextView textoSobre, textCreditos;
     private MyApplication myApplication;
+    private boolean inAplication = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,19 @@ public class SobreActivity extends AppCompatActivity {
         textCreditos = (TextView) findViewById(R.id.creditos);
     }
     @Override
+    public void onBackPressed() {
+        inAplication = true;
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(intent);
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
-        myApplication.onMusicInAplication();
+        if(!inAplication){
+            myApplication.onPauseMusicInAplication();
+        }
     }
 
     @Override

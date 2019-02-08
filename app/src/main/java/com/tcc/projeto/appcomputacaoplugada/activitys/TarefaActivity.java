@@ -5,8 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -24,6 +22,7 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 public class TarefaActivity extends AppCompatActivity {
     private FragmentManager fm = getSupportFragmentManager();
     private MyApplication myApplication;
+    private boolean inAplication = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +34,7 @@ public class TarefaActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
+        inAplication = true;
         Intent intent = new Intent(this, ExerciciosActivity.class);
         finish();
         startActivity(intent);
@@ -141,7 +141,9 @@ public class TarefaActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        myApplication.onMusicInAplication();
+        if(!inAplication){
+            myApplication.onPauseMusicInAplication();
+        }
     }
 
     @Override

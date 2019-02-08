@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -23,7 +22,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     private RecyclerView mRecyclerView;
     private CardAdapter mAdapter;
     private MyApplication myApplication;
-
+    private boolean inAplication = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +32,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     }
     @Override
     public void onBackPressed() {
+        inAplication = true;
         Intent intent = new Intent(this, MainActivity.class);
         finish();
         startActivity(intent);
@@ -62,6 +62,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     public void onClickListener(View view, int positon) {
         switch (positon + 1) {
             case 1:
+                inAplication = true;
                 Intent intent = new Intent(getApplicationContext(), ExerciciosActivity.class);
                 startActivity(intent);
                 break;
@@ -71,7 +72,9 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     @Override
     protected void onPause() {
         super.onPause();
-        myApplication.onMusicInAplication();
+        if(!inAplication){
+            myApplication.onPauseMusicInAplication();
+        }
     }
 
     @Override

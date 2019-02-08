@@ -1,19 +1,13 @@
 package com.tcc.projeto.appcomputacaoplugada.activitys;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 
@@ -24,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton mSound;
     private MyApplication myApplication;
     private boolean sair = false;
+    private boolean inAplication = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 //myApplication.setPositionExercicio(0);
                 myApplication.readDataBase();
                 //myApplication.deleteDataBase();
+                inAplication = true;
                 Intent intent = new Intent(getApplicationContext(), AtividadesActivity.class);
                 startActivity(intent);
             }
@@ -47,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mSobre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                inAplication = true;
                 Intent intent = new Intent(getApplicationContext(), SobreActivity.class);
                 startActivity(intent);
             }
@@ -77,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        myApplication.onMusicInAplication();
+        if(!inAplication){
+            myApplication.onPauseMusicInAplication();
+        }
+
     }
 
     @Override
