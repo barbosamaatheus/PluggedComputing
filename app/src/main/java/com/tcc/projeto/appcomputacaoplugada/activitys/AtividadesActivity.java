@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
@@ -29,6 +30,12 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
         setContentView(R.layout.activity_atividades);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initviews();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        finish();
+        startActivity(intent);
     }
 
     private void initviews() {

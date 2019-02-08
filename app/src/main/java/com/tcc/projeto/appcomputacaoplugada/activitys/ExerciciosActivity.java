@@ -18,6 +18,7 @@ import com.tcc.projeto.appcomputacaoplugada.R;
 import com.tcc.projeto.appcomputacaoplugada.RecyclerViewOnClickListener;
 import com.tcc.projeto.appcomputacaoplugada.adapter.ExercicioAdapter;
 import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
+import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 
 
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
@@ -34,6 +35,12 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         initviews();
 
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, AtividadesActivity.class);
+        finish();
+        startActivity(intent);
     }
 
     private void initviews() {

@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -31,6 +32,12 @@ public class TarefaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tarefa);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         getDadosBundle();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, ExerciciosActivity.class);
+        finish();
+        startActivity(intent);
     }
 
     private void getDadosBundle() {
