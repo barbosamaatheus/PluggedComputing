@@ -158,7 +158,7 @@ public abstract class MyFragments extends Fragment {
         replay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replay(dialog);
+                replay(position, context, dialog);
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
@@ -173,21 +173,12 @@ public abstract class MyFragments extends Fragment {
     }
 
     private void next(int position, Context context, AlertDialog dialog) {
-        if((position+1) !=9){
-            editarPositionExercicio(position, context);
-            Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
-            Bundle bundle = new Bundle();
-            bundle.putInt("next", (position + 1));
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }else{
-            home(position,context,dialog);
-        }
+        initNewFragment(position, context, dialog, position + 1);
         dialog.hide();
     }
 
-    private void replay(AlertDialog dialog) {
-        restartFragment();
+    private void replay(int position, Context context, AlertDialog dialog) {
+        initNewFragment(position, context, dialog, position);
         dialog.hide();
     }
 
@@ -197,14 +188,23 @@ public abstract class MyFragments extends Fragment {
         startActivity(intent);
         dialog.hide();
     }
-
+    private void initNewFragment(int position, Context context, AlertDialog dialog, int position2) {
+        if ((position + 1) != 9) {
+            editarPositionExercicio(position, context);
+            Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("next", position2);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        } else {
+            home(position, context, dialog);
+        }
+    }
     protected void vibrar() {
         Vibrator vibrator = (Vibrator) getActivity().getSystemService(VIBRATOR_SERVICE);
         long milliseconds = 700;
         vibrator.vibrate(milliseconds);
     }
-
-
 
     protected void virarCarta(Carta carta, TextView num, ImageButton mCarta) {
         if (carta.isFrente()) {
@@ -218,7 +218,6 @@ public abstract class MyFragments extends Fragment {
         }
         mCarta.setBackgroundResource(carta.getImagem());
     }
-
     protected void mudarImagem(Carta carta) {
         switch (carta.getNumero()) {
             case 1:
