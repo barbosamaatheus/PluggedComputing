@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.fragments.ContarAcima31Fragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.CorreioEletronicoModemsFragment;
 import com.tcc.projeto.appcomputacaoplugada.fragments.DeQueSeTrataTudoIssoFragment;
@@ -21,10 +22,12 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 
 public class TarefaActivity extends AppCompatActivity {
     private FragmentManager fm = getSupportFragmentManager();
+    private MyApplication myApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        myApplication = (MyApplication) getApplicationContext();
         setContentView(R.layout.activity_tarefa);
         setRequestedOrientation(SCREEN_ORIENTATION_PORTRAIT);
         getDadosBundle();
@@ -126,6 +129,20 @@ public class TarefaActivity extends AppCompatActivity {
         DeQueSeTrataTudoIssoFragment deQueSeTrataTudoIssoFragment = new DeQueSeTrataTudoIssoFragment();
         ft.add(R.id.fragment_content, deQueSeTrataTudoIssoFragment);
         ft.commit();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        myApplication.onMusicInAplication();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (myApplication.isOnSound()){
+            myApplication.onStartMusic(R.raw.music);
+        }
     }
 
 }

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.tcc.projeto.appcomputacaoplugada.aplication.MyApplication;
 import com.tcc.projeto.appcomputacaoplugada.objetos.Atividade;
 import com.tcc.projeto.appcomputacaoplugada.adapter.CardAdapter;
 import com.tcc.projeto.appcomputacaoplugada.R;
@@ -20,6 +21,7 @@ import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
 public class AtividadesActivity extends AppCompatActivity implements RecyclerViewOnClickListener {
     private RecyclerView mRecyclerView;
     private CardAdapter mAdapter;
+    private MyApplication myApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
     }
 
     private void initviews() {
+        myApplication = (MyApplication) getApplicationContext();
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_atividades);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -57,5 +60,18 @@ public class AtividadesActivity extends AppCompatActivity implements RecyclerVie
                 break;
         }
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        myApplication.onMusicInAplication();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (myApplication.isOnSound()){
+            myApplication.onStartMusic(R.raw.music);
+        }
     }
 }

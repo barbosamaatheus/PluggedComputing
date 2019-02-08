@@ -32,6 +32,16 @@ public class MyApplication extends Application {
     private MediaPlayer music;
     private boolean onSound;
 
+    public boolean isInAplication() {
+        return inAplication;
+    }
+
+    public void setInAplication(boolean inAplication) {
+        this.inAplication = inAplication;
+    }
+
+    private boolean inAplication;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -55,6 +65,11 @@ public class MyApplication extends Application {
             music.pause();
         }
         onSound = false;
+    }
+    public void onMusicInAplication() {
+        if (music != null) {
+            music.pause();
+        }
     }
 
     public void onStopMusic() {

@@ -89,8 +89,18 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
                 .repeat(0)
                 .playOn(view);
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        myApplication.onMusicInAplication();
+    }
 
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (myApplication.isOnSound()){
+            myApplication.onStartMusic(R.raw.music);
+        }
+    }
 }
 
