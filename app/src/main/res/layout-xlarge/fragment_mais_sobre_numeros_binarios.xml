@@ -94,7 +94,7 @@
                 style="@style/TextViewStyleLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2. Qual numero deve está no lugar da (?) interrogação?"
+                android:text="2. Qual numero deve estar no lugar da (?) interrogação?"
                 android:textAlignment="center" />
 
             <ImageView

@@ -105,9 +105,13 @@ public abstract class MyFragments extends Fragment {
     protected void gerenciarResultados(int position, Context context) {
         myApplication = (MyApplication) context.getApplicationContext();
         if (!exibir) {
+            boolean exibirNext = true;
+            if (position==8) {
+                exibirNext = false;
+            }
             dialogCompleteLevel("Nivel: " + (position), "Parabéns, você conseguiu completar o nivel " + (position) +
                             ". Agora você deve escolher uma das opções para continuar.",
-                    R.drawable.ic_check_black_24dp, position, context);
+                    R.drawable.ic_check_black_24dp, position, context, exibirNext);
             myApplication.showNotification("Parabéns, você finalizou o nivel " + (position));
         } else {
             restartFragment();
@@ -132,7 +136,7 @@ public abstract class MyFragments extends Fragment {
         myApplication.onCreateDialog(titulo, mensagem, positin, context);
     }
 
-    protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context) {
+    protected void dialogCompleteLevel(String title, String mensagem, int icon, int position, Context context, boolean exibirNext) {
         LayoutInflater li = LayoutInflater.from(context);
         View view = li.inflate(R.layout.dialog_exemple, null);
 
@@ -142,7 +146,9 @@ public abstract class MyFragments extends Fragment {
         ImageButton home = view.findViewById(R.id.home_dialog);
         ImageButton replay = view.findViewById(R.id.replay_dialog);
         ImageButton next = view.findViewById(R.id.next_dialog);
-
+        if(!exibirNext){
+            next.setVisibility(View.GONE);
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setView(view);
         AlertDialog dialog = builder.create();
@@ -189,7 +195,7 @@ public abstract class MyFragments extends Fragment {
         dialog.hide();
     }
     private void initNewFragment(int position, Context context, AlertDialog dialog, int position2) {
-        if ((position + 1) != 9) {
+        if ((position) != 8) {
             editarPositionExercicio(position, context);
             Intent intent = new Intent(getActivity().getApplicationContext(), TarefaActivity.class);
             Bundle bundle = new Bundle();

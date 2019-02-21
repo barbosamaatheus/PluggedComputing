@@ -133,7 +133,10 @@ public class CorreioEletronicoModemsFragment extends MyFragments {
     }
 
     private boolean validarTexto(String s) {
-        if (removeAccents(s).equalsIgnoreCase("ola, " + textoNome)) {
+        if (removeAccents(s).equalsIgnoreCase("ola, " + removeAccents(textoNome))) {
+            return true;
+        }
+        if (removeAccents(s).equalsIgnoreCase("olá, " + removeAccents(textoNome))) {
             return true;
         }
         return false;
