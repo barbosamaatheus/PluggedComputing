@@ -71,7 +71,7 @@ public class ExerciciosActivity extends AppCompatActivity implements RecyclerVie
             showAnimation(view);
             myApplication.onCreateDialog("Algo deu errado","Você ainda não liberou este exercicio. Complete as atividades anteriores para desbloquear"
             ,1, this);
-            callNextActivity(positon);
+            //callNextActivity(positon);
         }
 
     }
