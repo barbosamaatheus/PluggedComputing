@@ -27,10 +27,17 @@
                 android:text="@string/texto_intro_01" />
 
             <TextView
+                android:id="@+id/showNumber"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/texto_intro_02" />
+                android:text="As cartas abaixo estão representando o número 9" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aproveite e fique à vontade para experimentar outros números…" />
 
             <TextView
                 style="@style/TextViewStyle"

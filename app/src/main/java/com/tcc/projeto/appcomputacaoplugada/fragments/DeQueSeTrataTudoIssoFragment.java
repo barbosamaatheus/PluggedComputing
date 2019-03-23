@@ -44,10 +44,10 @@ public class DeQueSeTrataTudoIssoFragment extends MyFragments {
         mFormulario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*String uri = "https://goo.gl/forms/J1mmJ4A0MRFQihvC3";
+                String uri = "https://goo.gl/forms/vHMRpkAPvjXscLC52";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
-                startActivity(intent);*/
-                Toast.makeText(getActivity(), "Digite o codigo 00000", Toast.LENGTH_LONG).show();
+                startActivity(intent);
+                //Toast.makeText(getActivity(), "Digite o codigo 00000", Toast.LENGTH_LONG).show();
             }
         });
         mFinalizar.setOnClickListener(new View.OnClickListener() {

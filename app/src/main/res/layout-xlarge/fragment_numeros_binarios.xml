@@ -29,6 +29,13 @@
                 android:text="@string/texto_nb_01" />
 
             <TextView
+                android:id="@+id/showNumber_nb"
+                style="@style/TextViewStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="As cartas abaixo estão representando o número 31" />
+
+            <TextView
                 style="@style/TextViewStyleLarge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

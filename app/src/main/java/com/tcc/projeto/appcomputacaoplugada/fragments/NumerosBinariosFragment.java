@@ -14,12 +14,15 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.tcc.projeto.appcomputacaoplugada.R;
+import com.tcc.projeto.appcomputacaoplugada.adapter.TabelaAdapter;
 
 public class NumerosBinariosFragment extends MyFragments {
 
     private EditText mMaiorValor, mMenorValor;
+    private TextView showNumber;
     private String maiorValor = "";
     private String menorValor = "";
+
 
 
     public NumerosBinariosFragment() {
@@ -39,31 +42,35 @@ public class NumerosBinariosFragment extends MyFragments {
             @Override
             public void onClick(View view) {
                 virarCarta(carta01, numTxt1, mCarta1);
+                setNumber();
             }
         });
         mCarta2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 virarCarta(carta02, numTxt2, mCarta2);
-
+                setNumber();
             }
         });
         mCarta4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 virarCarta(carta04, numTxt4, mCarta4);
+                setNumber();
             }
         });
         mCarta8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 virarCarta(carta08, numTxt8, mCarta8);
+                setNumber();
             }
         });
         mCarta16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 virarCarta(carta16, numTxt16, mCarta16);
+                setNumber();
             }
         });
         radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -103,6 +110,12 @@ public class NumerosBinariosFragment extends MyFragments {
         return view;
     }
 
+    private void setNumber() {
+        String binarios = numTxt16.getText().toString() + numTxt8.getText().toString()
+                + numTxt4.getText().toString() + numTxt2.getText().toString() + numTxt1.getText().toString();
+        TabelaAdapter tabelaAdapter = new TabelaAdapter();
+        showNumber.setText("As cartas abaixo estão representando o número " + tabelaAdapter.obterNumeroDoBinario(binarios));
+    }
 
     @Override
     protected boolean respostasIsEmpty() {
@@ -142,6 +155,7 @@ public class NumerosBinariosFragment extends MyFragments {
 
     @Override
     protected void initViews(View view) {
+        showNumber = (TextView) view.findViewById(R.id.showNumber_nb);
         mMaiorValor = (EditText) view.findViewById(R.id.valorMaiorNB);
         mMenorValor = (EditText) view.findViewById(R.id.valorMenorNB);
         initButtons(view);

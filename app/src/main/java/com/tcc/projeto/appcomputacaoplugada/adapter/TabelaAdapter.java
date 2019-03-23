@@ -17,6 +17,7 @@ public class TabelaAdapter {
     }
 
     private void gerarTabela() {
+        tabela.add(new Tabela("0", "0", "00000"));
         tabela.add(new Tabela("a", "1", "00001"));
         tabela.add(new Tabela("b", "2", "00010"));
         tabela.add(new Tabela("c", "3", "00011"));
@@ -43,7 +44,11 @@ public class TabelaAdapter {
         tabela.add(new Tabela("x", "24", "11000"));
         tabela.add(new Tabela("y", "25", "11001"));
         tabela.add(new Tabela("z", "26", "11010"));
-
+        tabela.add(new Tabela("27", "27", "11011"));
+        tabela.add(new Tabela("28", "28", "11100"));
+        tabela.add(new Tabela("29", "29", "11101"));
+        tabela.add(new Tabela("30", "30", "11110"));
+        tabela.add(new Tabela("31", "31", "11111"));
     }
 
     public String obterBinarioDaLetra(String letra) {
